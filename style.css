@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+    background: black;
+}
+
+.bg-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, red, blue, purple, cyan);
+    background-size: 800% 800%;
+    animation: gradientMove 10s ease infinite;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% }
+    50% { background-position: 100% }
+    100% { background-position: 0% }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+section {
+    padding: 60px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.2);
+}
