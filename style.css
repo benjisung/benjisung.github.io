@@ -1,21 +1,23 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
+    background: #0b1220;
+    color: #e5e7eb;
 }
 
 /* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
-    background: #020617;
-    border-bottom: 1px solid #1e293b;
+    padding: 18px 40px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #1f2a44;
 }
 
 nav h1 {
     color: #38bdf8;
+    font-weight: 600;
     font-size: 18px;
 }
 
@@ -28,17 +30,11 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #cbd5e1;
+    transition: 0.2s;
 }
 
 nav a:hover {
     color: #38bdf8;
-}
-
-/* SECTIONS */
-section {
-    max-width: 900px;
-    margin: auto;
-    padding: 60px 40px;
 }
 
 /* HERO */
@@ -55,19 +51,35 @@ section {
     color: #94a3b8;
 }
 
+/* SECTIONS */
+section {
+    max-width: 950px;
+    margin: auto;
+    padding: 70px 30px;
+}
+
+/* HEADINGS */
+h2 {
+    font-size: 28px;
+    border-left: 4px solid #38bdf8;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
 /* CARDS */
 .card {
-    background: #020617;
-    border: 1px solid #1e293b;
-    padding: 20px;
+    background: linear-gradient(145deg, #0f172a, #0b1220);
+    border: 1px solid #1f2a44;
+    padding: 22px;
     margin: 15px 0;
-    border-radius: 10px;
-    transition: 0.3s;
+    border-radius: 14px;
+    transition: 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     border-color: #38bdf8;
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
 }
 
 /* ABOUT */
@@ -77,9 +89,12 @@ section {
     align-items: center;
 }
 
+/* PROFILE IMAGE (SQUARE) */
 .profile-img {
-    width: 160px;
-    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
     border: 2px solid #38bdf8;
 }
 
@@ -88,4 +103,10 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+}
+
+/* TEXT */
+p {
+    line-height: 1.6;
+    color: #cbd5e1;
 }
