@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Benjamin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-outline"></div>
+
+<div class="rgb-mesh"></div>
+
+<nav>
+    <div class="nav-brand">
+        <img src="images/benjaminlogo.png" alt="Logo" class="nav-logo">
+        <h1>BENJAMIN_SUNG >_</h1>
+    </div>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html" class="active">ABOUT</a></li>
+        <li><a href="activities.html">ACTIVITIES</a></li>
+        <li><a href="honors.html">HONORS</a></li>
+        <li><a href="robotics.html">ROBOTICS</a></li>
+        <li><a href="funfacts.html">FUN FACTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <div class="nav-time mono" id="clock">00:00:00</div>
+</nav>
+
+<section>
+    <h2 class="section-title mono">01_BIOGRAPHY</h2>
+
+    <div class="about-container">
+        <div>
+            <div class="profile-img-wrap">
+                <img src="images/profile.jpg" alt="Benjamin Sung" class="profile-img-portrait">
+            </div>
+            <p class="mono silver" style="margin-top: 15px; font-size: 0.8rem;">// PORTRAIT_FRAME_INIT</p>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p class="mono silver" style="font-size: 0.7rem; margin-bottom: 5px;">// AFFILIATION</p>
+                <img src="images/wego.png" alt="Wego School Logo" style="width: 120px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));">
+                <p class="mono" style="font-size: 0.75rem; margin-top: 8px; color: var(--accent-pink);">Taipei Wego Senior High School</p>
+            </div>
+        </div>
+
+        <div class="card" style="border-left: 5px solid var(--accent-pink);">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                <img src="images/benjaminlogo.png" alt="Logo" style="height: 40px;">
+                <h3 style="font-size: 2.2rem;">Benjamin Sung <span class="accent">(宋其軒)</span></h3>
+            </div>
+            
+            <p class="mono accent" style="margin-bottom: 20px;">// Grade 11 Student @ Wego High School IEP</p>
+            
+            <p style="margin-bottom: 20px; font-size: 1.1rem;">
+                I am a passionate engineer-in-training with a focus on how systems interact with the physical world. 
+                Whether it's designing autonomous robots for competitions or using AI to analyze ecological data, 
+                I thrive on solving complex technical challenges.
+            </p>
+
+            <div class="mavs-theme">
+                <p style="font-style: italic;">"True engineers don't just solve problems; they innovate for the future."</p>
+            </div>
+
+            <div class="tag-container" style="margin-top: 30px;">
+                <span class="tag">Robotics Lead</span>
+                <span class="tag">AI Researcher</span>
+                <span class="tag">USACO Gold</span>
+                <span class="tag">Mavs Fan</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <h2 class="section-title mono" style="margin-top: 80px;">02_DEVELOPMENT_TIMELINE</h2>
+    
+    <div class="timeline">
+        <!-- 11TH GRADE -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-year">Grade 11 (Current)</div>
+                <h4 class="mono accent">Robotics lead & Marine AI Fellow</h4>
+                <p style="font-size: 0.9rem; margin-top: 10px;">
+                    Leading Wego Robotics in VEX competitions. Awarded Create & Sportsmanship awards. 
+                    Currently conducting government-sponsored AI research in Hawaii.
+                </p>
+            </div>
+        </div>
+
+        <!-- 10TH GRADE -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-year">Grade 10</div>
+                <h4 class="mono accent">SPROUT Program & Bio Olympiads</h4>
+                <p style="font-size: 0.9rem; margin-top: 10px;">
+                    Mastered advanced data structures via NTU SPROUT. Achieved BBO Gold and USABO Semifinalist status. 
+                    Qualified for AIME (9/15).
+                </p>
+            </div>
+        </div>
+
+        <!-- 9TH GRADE -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-year">Grade 9</div>
+                <h4 class="mono accent">Debate & Service Foundations</h4>
+                <p style="font-size: 0.9rem; margin-top: 10px;">
+                    Joined the Debate Club and started volunteer work with ACT Club and CoInfinitas, 
+                    building early leadership and communication skills.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SKILL INVENTORY -->
+    <h2 class="section-title mono" style="margin-top: 80px;">03_SYSTEM_DIAGNOSTICS</h2>
+    <div class="skill-grid">
+        <div class="skill-card">
+            <div class="skill-info">
+                <span class="mono">ROBOTICS_PROG</span>
+                <span class="mono accent">92%</span>
+            </div>
+            <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-width="92%"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-info">
+                <span class="mono">DATA_ANALYSIS</span>
+                <span class="mono accent">82%</span>
+            </div>
+            <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-width="82%"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-info">
+                <span class="mono">BIOLOGY_THEORY</span>
+                <span class="mono accent">85%</span>
+            </div>
+            <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-width="85%"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-info">
+                <span class="mono">LEADERSHIP</span>
+                <span class="mono accent">88%</span>
+            </div>
+            <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-width="88%"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const observerOptions = { threshold: 0.2 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('timeline-item')) {
+                        entry.target.classList.add('visible');
+                    }
+                    if (entry.target.classList.contains('skill-bar-fill')) {
+                        entry.target.style.width = entry.target.getAttribute('data-width');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.timeline-item, .skill-bar-fill').forEach(item => {
+            observer.observe(item);
+        });
+
+        // CUSTOM CURSOR LOGIC
+        const dot = document.getElementById('cursor-dot');
+        const outline = document.getElementById('cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            dot.style.left = `${posX}px`;
+            dot.style.top = `${posY}px`;
+            outline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+
+        // CLOCK LOGIC
+        function updateClock() {
+            const now = new Date();
+            const clockEl = document.getElementById('clock');
+            if (clockEl) {
+                clockEl.innerText = now.toLocaleTimeString('en-GB', { hour12: false });
+            }
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</section>
+
+<footer style="text-align: center; padding: 40px; color: var(--accent-silver); font-size: 0.8rem;" class="mono">
+    &copy; 2026 BENJAMIN SUNG | BUILT_WITH_GEMINI_CLI
+</footer>
+
+</body>
+</html>

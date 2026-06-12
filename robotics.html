@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics | Benjamin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: 
+                linear-gradient(rgba(5, 8, 22, 0.8), rgba(5, 8, 22, 0.8)),
+                url('images/robotics_allteam.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .iframe-container {
+            width: 100%;
+            height: 800px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid var(--accent-cyan);
+            margin-top: 20px;
+        }
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-outline"></div>
+
+<div class="rgb-mesh"></div>
+
+<nav>
+    <div class="nav-brand">
+        <img src="images/benjaminlogo.png" alt="Logo" class="nav-logo">
+        <h1>BENJAMIN_SUNG >_</h1>
+    </div>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="activities.html">ACTIVITIES</a></li>
+        <li><a href="honors.html">HONORS</a></li>
+        <li><a href="robotics.html" class="active">ROBOTICS</a></li>
+        <li><a href="funfacts.html">FUN FACTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <div class="nav-time mono" id="clock">00:00:00</div>
+</nav>
+
+<section style="max-width: 1200px;">
+    <!-- ROW 1: FULL WIDTH WEBSITE -->
+    <div class="full-row">
+        <h2 class="section-title mono">01_TEAM_SITE_COMMAND</h2>
+        <div class="card" style="padding: 10px;">
+            <div class="iframe-container">
+                <iframe src="https://23083z.com/#home" title="Team Website"></iframe>
+            </div>
+            <div style="padding: 20px; text-align: center;">
+                <a href="https://23083z.com/#home" target="_blank" class="btn">[ OPEN_FULL_WEBSITE_NEW_TAB ]</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ROW 2: ROBOT ARSENAL (4 PICS) -->
+    <div class="full-row">
+        <h2 class="section-title mono">02_ROBOT_ITERATIONS</h2>
+        <div class="img-row">
+            <img src="images/bot_1.jpg" alt="Robot 1">
+            <img src="images/bot_2.jpg" alt="Robot 2">
+            <img src="images/bot_3.jpg" alt="Robot 3">
+            <img src="images/bot_4.jpg" alt="Robot 4">
+        </div>
+    </div>
+
+    <!-- ROW 3: TEAM SYNERGY (4 PICS) -->
+    <div class="full-row">
+        <h2 class="section-title mono">03_TEAM_PERSONNEL</h2>
+        <div class="img-row">
+            <img src="images/robotics_1.jpg" alt="Team 1">
+            <img src="images/robotics_2.jpg" alt="Team 2">
+            <img src="images/robotics_3.jpg" alt="Team 3">
+            <img src="images/teammember.png" alt="Team Member">
+        </div>
+    </div>
+
+    <!-- ROW 4: SOCIAL CONNECT -->
+    <div class="full-row">
+        <h2 class="section-title mono">04_SOCIAL_CONNECT</h2>
+        <div class="split-row">
+            <!-- INSTAGRAM POST -->
+            <div class="card" style="padding: 15px; border-bottom: 3px solid var(--accent-pink);">
+                <div style="display: flex; justify-content: center; overflow: hidden; border-radius: 12px;">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DS7xWzIkqur/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+                        <div style="padding:16px;"> 
+                            <a href="https://www.instagram.com/p/DS7xWzIkqur/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                <div style="padding-top: 8px;"> 
+                                    <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div>
+                                </div>
+                            </a>
+                        </div>
+                    </blockquote>
+                    <script async src="https://www.instagram.com/embed.js"></script>
+                </div>
+            </div>
+
+            <!-- INSTAGRAM PROFILE CARD -->
+            <div class="card featured pink-border" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                <div class="mono accent" style="font-size: 0.8rem; margin-bottom: 20px;">[ PROFILE_ACCESS ]</div>
+                <h3>Visit @23083_wego_robotics</h3>
+                <p style="margin-bottom: 30px;">Follow our team for more competition updates and build logs.</p>
+                <a href="https://www.instagram.com/23083_wego_robotics/" target="_blank" class="btn">VIEW_INSTAGRAM_PROFILE</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 40px; color: var(--text-secondary); font-size: 0.8rem;" class="mono">
+    &copy; 2026 BENJAMIN SUNG | BUILT_WITH_GEMINI_CLI
+</footer>
+
+<script>
+    // CUSTOM CURSOR LOGIC
+    const dot = document.getElementById('cursor-dot');
+    const outline = document.getElementById('cursor-outline');
+
+    window.addEventListener('mousemove', (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+        dot.style.left = `${posX}px`;
+        dot.style.top = `${posY}px`;
+        outline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, { duration: 500, fill: "forwards" });
+    });
+
+    // CLOCK LOGIC
+    function updateClock() {
+        const now = new Date();
+        const clockEl = document.getElementById('clock');
+        if (clockEl) {
+            clockEl.innerText = now.toLocaleTimeString('en-GB', { hour12: false });
+        }
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
