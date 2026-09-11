@@ -3,119 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Honors | Benjamin</title>
+    <meta name="description" content="Benjamin Sung's academic, robotics, and science recognitions.">
+    <title>Honors | Benjamin Sung</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<div id="cursor-dot"></div>
-<div id="cursor-outline"></div>
-
-<div class="rgb-mesh"></div>
-
+<div id="cursor-dot"></div><div id="cursor-outline"></div><div class="rgb-mesh"></div>
 <nav>
-    <div class="nav-brand">
-        <img src="images/benjaminlogo.png" alt="Logo" class="nav-logo">
-        <h1>BENJAMIN_SUNG >_</h1>
-    </div>
+    <div class="nav-brand"><img src="images/benjaminlogo.png" alt="Benjamin Sung logo" class="nav-logo"><h1>BENJAMIN_SUNG &gt;_</h1></div>
     <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="activities.html">ACTIVITIES</a></li>
-        <li><a href="honors.html" class="active">HONORS</a></li>
-        <li><a href="robotics.html">ROBOTICS</a></li>
-        <li><a href="funfacts.html">FUN FACTS</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="index.html">HOME</a></li><li><a href="about.html">ABOUT</a></li><li><a href="activities.html">ACTIVITIES</a></li><li><a href="honors.html" class="active">HONORS</a></li><li><a href="robotics.html">ROBOTICS</a></li><li><a href="funfacts.html">FUN FACTS</a></li><li><a href="contact.html">CONTACT</a></li>
     </ul>
     <div class="nav-time mono" id="clock">00:00:00</div>
 </nav>
 
+<main>
 <section>
-    <h2 class="section-title mono">01_ACHIEVEMENTS</h2>
+    <div class="page-intro"><p class="mono accent">// ACADEMIC + ENGINEERING RECOGNITION</p><h2>Honors grounded in <span class="accent">coursework and projects</span></h2><p>These results support the analytical, scientific, and collaborative foundations of my engineering work.</p></div>
+    <h2 class="section-title mono">01_ACADEMIC_HONORS</h2>
+    <div class="grid honor-grid">
+        <article class="card honor-card">
+            <div class="logo-display"><img src="images/usaco.png" alt="USA Computing Olympiad logo"></div>
+            <div class="eyebrow mono">[ COMPETITIVE PROGRAMMING ]</div><h3>USACO Gold Division</h3><p>Advanced to the Gold Division of the USA Computing Olympiad through algorithmic problem solving in C++.</p>
+        </article>
+        <article class="card honor-card">
+            <div class="logo-display"><img src="images/amc.png" alt="American Mathematics Competitions logo"></div>
+            <div class="eyebrow mono">[ MATHEMATICS ]</div><h3>AMC 12 &amp; AIME</h3><p><strong>AMC 12:</strong> 121.5 / 150<br><strong>AIME:</strong> 9 / 15</p>
+        </article>
+        <article class="card honor-card">
+            <div class="logo-display dual-logos"><img src="images/usabo.png" alt="USA Biology Olympiad logo"><img src="images/bbo.png" alt="British Biology Olympiad logo"></div>
+            <div class="eyebrow mono">[ BIOLOGY ]</div><h3>USABO &amp; BBO</h3><p><strong>USABO Semifinalist</strong><br><strong>British Biology Olympiad Gold</strong></p>
+        </article>
+        <article class="card honor-card">
+            <div class="logo-display"><img src="images/wego.png" alt="Wego High School logo"></div>
+            <div class="eyebrow mono">[ SCHOOL RECOGNITION ]</div><h3>High Honor / Honor Roll</h3><p>Received High Honor and Honor Roll recognition across multiple semesters in the Wego High School IEP.</p>
+        </article>
+    </div>
 
+    <h2 class="section-title mono spaced-title">02_ENGINEERING_&amp;_SCIENCE_AWARDS</h2>
     <div class="grid">
-        <!-- USACO -->
-        <div class="card pink-border">
-            <div class="logo-display" style="margin-bottom: 15px;">
-                <img src="images/usaco.png" alt="USACO" style="height: 60px;">
-            </div>
-            <div class="mono accent-pink" style="font-size: 0.8rem; margin-bottom: 10px;">[ INTERNATIONAL OLYMPIAD ]</div>
-            <h3>USACO Gold</h3>
-            <p>Advanced to the <b>Gold Division</b> in the USA Computing Olympiad. Mastered advanced competitive programming and complex algorithmic logic.</p>
-        </div>
-
-        <!-- BIOLOGY -->
-        <div class="card">
-            <div class="logo-display" style="margin-bottom: 15px; gap: 15px;">
-                <img src="images/bbo.png" alt="BBO" style="height: 50px;">
-                <img src="images/usabo.png" alt="USABO" style="height: 50px;">
-            </div>
-            <div class="mono accent" style="font-size: 0.8rem; margin-bottom: 10px;">[ BIOLOGY OLYMPIADS ]</div>
-            <h3>BBO & USABO</h3>
-            <p><b>BBO Gold Award</b> (British Biology Olympiad) and <b>USABO Semifinalist</b> (USA Biology Olympiad). Demonstrating elite-level understanding of biological sciences.</p>
-        </div>
-
-        <!-- MATH -->
-        <div class="card">
-            <div class="mono accent" style="font-size: 0.8rem; margin-bottom: 10px;">[ MATHEMATICS ]</div>
-            <h3>AMC 12 / AIME</h3>
-            <p><b>Top 10%</b> in AMC 12 with a score of <b>121.5</b>. Qualified for the American Invitational Mathematics Examination (AIME) with a <b>9/15</b> score.</p>
-        </div>
-
-        <!-- SCHOOL -->
-        <div class="card">
-            <div class="mono accent" style="font-size: 0.8rem; margin-bottom: 10px;">[ ACADEMIC EXCELLENCE ]</div>
-            <h3>High Honor Rolls/Honor Rolls</h3>
-            <p>Consistent placement on the <b>High Honor Rolls</b> and Honor Rolls. Awarded for sustained academic excellence throughout the IEP program.</p>
-        </div>
-        
-        <!-- SPECIAL AWARDS -->
-        <div class="card" style="border-color: var(--accent-cyan);">
-            <div class="mono accent" style="font-size: 0.8rem; margin-bottom: 10px;">[ SPECIAL RECOGNITION ]</div>
-            <h3>Create & Sportsmanship Awards</h3>
-            <p>Awarded at VEX Robotics competitions for innovative robot design and demonstrating exceptional teamwork and professional ethics.</p>
-        </div>
-
-        <div class="card" style="border-color: var(--accent-cyan);">
-            <div class="mono accent" style="font-size: 0.8rem; margin-bottom: 10px;">[ SCIENCE FAIR ]</div>
-            <h3>3-Min Science Gold</h3>
-            <p>Gold Award winner for SDG-focused innovation projects. Recognized for excellence in scientific communication and research.</p>
-        </div>
+        <article class="card"><div class="logo-display dual-logos"><img src="images/wego robotics.png" alt="Wego Robotics logo"><img src="images/reaper.png" alt="Reaper team logo"></div><div class="eyebrow mono">[ VEX ROBOTICS ]</div><h3>Create Award</h3><p>Received the VEX Create Award as part of the Wego Robotics team.</p></article>
+        <article class="card"><div class="logo-display dual-logos"><img src="images/wego robotics.png" alt="Wego Robotics logo"><img src="images/reaper.png" alt="Reaper team logo"></div><div class="eyebrow mono">[ VEX ROBOTICS ]</div><h3>Sportsmanship Award</h3><p>Received the VEX Sportsmanship Award as part of the Wego Robotics team.</p></article>
+        <article class="card"><div class="logo-display"><img src="images/threemin.png" alt="3-Minute Science Competition"></div><div class="eyebrow mono">[ SCIENCE COMMUNICATION ]</div><h3>3-Minute Science Gold Award</h3><p>Gold Award for presenting SDG-focused science and engineering project work.</p></article>
+        <article class="card"><div class="eyebrow mono">[ ENVIRONMENTAL PROJECT ]</div><h3>2024 Ocean Challenge Finalist</h3><p>Finalist recognition connected to an early environmental engineering project.</p></article>
     </div>
 </section>
+</main>
 
-<footer style="text-align: center; padding: 40px; color: var(--text-secondary); font-size: 0.8rem;" class="mono">
-    &copy; 2026 BENJAMIN SUNG | BUILT_WITH_GEMINI_CLI
-</footer>
-
+<footer class="site-footer mono">&copy; 2026 BENJAMIN SUNG | PERSONAL ENGINEERING PORTFOLIO</footer>
 <script>
-    // CUSTOM CURSOR LOGIC
-    const dot = document.getElementById('cursor-dot');
-    const outline = document.getElementById('cursor-outline');
-
-    window.addEventListener('mousemove', (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
-        dot.style.left = `${posX}px`;
-        dot.style.top = `${posY}px`;
-        outline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    });
-
-    // CLOCK LOGIC
-    function updateClock() {
-        const now = new Date();
-        const clockEl = document.getElementById('clock');
-        if (clockEl) {
-            clockEl.innerText = now.toLocaleTimeString('en-GB', { hour12: false });
-        }
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
+    const dot = document.getElementById('cursor-dot'); const outline = document.getElementById('cursor-outline');
+    window.addEventListener('mousemove', (event) => { dot.style.left = `${event.clientX}px`; dot.style.top = `${event.clientY}px`; outline.animate({ left: `${event.clientX}px`, top: `${event.clientY}px` }, { duration: 500, fill: 'forwards' }); });
+    function updateClock() { const clock = document.getElementById('clock'); if (clock) clock.innerText = new Date().toLocaleTimeString('en-GB', { hour12: false }); }
+    setInterval(updateClock, 1000); updateClock();
 </script>
-
 </body>
 </html>

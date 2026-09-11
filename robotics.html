@@ -3,155 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robotics | Benjamin</title>
+    <meta name="description" content="Benjamin Sung's autonomous mobile robot development platform and VEX robotics work.">
+    <title>Robotics | Benjamin Sung</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-image: 
-                linear-gradient(rgba(5, 8, 22, 0.8), rgba(5, 8, 22, 0.8)),
-                url('images/robotics_allteam.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
-        .iframe-container {
-            width: 100%;
-            height: 800px;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 2px solid var(--accent-cyan);
-            margin-top: 20px;
-        }
-        .iframe-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
 </head>
 <body>
-
-<div id="cursor-dot"></div>
-<div id="cursor-outline"></div>
-
-<div class="rgb-mesh"></div>
+<div id="cursor-dot"></div><div id="cursor-outline"></div><div class="rgb-mesh"></div>
 
 <nav>
-    <div class="nav-brand">
-        <img src="images/benjaminlogo.png" alt="Logo" class="nav-logo">
-        <h1>BENJAMIN_SUNG >_</h1>
-    </div>
+    <div class="nav-brand"><img src="images/benjaminlogo.png" alt="Benjamin Sung logo" class="nav-logo"><h1>BENJAMIN_SUNG &gt;_</h1></div>
     <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="activities.html">ACTIVITIES</a></li>
-        <li><a href="honors.html">HONORS</a></li>
-        <li><a href="robotics.html" class="active">ROBOTICS</a></li>
-        <li><a href="funfacts.html">FUN FACTS</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="index.html">HOME</a></li><li><a href="about.html">ABOUT</a></li><li><a href="activities.html">ACTIVITIES</a></li><li><a href="honors.html">HONORS</a></li><li><a href="robotics.html" class="active">ROBOTICS</a></li><li><a href="funfacts.html">FUN FACTS</a></li><li><a href="contact.html">CONTACT</a></li>
     </ul>
     <div class="nav-time mono" id="clock">00:00:00</div>
 </nav>
 
+<main>
 <section style="max-width: 1200px;">
-    <!-- ROW 1: FULL WIDTH WEBSITE -->
-    <div class="full-row">
-        <h2 class="section-title mono">01_TEAM_SITE_COMMAND</h2>
-        <div class="card" style="padding: 10px;">
-            <div class="iframe-container">
-                <iframe src="https://23083z.com/#home" title="Team Website"></iframe>
-            </div>
-            <div style="padding: 20px; text-align: center;">
-                <a href="https://23083z.com/#home" target="_blank" class="btn">[ OPEN_FULL_WEBSITE_NEW_TAB ]</a>
-            </div>
-        </div>
+    <div class="page-intro">
+        <p class="mono accent">// ROBOTICS DEVELOPMENT LOG</p>
+        <h2>From competition robots to a <span class="accent">reusable AMR platform</span></h2>
+        <p>My robotics work combines mechanical assembly, embedded control, computing, sensing, and repeated testing. The goal is to make software and hardware behave as one system.</p>
     </div>
 
-    <!-- ROW 2: ROBOT ARSENAL (4 PICS) -->
-    <div class="full-row">
-        <h2 class="section-title mono">02_ROBOT_ITERATIONS</h2>
-        <div class="img-row">
-            <img src="images/bot_1.jpg" alt="Robot 1">
-            <img src="images/bot_2.jpg" alt="Robot 2">
-            <img src="images/bot_3.jpg" alt="Robot 3">
-            <img src="images/bot_4.jpg" alt="Robot 4">
+    <article class="card amr-hero" id="amr">
+        <div>
+            <div class="project-meta mono"><span>INDEPENDENT PROJECT</span><span class="status-in-progress">IN DEVELOPMENT</span></div>
+            <h2>Autonomous Mobile Robot Development Platform</h2>
+            <p class="project-subtitle">24V differential drive · STM32 low-level control · Jetson Orin Nano · ROS 2 Humble</p>
+            <p>I assembled this two-wheel differential-drive platform as a reusable base for robotics development. It began from one application idea, but the project has evolved into a general platform that can accept different sensors, perception models, and mechanisms.</p>
+            <p>The current work centers on hardware-software integration: power, geared motors, encoder feedback, embedded control, high-level Jetson compute, and ROS 2 communication. The robot exists and can be driven; the advanced navigation and perception stack is still being integrated and tested.</p>
+            <div class="tag-container"><span class="tag">Mechatronics</span><span class="tag">Embedded Control</span><span class="tag">Jetson Deployment</span><span class="tag">ROS 2</span><span class="tag">System Debugging</span></div>
         </div>
+        <div class="system-diagram" aria-label="Robot system architecture">
+            <div class="diagram-node"><span>HIGH-LEVEL COMPUTE</span><strong>Jetson Orin Nano Super 8GB</strong><small>Ubuntu · ROS 2 Humble</small></div>
+            <div class="diagram-arrow">↕</div>
+            <div class="diagram-node"><span>LOW-LEVEL CONTROL</span><strong>STM32</strong><small>Motor commands · encoder feedback</small></div>
+            <div class="diagram-arrow">↕</div>
+            <div class="diagram-node"><span>MOBILE BASE</span><strong>24V Differential Drive</strong><small>Two 24V / 60W geared motors · AB encoders</small></div>
+        </div>
+    </article>
+
+    <h2 class="section-title mono spaced-title">01_PLATFORM_ARCHITECTURE</h2>
+    <div class="spec-card-grid">
+        <article class="spec-card"><span class="mono">DRIVE</span><h3>Mechanical &amp; Power</h3><ul class="clean-list"><li>Two-wheel differential-drive base</li><li>24V / 60W geared motors</li><li>AB encoder feedback</li><li>Assembled physical platform</li></ul></article>
+        <article class="spec-card"><span class="mono">CONTROL</span><h3>Embedded Layer</h3><ul class="clean-list"><li>STM32 low-level controller</li><li>Motor and encoder integration</li><li>Proportional speed control</li><li>Joystick / joy-topic commands</li></ul></article>
+        <article class="spec-card"><span class="mono">COMPUTE</span><h3>High-Level Layer</h3><ul class="clean-list"><li>Jetson Orin Nano Super 8GB</li><li>Ubuntu / Jetson environment</li><li>ROS 2 Humble</li><li>Camera / YOLO integration in progress</li></ul></article>
+        <article class="spec-card"><span class="mono">AUTONOMY</span><h3>Integration Roadmap</h3><ul class="clean-list"><li>LiDAR integration in progress</li><li>SLAM and localization in progress</li><li>Nav2 and obstacle avoidance in progress</li><li>Autonomous navigation not yet complete</li></ul></article>
     </div>
 
-    <!-- ROW 3: TEAM SYNERGY (4 PICS) -->
-    <div class="full-row">
-        <h2 class="section-title mono">03_TEAM_PERSONNEL</h2>
-        <div class="img-row">
-            <img src="images/robotics_1.jpg" alt="Team 1">
-            <img src="images/robotics_2.jpg" alt="Team 2">
-            <img src="images/robotics_3.jpg" alt="Team 3">
-            <img src="images/teammember.png" alt="Team Member">
-        </div>
+    <div class="engineering-note">
+        <span class="mono">WHY_THIS_PROJECT_MATTERS</span>
+        <p>The platform gives me one system on which to learn mechanical design, power and motor integration, encoder feedback, embedded programming, Linux deployment, ROS 2, perception, and autonomy. It is intentionally not tied to a single end use.</p>
     </div>
 
-    <!-- ROW 4: SOCIAL CONNECT -->
-    <div class="full-row">
-        <h2 class="section-title mono">04_SOCIAL_CONNECT</h2>
-        <div class="split-row">
-            <!-- INSTAGRAM POST -->
-            <div class="card" style="padding: 15px; border-bottom: 3px solid var(--accent-pink);">
-                <div style="display: flex; justify-content: center; overflow: hidden; border-radius: 12px;">
-                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DS7xWzIkqur/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
-                        <div style="padding:16px;"> 
-                            <a href="https://www.instagram.com/p/DS7xWzIkqur/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
-                                <div style="padding-top: 8px;"> 
-                                    <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div>
-                                </div>
-                            </a>
-                        </div>
-                    </blockquote>
-                    <script async src="https://www.instagram.com/embed.js"></script>
-                </div>
-            </div>
-
-            <!-- INSTAGRAM PROFILE CARD -->
-            <div class="card featured pink-border" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                <div class="mono accent" style="font-size: 0.8rem; margin-bottom: 20px;">[ PROFILE_ACCESS ]</div>
-                <h3>Visit @23083_wego_robotics</h3>
-                <p style="margin-bottom: 30px;">Follow our team for more competition updates and build logs.</p>
-                <a href="https://www.instagram.com/23083_wego_robotics/" target="_blank" class="btn">VIEW_INSTAGRAM_PROFILE</a>
-            </div>
+    <h2 class="section-title mono spaced-title" id="vex">02_VEX_ROBOTICS</h2>
+    <article class="card vex-overview">
+        <div>
+            <div class="project-meta mono"><span>PROGRAMMER / BUILDER</span><span>WEGO ROBOTICS</span></div>
+            <h3>Competition robotics under real constraints</h3>
+            <p>In VEX Robotics, I worked across programming and building. I used C++ and PROS for robot programming and contributed to mechanism assembly and modification. My technical experience includes PID, odometry, repeated testing, tuning, and engineering design iteration.</p>
+            <p>Competition work taught me that an idea is only useful when the mechanism, code, timing, and driver needs all work together reliably.</p>
+            <p><strong>Team recognition:</strong> VEX Create Award and VEX Sportsmanship Award.</p>
+            <a href="https://23083z.com/#home" target="_blank" rel="noopener" class="btn">OPEN TEAM WEBSITE</a>
         </div>
+        <img src="images/teammember.png" alt="Wego Robotics team members">
+    </article>
+
+    <h2 class="section-title mono spaced-title">03_BUILD_&amp;_TEST_PROCESS</h2>
+    <div class="spec-card-grid">
+        <article class="spec-card"><span class="mono">PROGRAM</span><h3>C++ / PROS</h3><p>Translate match objectives into driver-control and autonomous routines.</p></article>
+        <article class="spec-card"><span class="mono">CONTROL</span><h3>PID / Odometry</h3><p>Develop and tune movement behavior using feedback and position estimates.</p></article>
+        <article class="spec-card"><span class="mono">BUILD</span><h3>Mechanism Iteration</h3><p>Assemble and modify mechanisms as the design and strategy change.</p></article>
+        <article class="spec-card"><span class="mono">VERIFY</span><h3>Repeated Testing</h3><p>Test the complete robot, identify unreliable behavior, and refine the system.</p></article>
+    </div>
+    <div class="social-row">
+        <p>More team updates and build logs are available from Wego Robotics.</p>
+        <a href="https://www.instagram.com/23083_wego_robotics/" target="_blank" rel="noopener" class="text-link mono">VISIT @23083_WEGO_ROBOTICS →</a>
     </div>
 </section>
+</main>
 
-<footer style="text-align: center; padding: 40px; color: var(--text-secondary); font-size: 0.8rem;" class="mono">
-    &copy; 2026 BENJAMIN SUNG | BUILT_WITH_GEMINI_CLI
-</footer>
-
+<footer class="site-footer mono">&copy; 2026 BENJAMIN SUNG | PERSONAL ENGINEERING PORTFOLIO</footer>
 <script>
-    // CUSTOM CURSOR LOGIC
-    const dot = document.getElementById('cursor-dot');
-    const outline = document.getElementById('cursor-outline');
-
-    window.addEventListener('mousemove', (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
-        dot.style.left = `${posX}px`;
-        dot.style.top = `${posY}px`;
-        outline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    });
-
-    // CLOCK LOGIC
-    function updateClock() {
-        const now = new Date();
-        const clockEl = document.getElementById('clock');
-        if (clockEl) {
-            clockEl.innerText = now.toLocaleTimeString('en-GB', { hour12: false });
-        }
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
+    const dot = document.getElementById('cursor-dot'); const outline = document.getElementById('cursor-outline');
+    window.addEventListener('mousemove', (event) => { dot.style.left = `${event.clientX}px`; dot.style.top = `${event.clientY}px`; outline.animate({ left: `${event.clientX}px`, top: `${event.clientY}px` }, { duration: 500, fill: 'forwards' }); });
+    function updateClock() { const clock = document.getElementById('clock'); if (clock) clock.innerText = new Date().toLocaleTimeString('en-GB', { hour12: false }); }
+    setInterval(updateClock, 1000); updateClock();
 </script>
-
 </body>
 </html>
