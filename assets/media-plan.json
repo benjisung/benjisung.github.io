@@ -246,10 +246,10 @@
       "section": "AMR / Compute & control",
       "content": "Close view of the mounted Jetson board, fan and connectors",
       "orientation": "Landscape 16:9 or native aspect",
-      "crop": "contain; show full evidence",
+      "crop": "100px cropped from the left of the 1600px image to omit the chassis-order sticker; hardware unchanged; contain",
       "type": "technical",
       "priority": "High",
-      "current": "portfolio-assets/amr/jetson-detail.webp",
+      "current": "portfolio-assets/amr/jetson-detail-cropped.webp",
       "plannedPath": "portfolio-assets/amr/amr-jetson-stm32.png",
       "source": "images/amr/jetson  but the case is kind broken.jpg",
       "caption": "Compute detail · Jetson shown; STM32 detail still needed"
