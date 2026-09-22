@@ -1,62 +1,305 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Benjamin Sung's academic, robotics, and science recognitions.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Benjamin Sung's academic recognition and team engineering awards."
+    />
+    <meta name="theme-color" content="#25272c" />
     <title>Honors | Benjamin Sung</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-<div id="cursor-dot"></div><div id="cursor-outline"></div><div class="rgb-mesh"></div>
-<nav>
-    <div class="nav-brand"><img src="images/benjaminlogo.png" alt="Benjamin Sung logo" class="nav-logo"><h1>BENJAMIN_SUNG &gt;_</h1></div>
-    <ul>
-        <li><a href="index.html">HOME</a></li><li><a href="about.html">ABOUT</a></li><li><a href="activities.html">ACTIVITIES</a></li><li><a href="honors.html" class="active">HONORS</a></li><li><a href="robotics.html">ROBOTICS</a></li><li><a href="funfacts.html">FUN FACTS</a></li><li><a href="contact.html">CONTACT</a></li>
-    </ul>
-    <div class="nav-time mono" id="clock">00:00:00</div>
-</nav>
-
-<main>
-<section>
-    <div class="page-intro"><p class="mono accent">// ACADEMIC + ENGINEERING RECOGNITION</p><h2>Honors grounded in <span class="accent">coursework and projects</span></h2><p>These results support the analytical, scientific, and collaborative foundations of my engineering work.</p></div>
-    <h2 class="section-title mono">01_ACADEMIC_HONORS</h2>
-    <div class="grid honor-grid">
-        <article class="card honor-card">
-            <div class="logo-display"><img src="images/usaco.png" alt="USA Computing Olympiad logo"></div>
-            <div class="eyebrow mono">[ COMPETITIVE PROGRAMMING ]</div><h3>USACO Gold Division</h3><p>Advanced to the Gold Division of the USA Computing Olympiad through algorithmic problem solving in C++.</p>
-        </article>
-        <article class="card honor-card">
-            <div class="logo-display"><img src="images/amc.png" alt="American Mathematics Competitions logo"></div>
-            <div class="eyebrow mono">[ MATHEMATICS ]</div><h3>AMC 12 &amp; AIME</h3><p><strong>AMC 12:</strong> 121.5 / 150<br><strong>AIME:</strong> 9 / 15</p>
-        </article>
-        <article class="card honor-card">
-            <div class="logo-display dual-logos"><img src="images/usabo.png" alt="USA Biology Olympiad logo"><img src="images/bbo.png" alt="British Biology Olympiad logo"></div>
-            <div class="eyebrow mono">[ BIOLOGY ]</div><h3>USABO &amp; BBO</h3><p><strong>USABO Semifinalist</strong><br><strong>British Biology Olympiad Gold</strong></p>
-        </article>
-        <article class="card honor-card">
-            <div class="logo-display"><img src="images/wego.png" alt="Wego High School logo"></div>
-            <div class="eyebrow mono">[ SCHOOL RECOGNITION ]</div><h3>High Honor / Honor Roll</h3><p>Received High Honor and Honor Roll recognition across multiple semesters in the Wego High School IEP.</p>
-        </article>
-    </div>
-
-    <h2 class="section-title mono spaced-title">02_ENGINEERING_&amp;_SCIENCE_AWARDS</h2>
-    <div class="grid">
-        <article class="card"><div class="logo-display dual-logos"><img src="images/wego robotics.png" alt="Wego Robotics logo"><img src="images/reaper.png" alt="Reaper team logo"></div><div class="eyebrow mono">[ VEX ROBOTICS ]</div><h3>Create Award</h3><p>Received the VEX Create Award as part of the Wego Robotics team.</p></article>
-        <article class="card"><div class="logo-display dual-logos"><img src="images/wego robotics.png" alt="Wego Robotics logo"><img src="images/reaper.png" alt="Reaper team logo"></div><div class="eyebrow mono">[ VEX ROBOTICS ]</div><h3>Sportsmanship Award</h3><p>Received the VEX Sportsmanship Award as part of the Wego Robotics team.</p></article>
-        <article class="card"><div class="logo-display"><img src="images/threemin.png" alt="3-Minute Science Competition"></div><div class="eyebrow mono">[ SCIENCE COMMUNICATION ]</div><h3>3-Minute Science Gold Award</h3><p>Gold Award for presenting SDG-focused science and engineering project work.</p></article>
-        <article class="card"><div class="eyebrow mono">[ ENVIRONMENTAL PROJECT ]</div><h3>2024 Ocean Challenge Finalist</h3><p>Finalist recognition connected to an early environmental engineering project.</p></article>
-    </div>
-</section>
-</main>
-
-<footer class="site-footer mono">&copy; 2026 BENJAMIN SUNG | PERSONAL ENGINEERING PORTFOLIO</footer>
-<script>
-    const dot = document.getElementById('cursor-dot'); const outline = document.getElementById('cursor-outline');
-    window.addEventListener('mousemove', (event) => { dot.style.left = `${event.clientX}px`; dot.style.top = `${event.clientY}px`; outline.animate({ left: `${event.clientX}px`, top: `${event.clientY}px` }, { duration: 500, fill: 'forwards' }); });
-    function updateClock() { const clock = document.getElementById('clock'); if (clock) clock.innerText = new Date().toLocaleTimeString('en-GB', { hour12: false }); }
-    setInterval(updateClock, 1000); updateClock();
-</script>
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cinematic.css" />
+    <link rel="stylesheet" href="chapters.css" />
+    <link rel="stylesheet" href="stories.css" />
+    <script src="site.js" defer></script>
+    <script src="chapters.js" defer></script>
+    <script src="stories.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Benjamin Sung, home"
+        >BS<span class="brand-dot">.</span
+        ><span class="brand-name">Benjamin Sung</span></a
+      ><button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        hidden
+      >
+        Menu <span aria-hidden="true">+</span>
+      </button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="about.html">About</a
+        ><a href="environment.html">Environment</a
+        ><a href="research.html">AI / Research</a
+        ><a href="robotics.html">Robotics</a
+        ><a href="activities.html">Activities</a
+        ><a href="honors.html" aria-current="page">Honors</a
+        ><a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="detail-hero wrap photo-heading heading-honors">
+        <div class="heading-photograph" data-asset-key="sdg-championship">
+          <img
+            class=""
+            src="portfolio-assets/sdg/championship.webp"
+            alt="SDG team receiving their science competition award"
+            fetchpriority="high"
+            width="1200"
+            height="800"
+          />
+        </div>
+        <p class="eyebrow">Honors / Academic &amp; project recognition</p>
+        <h1>Foundations<br />behind the work.</h1>
+        <p class="large-copy">
+          Recognition in mathematics, programming, biology, and team engineering
+          supports the analytical and collaborative foundations of my projects.
+        </p>
+      </section>
+      <section class="detail-section wrap atmospheric honors-atmosphere">
+        <p class="eyebrow section-label">
+          <span>01</span> Academic recognition
+        </p>
+        <h2>Problem solving<br />across disciplines.</h2>
+        <div class="honor-list">
+          <div>
+            <div class="honor-identity">
+              <div class="context-badges">
+                <span class="context-badge" data-asset-key="logo-usaco"
+                  ><img
+                    class=""
+                    src="portfolio-assets/logos/usaco.webp"
+                    alt="USA Computing Olympiad logo"
+                    loading="lazy"
+                    width="480"
+                    height="480"
+                  /><span>USA Computing Olympiad</span></span
+                >
+              </div>
+              <h3>USACO</h3>
+            </div>
+            <span class="honor-result">Gold Division</span>
+            <p>USA Computing Olympiad · C++ and algorithmic problem solving</p>
+          </div>
+          <div>
+            <div class="honor-identity">
+              <div data-asset-key="logo-amc">
+                <img
+                  class="honor-logo"
+                  src="portfolio-assets/logos/amc.webp"
+                  alt="American Mathematics Competitions logo"
+                  loading="lazy"
+                />
+              </div>
+              <h3>AMC 12</h3>
+            </div>
+            <span class="honor-result">121.5 / 150</span>
+            <p>American Mathematics Competitions</p>
+          </div>
+          <div>
+            <div class="honor-identity">
+              <div data-asset-key="logo-amc">
+                <img
+                  class="honor-logo"
+                  src="portfolio-assets/logos/amc.webp"
+                  alt="American Mathematics Competitions logo"
+                  loading="lazy"
+                />
+              </div>
+              <h3>AIME</h3>
+            </div>
+            <span class="honor-result">9 / 15</span>
+            <p>American Invitational Mathematics Examination</p>
+          </div>
+          <div>
+            <div class="honor-identity">
+              <div data-asset-key="logo-usabo">
+                <img
+                  class="honor-logo"
+                  src="portfolio-assets/logos/usabo.webp"
+                  alt="USA Biology Olympiad logo"
+                  loading="lazy"
+                />
+              </div>
+              <h3>USABO</h3>
+            </div>
+            <span class="honor-result">Semifinalist</span>
+            <p>USA Biology Olympiad</p>
+          </div>
+          <div>
+            <div class="honor-identity">
+              <div data-asset-key="logo-bbo">
+                <img
+                  class="honor-logo"
+                  src="portfolio-assets/logos/bbo.webp"
+                  alt="British Biology Olympiad logo"
+                  loading="lazy"
+                />
+              </div>
+              <h3>BBO</h3>
+            </div>
+            <span class="honor-result">Gold</span>
+            <p>British Biology Olympiad</p>
+          </div>
+          <div>
+            <div class="honor-identity">
+              <div data-asset-key="logo-wego">
+                <img
+                  class="honor-logo"
+                  src="portfolio-assets/logos/wego.webp"
+                  alt="Wego High School logo"
+                  loading="lazy"
+                />
+              </div>
+              <h3>School recognition</h3>
+            </div>
+            <span class="honor-result">High Honor / Honor Roll</span>
+            <p>Multiple semesters · Wego High School International Program</p>
+          </div>
+        </div>
+      </section>
+      <section class="detail-section tinted">
+        <div class="wrap">
+          <p class="eyebrow section-label">
+            <span>02</span> Engineering &amp; science
+          </p>
+          <h2>Projects are<br />collaborative work.</h2>
+          <div class="honor-list">
+            <div>
+              <div class="honor-identity">
+                <div data-asset-key="logo-reaper">
+                  <img
+                    class="honor-logo"
+                    src="portfolio-assets/logos/reaper.webp"
+                    alt="Reaper team logo"
+                    loading="lazy"
+                  />
+                </div>
+                <h3>VEX Robotics</h3>
+              </div>
+              <span class="honor-result">Create Award</span>
+              <p>Team recognition · Wego Robotics</p>
+            </div>
+            <div>
+              <div class="honor-identity">
+                <div data-asset-key="logo-reaper">
+                  <img
+                    class="honor-logo"
+                    src="portfolio-assets/logos/reaper.webp"
+                    alt="Reaper team logo"
+                    loading="lazy"
+                  />
+                </div>
+                <h3>VEX Robotics</h3>
+              </div>
+              <span class="honor-result">Sportsmanship Award</span>
+              <p>Team recognition · Wego Robotics</p>
+            </div>
+            <div>
+              <h3>3-Minute Science</h3>
+              <span class="honor-result">National champions · Gold Award</span>
+              <p>
+                Our team won the national championship in the 3-Minute Science
+                Competition, receiving the Gold Award for our science
+                communication.
+              </p>
+            </div>
+            <div>
+              <h3>2024 Ocean Challenge</h3>
+              <span class="honor-result">Finalist</span>
+              <p>Environmental engineering project</p>
+            </div>
+          </div>
+          <a class="text-link" href="activities.html"
+            >See the work behind the recognition <span>↗</span></a
+          >
+        </div>
+      </section>
+      <section class="detail-section wrap">
+        <p class="eyebrow">Shared recognition</p>
+        <div class="story-photo-grid">
+          <figure class="photo-story" data-asset-key="sdg-award-speech">
+            <img
+              class=""
+              src="portfolio-assets/sdg/award-speech.webp"
+              alt="Benjamin speaking with his teammates after their science competition award"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <figcaption>
+              3-Minute Science Competition / A team achievement
+            </figcaption>
+          </figure>
+          <figure class="photo-story" data-asset-key="vex-all-team">
+            <img
+              class=""
+              src="portfolio-assets/vex/all-team.webp"
+              alt="The full Reaper 23083Z team with its competition robot"
+              loading="lazy"
+              width="1477"
+              height="1108"
+            />
+            <figcaption>Robotics recognition belongs to the team</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="detail-section wrap source-links">
+        <p class="eyebrow">Official competition references</p>
+        <p>
+          About the competitions—not independent verification of my results.
+        </p>
+        <a href="https://usaco.org/" target="_blank" rel="noopener noreferrer"
+          >USACO ↗</a
+        ><a
+          href="https://maa.org/student-programs/amc/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >AMC ↗</a
+        ><a
+          href="https://maa.org/maa-invitational-competitions/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >AIME ↗</a
+        ><a
+          href="https://ukbiologycompetitions.org/british-biology-olympiad/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >BBO ↗</a
+        >
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <div>
+        <a class="footer-name" href="index.html"
+          >Benjamin Sung<span class="accent">.</span></a
+        >
+        <p>
+          Chi-Hsuan Sung · 宋其軒<br />Wego High School International Program ·
+          Taiwan
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a
+        ><a href="mailto:benjisung@gmail.com">benjisung@gmail.com ↗</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Benjamin Sung</span
+        ><span>Still learning. Still building.</span
+        ><button
+          type="button"
+          class="motion-toggle"
+          aria-pressed="false"
+          hidden
+        >
+          Reduce motion</button
+        ><a href="#main">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,127 +1,1055 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Benjamin Sung's engineering portfolio: environmental monitoring, mechanical systems, robotics, computer vision, and computational problem solving.">
-    <title>Benjamin Sung | Engineering Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-<div id="cursor-dot"></div>
-<div id="cursor-outline"></div>
-<div id="loader">
-    <div class="loader-content">
-        <div class="boot-text">INITIALIZING_SYSTEM...</div>
-        <div class="boot-text" style="animation-delay: 0.5s;">LOADING_PROJECT_LOG...</div>
-        <div class="boot-text" style="animation-delay: 1s;">BENJAMIN_PORTFOLIO_v3.0</div>
-        <div class="progress-bar-wrap"><div class="progress-bar-fill"></div></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Benjamin Sung · Chi-Hsuan Sung · 宋其軒. Building systems that understand and interact with the physical, environmental, and biological world."
+    />
+    <meta name="theme-color" content="#25272c" />
+    <title>Personal Engineering Portfolio | Benjamin Sung</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cinematic.css" />
+    <link rel="stylesheet" href="chapters.css" />
+    <link rel="stylesheet" href="stories.css" />
+    <link
+      rel="preload"
+      href="assets/fonts/SpaceGrotesk-Variable.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <script src="intro.js" defer></script>
+    <script src="site.js" defer></script>
+    <script src="chapters.js" defer></script>
+    <script src="stories.js" defer></script>
+    <script src="cinematic.js" defer></script>
+  </head>
+  <body class="portfolio-home">
+    <div class="intro-overlay" hidden>
+      <div class="intro-words" aria-hidden="true">
+        <p class="intro-greeting">Hello</p>
+        <div class="intro-identity">
+          <p lang="zh-Hant">我是宋其軒。</p>
+          <p>Benjamin Sung</p>
+          <small>Chi-Hsuan Sung</small>
+        </div>
+      </div>
+      <button class="intro-skip" type="button">
+        Skip introduction <span aria-hidden="true">↗</span>
+      </button>
     </div>
-</div>
-<div class="rgb-mesh"></div>
-
-<nav>
-    <div class="nav-brand">
-        <img src="images/benjaminlogo.png" alt="Benjamin Sung logo" class="nav-logo">
-        <h1>BENJAMIN_SUNG &gt;_</h1>
-    </div>
-    <ul>
-        <li><a href="index.html" class="active">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="activities.html">ACTIVITIES</a></li>
-        <li><a href="honors.html">HONORS</a></li>
-        <li><a href="robotics.html">ROBOTICS</a></li>
-        <li><a href="funfacts.html">FUN FACTS</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-    </ul>
-    <div class="nav-time mono" id="clock">00:00:00</div>
-</nav>
-
-<header class="hero">
-    <div class="mono silver" style="margin-bottom: 10px;">// GRADE_12_ENGINEERING_PORTFOLIO</div>
-    <h2>BUILDING FOR THE <span class="accent">PHYSICAL WORLD</span></h2>
-    <p class="silver hero-positioning">Environmental + Mechanical Engineering | Robotics + AI | Environmental Monitoring</p>
-    <p class="hero-intro">I explore how sensing, computation, and mechanical systems can work together—from coral conservation and fish monitoring to mobile robots.</p>
-    <div class="personality-chip">
-        <img src="images/dallasmavericks.png" alt="Dallas Mavericks logo">
-        <span class="mono">MFFL_STATUS: ACTIVE</span>
-    </div>
-    <div style="margin-top: 40px;"><a href="activities.html" class="btn">EXPLORE PROJECTS</a></div>
-</header>
-
-<main>
-    <section>
-        <h2 class="section-title mono">01_CORE_FOCUS</h2>
-        <div class="grid focus-grid">
-            <article class="card focus-card">
-                <img src="images/hawaiivisit.png" alt="Learning about coral propagation at HIMB" class="card-media">
-                <div class="eyebrow mono">[ ENVIRONMENTAL_SYSTEMS ]</div>
-                <h3>Marine Conservation &amp; Environmental Monitoring</h3>
-                <p>Completed the Taiwan Global Pathfinders program with training at NMMBA and HIMB, learning how coral science, water-quality sensing, mapping, GIS, and AI can support conservation.</p>
-                <a href="activities.html#pathfinders" class="text-link mono">VIEW EXPERIENCE →</a>
-            </article>
-            <article class="card focus-card">
-                <div class="system-icon" aria-hidden="true">AMR</div>
-                <div class="eyebrow mono">[ MECHATRONICS_PLATFORM ]</div>
-                <h3>Autonomous Mobile Robot Development Platform</h3>
-                <p>An assembled 24V differential-drive platform connecting motors, encoders, STM32 control, Jetson compute, and ROS 2. LiDAR, SLAM, Nav2, and vision integration are in progress.</p>
-                <a href="robotics.html#amr" class="text-link mono">VIEW TECHNICAL DETAILS →</a>
-            </article>
-            <article class="card focus-card">
-                <div class="system-icon cyan-icon" aria-hidden="true">CV</div>
-                <div class="eyebrow mono">[ COMPUTER_VISION ]</div>
-                <h3>AI Fish Detection</h3>
-                <p>Extended a summer 2026 NYCU lab experience into an independent school aquarium system, improving a YOLO model after deployment revealed domain-shift and false-positive problems.</p>
-                <a href="activities.html#fish-detection" class="text-link mono">VIEW ITERATION LOG →</a>
-            </article>
-            <article class="card focus-card">
-                <div class="logo-display compact-logos">
-                    <img src="images/wego robotics.png" alt="Wego Robotics logo">
-                    <img src="images/usaco.png" alt="USACO logo">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Benjamin Sung, home"
+        >BS<span class="brand-dot">.</span
+        ><span class="brand-name">Benjamin Sung</span></a
+      ><button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        hidden
+      >
+        Menu <span aria-hidden="true">+</span>
+      </button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a
+        ><a href="about.html">About</a><a href="environment.html">Environment</a
+        ><a href="research.html">AI / Research</a
+        ><a href="robotics.html">Robotics</a
+        ><a href="activities.html">Activities</a><a href="honors.html">Honors</a
+        ><a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="cinema-hero" aria-labelledby="hero-title">
+        <div class="hero-scene" data-asset-key="hero-conversation">
+          <img
+            src="portfolio-assets/portrait/himb-conversation.webp"
+            alt="Benjamin speaking with a marine expert at HIMB"
+            width="2000"
+            height="1392"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-coordinate eyebrow">
+          Personal portfolio / 2026<br />Taiwan → The real world
+        </div>
+        <div class="hero-subject" data-asset-key="hero-cutout">
+          <img
+            src="portfolio-assets/portrait/benjamin-cutout.webp"
+            alt=""
+            width="1060"
+            height="1484"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow hero-kicker">
+            <span class="signal-dot"></span> Hello, I’m Benjamin
+          </p>
+          <h1 id="hero-title" tabindex="-1">
+            Benjamin<br /><span>Sung.</span>
+          </h1>
+          <p class="hero-legal">
+            Chi-Hsuan Sung <span lang="zh-Hant">/ 宋其軒</span>
+          </p>
+          <p class="hero-manifesto">Code meets<br />the real world.</p>
+          <p class="hero-description">
+            I build systems that sense, understand,<br class="desktop-break" />
+            and interact with the world around us.
+          </p>
+          <a class="pill-link" href="#project-field"
+            >Explore my work <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="hero-bottom">
+          <span class="eyebrow"
+            >Wego High School International Program · Grade 12</span
+          ><span class="eyebrow">Scroll to discover ↓</span>
+        </div>
+        <a
+          class="hero-original"
+          href="portfolio-assets/portrait/himb-conversation.webp"
+          >HIMB / View original photograph ↗</a
+        >
+      </section>
+      <nav class="chapter-nav" aria-label="Homepage projects">
+        <a href="#project-field"><span>01</span>Pathfinders</a
+        ><a href="#project-vision"><span>02</span>Fish AI</a
+        ><a href="#project-robot"><span>03</span>AMR</a
+        ><a href="#project-vex"><span>04</span>VEX Robotics</a
+        ><a href="#project-sdg"><span>05</span>SDG Engineering</a>
+      </nav>
+      <section
+        class="project-story story-ocean"
+        id="project-field"
+        data-chapter="01"
+        aria-labelledby="project-field-title"
+      >
+        <span class="legacy-anchor" id="environment"></span>
+        <div class="story-shell">
+          <header class="story-heading">
+            <p class="story-number">01<span> / 05</span></p>
+            <h2 id="project-field-title">Pathfinders</h2>
+            <span class="story-kind">Scroll to unfold ↓</span>
+          </header>
+          <div class="story-scenes">
+            <article
+              class="story-scene scene-route"
+              id="field-route"
+              aria-labelledby="field-route-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Taiwan → Hawaiʻi</p>
+                <h3 id="field-route-title">
+                  A wider<br />
+                  field of view.
+                </h3>
+                <p class="scene-description">
+                  An independently prepared proposal became a learning
+                  journey—from NMMBA preparation in Taiwan to HIMB on Moku o
+                  Loʻe.
+                </p>
+                <div class="route-island-thumbnail">
+                  <figure class="" data-asset-key="moku-o-loe">
+                    <img
+                      class=""
+                      src="portfolio-assets/pathfinders/moku-o-loe.webp"
+                      alt="Official HIMB image of Moku o Loʻe / Coconut Island; institutional reference, not Benjamin’s photograph"
+                      loading="lazy"
+                    />
+                    <figcaption>
+                      Moku o Loʻe / Coconut Island ·
+                      <a
+                        href="https://www.himb.hawaii.edu/who-we-are/moku-o-loe/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Official HIMB image &amp; island story ↗</a
+                      >
+                    </figcaption>
+                  </figure>
                 </div>
-                <div class="eyebrow mono">[ BUILD + COMPUTE ]</div>
-                <h3>Robotics &amp; Computational Problem Solving</h3>
-                <p>VEX building and C++ programming, PID and odometry testing, plus algorithm training through USACO Gold and the SPROUT program.</p>
-                <a href="robotics.html#vex" class="text-link mono">VIEW ROBOTICS WORK →</a>
+              </div>
+              <div class="scene-media route-map-media">
+                <div
+                  class="island-route pacific-route"
+                  aria-label="Pacific map showing Taiwan and Moku o Loʻe near Oʻahu, Hawaiʻi, connected by an illustrative journey route."
+                >
+                  <svg
+                    viewBox="0 0 900 450"
+                    role="img"
+                    aria-label="Taiwan to Moku o Loʻe across the Pacific Ocean"
+                  >
+                    <image
+                      href="assets/pacific-map.svg"
+                      width="900"
+                      height="450"
+                    />
+                    <path
+                      class="route-track"
+                      d="M130.3 239.4 Q370 80 634.4 253.6"
+                    />
+                    <path
+                      class="route-flight"
+                      pathLength="1"
+                      d="M130.3 239.4 Q370 80 634.4 253.6"
+                    />
+                    <circle class="map-halo" cx="130.3" cy="239.4" r="17" />
+                    <circle class="map-pin" cx="130.3" cy="239.4" r="6" />
+                    <circle class="map-halo" cx="634.4" cy="253.6" r="17" />
+                    <circle class="map-pin" cx="634.4" cy="253.6" r="6" />
+                    <path
+                      class="route-plane"
+                      d="M-12 0L10 -4L4 2L-3 10L-4 3Z"
+                    />
+                    <g class="map-label">
+                      <text x="105" y="278" text-anchor="end">TAIWAN</text>
+                      <text x="650" y="288">HAWAIʻI</text>
+                      <text class="map-destination" x="650" y="316">
+                        Moku o Loʻe
+                      </text>
+                      <text class="map-small" x="650" y="338">
+                        Coconut Island · HIMB
+                      </text>
+                    </g>
+                  </svg>
+                  <p class="map-credit">
+                    Coastlines:
+                    <a
+                      href="https://www.naturalearthdata.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Natural Earth</a
+                    >
+                    · Illustrative journey, not a flight itinerary. Island
+                    marker enlarged for visibility.
+                  </p>
+                </div>
+              </div>
             </article>
+            <article
+              class="story-scene"
+              id="field-learning"
+              aria-labelledby="field-learning-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">NMMBA → HIMB</p>
+                <h3 id="field-learning-title">
+                  Learn close.<br />
+                  Look closer.
+                </h3>
+                <p class="scene-description">
+                  Coral identification, nursery care and environmental
+                  observation. Learning methods in context—not claiming original
+                  research findings.
+                </p>
+              </div>
+              <div class="scene-media media-pair">
+                <figure class="" data-asset-key="nmmba-training">
+                  <img
+                    class=""
+                    src="portfolio-assets/pathfinders/nmmba-coral.webp"
+                    alt="Coral photographed by Benjamin during NMMBA preparatory learning"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    My coral photograph / NMMBA preparation
+                  </figcaption>
+                </figure>
+                <figure class="" data-asset-key="pathfinders-hero">
+                  <img
+                    class=""
+                    src="portfolio-assets/pathfinders/coral-learning.webp"
+                    alt="Benjamin listening beside outdoor coral tanks during a marine learning session"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Learning beside the coral tanks / HIMB
+                  </figcaption>
+                </figure>
+              </div>
+            </article>
+            <article
+              class="story-scene"
+              id="field-diving"
+              aria-labelledby="field-diving-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Below the surface</p>
+                <h3 id="field-diving-title">
+                  18 metres.<br />
+                  A new perspective.
+                </h3>
+                <p class="scene-description">
+                  Diving with a friend and earning PADI Open Water certification
+                  added another way to experience the marine environment.
+                </p>
+              </div>
+              <div class="scene-media media-pair dive-pair">
+                <figure class="" data-asset-key="diving-18m">
+                  <img
+                    class=""
+                    src="portfolio-assets/pathfinders/diving-18m.webp"
+                    alt="Benjamin and a friend diving at 18 metres"
+                    loading="lazy"
+                  />
+                  <figcaption>Underwater at 18 m</figcaption>
+                </figure>
+                <figure class="" data-asset-key="padi-certification">
+                  <img
+                    class=""
+                    src="portfolio-assets/pathfinders/padi-certification.webp"
+                    alt="Benjamin receiving his PADI Open Water Diver certificate"
+                    loading="lazy"
+                  />
+                  <figcaption>PADI Open Water Diver</figcaption>
+                </figure>
+              </div>
+            </article>
+            <article
+              class="story-scene scene-conference"
+              id="field-hcc"
+              aria-labelledby="field-hcc-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Hawaii Conservation Conference</p>
+                <h3 id="field-hcc-title">
+                  Beyond<br />
+                  the reef.
+                </h3>
+                <p class="scene-description">
+                  Lectures and conservation organizations connected field
+                  learning with the people working to protect these ecosystems.
+                </p>
+              </div>
+              <div
+                class="scene-media media-pair"
+                role="group"
+                aria-label="HCC photographs; swipe horizontally on a phone to see both photographs"
+                tabindex="0"
+              >
+                <figure class="" data-asset-key="hcc">
+                  <img
+                    class=""
+                    src="portfolio-assets/pathfinders/hcc-lectures.webp"
+                    alt="A lecture at the Hawaii Conservation Conference"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Listening / Conference lectures · Swipe for more ↔
+                  </figcaption>
+                </figure>
+                <figure class="" data-asset-key="hcc-exhibition">
+                  <img
+                    class=""
+                    src="portfolio-assets/pathfinders/hcc-exhibition.webp"
+                    alt="Conservation organizations in the HCC exhibition area"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Connecting / Conservation organizations
+                  </figcaption>
+                </figure>
+              </div>
+            </article>
+          </div>
+          <footer class="story-controls">
+            <nav class="scene-steps" aria-label="Pathfinders stages">
+              <a
+                href="#field-route"
+                aria-label="Pathfinders: Taiwan → Hawaiʻi"
+                aria-current="step"
+                ><span>01</span><span class="step-label">Discover</span></a
+              ><a href="#field-learning" aria-label="Pathfinders: NMMBA → HIMB"
+                ><span>02</span><span class="step-label">Explore</span></a
+              ><a
+                href="#field-diving"
+                aria-label="Pathfinders: Below the surface"
+                ><span>03</span><span class="step-label">Reflect</span></a
+              ><a
+                href="#field-hcc"
+                aria-label="Pathfinders: Hawaii Conservation Conference"
+                ><span>04</span><span class="step-label">Connect</span></a
+              >
+            </nav>
+            <a class="story-cta" href="environment.html"
+              >Open the field notebook <span>↗</span></a
+            >
+          </footer>
+          <div class="story-progress" aria-hidden="true"></div>
         </div>
-    </section>
-
-    <section class="status-section">
-        <h2 class="section-title mono">02_FOUNDATIONS</h2>
-        <div class="evidence-grid">
-            <div class="evidence-item"><strong>USACO Gold</strong><span>Algorithms &amp; problem solving</span></div>
-            <div class="evidence-item"><strong>AMC 12: 121.5</strong><span>AIME: 9 / 15</span></div>
-            <div class="evidence-item"><strong>USABO Semifinalist</strong><span>BBO Gold</span></div>
-            <div class="evidence-item"><strong>Completed</strong><span>Taiwan Global Pathfinders · approx. NT$280,000 funding</span></div>
+      </section>
+      <section
+        class="project-story story-vision"
+        id="project-vision"
+        data-chapter="02"
+        aria-labelledby="project-vision-title"
+      >
+        <span class="legacy-anchor" id="vision"></span>
+        <div class="story-shell">
+          <header class="story-heading">
+            <p class="story-number">02<span> / 05</span></p>
+            <h2 id="project-vision-title">Fish AI</h2>
+            <span class="story-kind">Scroll to unfold ↓</span>
+          </header>
+          <div class="story-scenes">
+            <article
+              class="story-scene"
+              id="vision-question"
+              aria-labelledby="vision-question-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Independent computer vision</p>
+                <h3 id="vision-question-title">
+                  Seeing isn’t<br />
+                  understanding.
+                </h3>
+                <p class="scene-description">
+                  Real aquarium footage. Eight classes. A model improved by
+                  looking carefully at its errors.
+                </p>
+                <div class="scene-tags">
+                  <span>419 images</span><span>~5,100 boxes</span
+                  ><span>8 classes</span>
+                </div>
+              </div>
+              <div class="scene-media technical-scene">
+                <figure class="" data-asset-key="fish-raw">
+                  <img
+                    class=""
+                    src="portfolio-assets/fish-ai/raw-0010.webp"
+                    alt="Full aquarium frame at the same source timestamp used in the v1 and v2 examples"
+                    loading="lazy"
+                  />
+                  <figcaption>Original aquarium frame / 00:10</figcaption>
+                </figure>
+              </div>
+            </article>
+            <article
+              class="story-scene"
+              id="vision-compare"
+              aria-labelledby="vision-compare-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Compare / Drag the divider</p>
+                <h3 id="vision-compare-title">
+                  Same frame.<br />
+                  Better detection.
+                </h3>
+                <p class="scene-description">
+                  Move the divider to compare the baseline and adapted model.
+                  This is a qualitative example, not the frozen evaluation set.
+                </p>
+              </div>
+              <div class="scene-media comparison-scene">
+                <div class="comparison-block">
+                  <div class="image-comparison" style="--split: 50%">
+                    <figure
+                      class="compare-base"
+                      data-asset-key="fish-v1-failure"
+                    >
+                      <img
+                        src="portfolio-assets/fish-ai/v1-0010.webp"
+                        alt="Version 1 detections on the aquarium frame at 00:10"
+                        loading="lazy"
+                        width="1920"
+                        height="1080"
+                      />
+                    </figure>
+                    <figure class="compare-updated" data-asset-key="fish-v2">
+                      <img
+                        src="portfolio-assets/fish-ai/v2-0010.webp"
+                        alt="Version 2 detections on the same aquarium frame at 00:10"
+                        loading="lazy"
+                        width="1920"
+                        height="1080"
+                      />
+                    </figure>
+                    <div class="compare-divider" aria-hidden="true">
+                      <span>↔</span>
+                    </div>
+                    <span class="compare-tag compare-tag-left"
+                      >V2 / adapted</span
+                    ><span class="compare-tag compare-tag-right"
+                      >V1 / baseline</span
+                    >
+                  </div>
+                  <label class="comparison-control" for="fish-compare"
+                    ><span>Drag to compare / V2 reveal</span
+                    ><input
+                      id="fish-compare"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="50"
+                  /></label>
+                  <p class="evidence-caption">
+                    Same frame, 00:10. Qualitative comparison—not the frozen
+                    evaluation set.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article
+              class="story-scene"
+              id="vision-evaluate"
+              aria-labelledby="vision-evaluate-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Final frozen validation</p>
+                <h3 id="vision-evaluate-title">
+                  Measure the<br />
+                  improvement.
+                </h3>
+                <p class="scene-description">
+                  60 manually annotated frames · 428 ground-truth boxes.
+                  Tracking and live deployment remain exploratory.
+                </p>
+                <div class="scene-metrics">
+                  <div>
+                    <strong>74.10<small>%</small></strong
+                    ><span>Precision</span>
+                  </div>
+                  <div>
+                    <strong>52.80<small>%</small></strong
+                    ><span>Recall</span>
+                  </div>
+                  <div>
+                    <strong>58.20<small>%</small></strong
+                    ><span>mAP@50</span>
+                  </div>
+                </div>
+              </div>
+              <div class="scene-media technical-scene">
+                <figure class="" data-asset-key="fish-v2">
+                  <img
+                    class=""
+                    src="portfolio-assets/fish-ai/v2-0010.webp"
+                    alt="Actual v2 detector output for the matched aquarium scene"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Adapted model example / Evaluation details in the research
+                    page
+                  </figcaption>
+                </figure>
+              </div>
+            </article>
+          </div>
+          <footer class="story-controls">
+            <nav class="scene-steps" aria-label="Fish AI stages">
+              <a
+                href="#vision-question"
+                aria-label="Fish AI: Independent computer vision"
+                aria-current="step"
+                ><span>01</span><span class="step-label">Discover</span></a
+              ><a
+                href="#vision-compare"
+                aria-label="Fish AI: Compare / Drag the divider"
+                ><span>02</span><span class="step-label">Explore</span></a
+              ><a
+                href="#vision-evaluate"
+                aria-label="Fish AI: Final frozen validation"
+                ><span>03</span><span class="step-label">Reflect</span></a
+              >
+            </nav>
+            <a class="story-cta" href="research.html"
+              >Explore data & evaluation <span>↗</span></a
+            >
+          </footer>
+          <div class="story-progress" aria-hidden="true"></div>
         </div>
-        <div class="center-link"><a href="honors.html" class="text-link mono">VIEW COMPLETE HONORS →</a></div>
-    </section>
-</main>
-
-<footer class="site-footer mono">&copy; 2026 BENJAMIN SUNG | PERSONAL ENGINEERING PORTFOLIO</footer>
-
-<script>
-    window.addEventListener('load', () => {
-        const loader = document.getElementById('loader');
-        setTimeout(() => loader.classList.add('loader-hidden'), 2200);
-    });
-    const dot = document.getElementById('cursor-dot');
-    const outline = document.getElementById('cursor-outline');
-    window.addEventListener('mousemove', (event) => {
-        dot.style.left = `${event.clientX}px`;
-        dot.style.top = `${event.clientY}px`;
-        outline.animate({ left: `${event.clientX}px`, top: `${event.clientY}px` }, { duration: 500, fill: 'forwards' });
-    });
-    function updateClock() {
-        const clock = document.getElementById('clock');
-        if (clock) clock.innerText = new Date().toLocaleTimeString('en-GB', { hour12: false });
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-</script>
-</body>
+      </section>
+      <section
+        class="project-story story-machine"
+        id="project-robot"
+        data-chapter="03"
+        aria-labelledby="project-robot-title"
+      >
+        <span class="legacy-anchor" id="systems"></span>
+        <div class="story-shell">
+          <header class="story-heading">
+            <p class="story-number">03<span> / 05</span></p>
+            <h2 id="project-robot-title">AMR</h2>
+            <span class="story-kind">Scroll to unfold ↓</span>
+          </header>
+          <div class="story-scenes">
+            <article
+              class="story-scene"
+              id="robot-build"
+              aria-labelledby="robot-build-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Independent development platform</p>
+                <h3 id="robot-build-title">
+                  From code<br />
+                  to motion.
+                </h3>
+                <p class="scene-description">
+                  A 24V differential-drive platform I assembled to connect
+                  computation, electronics and control.
+                </p>
+              </div>
+              <div class="scene-media">
+                <figure class="" data-asset-key="amr-hero">
+                  <img
+                    class=""
+                    src="portfolio-assets/amr/assembled-platform.webp"
+                    alt="Front three-quarter view of Benjamin’s assembled robot, showing wheels, electronics and base"
+                    loading="lazy"
+                  />
+                  <figcaption>My assembled development platform</figcaption>
+                </figure>
+              </div>
+            </article>
+            <article
+              class="story-scene"
+              id="robot-stack"
+              aria-labelledby="robot-stack-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Inside the system</p>
+                <h3 id="robot-stack-title">
+                  Power. Control.<br />
+                  Compute.
+                </h3>
+                <p class="scene-description">
+                  STM32 motor control meets Jetson Orin Nano Super and ROS 2
+                  Humble. Each layer has to work with the next.
+                </p>
+                <div class="scene-tags">
+                  <span>24V drive</span><span>STM32</span
+                  ><span>Jetson · ROS 2</span>
+                </div>
+              </div>
+              <div class="scene-media media-pair">
+                <figure class="" data-asset-key="amr-chassis">
+                  <img
+                    class=""
+                    src="portfolio-assets/amr/chassis-underneath.webp"
+                    alt="Low-angle view of the robot chassis, front caster and lower electronics"
+                    loading="lazy"
+                  />
+                  <figcaption>Drivetrain / Under the chassis</figcaption>
+                </figure>
+                <figure class="" data-asset-key="amr-electronics">
+                  <img
+                    class=""
+                    src="portfolio-assets/amr/powered-top-view.webp"
+                    alt="Top view of the powered robot with controller wiring, compute board and display"
+                    loading="lazy"
+                  />
+                  <figcaption>Electronics / Powered top view</figcaption>
+                </figure>
+              </div>
+            </article>
+            <article
+              class="story-scene"
+              id="robot-next"
+              aria-labelledby="robot-next-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Current state / Next steps</p>
+                <h3 id="robot-next-title">
+                  A platform.<br />
+                  Not a finished robot.
+                </h3>
+                <p class="scene-description">
+                  Assembled and joystick-controlled. Sensor integration and
+                  advanced autonomy are still in development.
+                </p>
+                <div class="scene-tags">
+                  <span>Built ✓</span><span>Joystick control ✓</span
+                  ><span>Autonomy / In progress</span>
+                </div>
+              </div>
+              <div class="scene-media technical-scene">
+                <figure class="" data-asset-key="amr-jetson-stm32">
+                  <img
+                    class=""
+                    src="portfolio-assets/amr/jetson-detail.webp"
+                    alt="Close view of the mounted Jetson board, fan and connectors"
+                    loading="lazy"
+                  />
+                  <figcaption>Onboard computing / Jetson hardware</figcaption>
+                </figure>
+              </div>
+            </article>
+          </div>
+          <footer class="story-controls">
+            <nav class="scene-steps" aria-label="AMR stages">
+              <a
+                href="#robot-build"
+                aria-label="AMR: Independent development platform"
+                aria-current="step"
+                ><span>01</span><span class="step-label">Discover</span></a
+              ><a href="#robot-stack" aria-label="AMR: Inside the system"
+                ><span>02</span><span class="step-label">Explore</span></a
+              ><a
+                href="#robot-next"
+                aria-label="AMR: Current state / Next steps"
+                ><span>03</span><span class="step-label">Reflect</span></a
+              >
+            </nav>
+            <a class="story-cta" href="amr.html"
+              >Explore the AMR platform <span>↗</span></a
+            >
+          </footer>
+          <div class="story-progress" aria-hidden="true"></div>
+        </div>
+      </section>
+      <section
+        class="project-story story-vex"
+        id="project-vex"
+        data-chapter="04"
+        aria-labelledby="project-vex-title"
+      >
+        <span class="legacy-anchor" id="foundation"></span>
+        <div class="story-shell">
+          <header class="story-heading">
+            <p class="story-number">04<span> / 05</span></p>
+            <h2 id="project-vex-title">VEX Robotics</h2>
+            <span class="story-kind">Scroll to unfold ↓</span>
+          </header>
+          <div class="story-scenes">
+            <article
+              class="story-scene"
+              id="vex-team"
+              aria-labelledby="vex-team-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Reaper 23083Z / Team engineering</p>
+                <h3 id="vex-team-title">
+                  Every part.<br />
+                  One team.
+                </h3>
+                <p class="scene-description">
+                  Shared robots. Shared problem-solving. Working together from
+                  the workshop to the competition field.
+                </p>
+              </div>
+              <div class="scene-media team-scene">
+                <figure class="" data-asset-key="vex-all-team">
+                  <img
+                    class=""
+                    src="portfolio-assets/vex/all-team.webp"
+                    alt="The full Reaper 23083Z team with its competition robot"
+                    loading="lazy"
+                  />
+                  <figcaption>Reaper 23083Z / The full team</figcaption>
+                </figure>
+              </div>
+            </article>
+            <article
+              class="story-scene"
+              id="vex-iterate"
+              aria-labelledby="vex-iterate-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Build → Test → Repeat</p>
+                <h3 id="vex-iterate-title">
+                  The real work<br />
+                  is between rounds.
+                </h3>
+                <p class="scene-description">
+                  Mechanisms, code and teamwork develop through repeated tests,
+                  repairs and redesign.
+                </p>
+              </div>
+              <div class="scene-media media-pair">
+                <figure class="" data-asset-key="vex-repair">
+                  <img
+                    class=""
+                    src="portfolio-assets/vex/team-repair.webp"
+                    alt="Benjamin and teammates working together on a robot mechanism"
+                    loading="lazy"
+                  />
+                  <figcaption>Repairing together</figcaption>
+                </figure>
+                <figure class="" data-asset-key="vex-competition">
+                  <img
+                    class=""
+                    src="portfolio-assets/vex/robot-at-field.webp"
+                    alt="The Reaper team robot beside the competition field"
+                    loading="lazy"
+                  />
+                  <figcaption>Testing at the competition field</figcaption>
+                </figure>
+              </div>
+            </article>
+            <article
+              class="story-scene"
+              id="vex-role"
+              aria-labelledby="vex-role-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">My contribution</p>
+                <h3 id="vex-role-title">
+                  Code under<br />
+                  pressure.
+                </h3>
+                <p class="scene-description">
+                  C++ / PROS, programming, debugging, mechanism ideas, and PID /
+                  odometry testing. The robot and its awards belong to the team.
+                </p>
+              </div>
+              <div class="scene-media">
+                <figure class="" data-asset-key="vex-testing">
+                  <img
+                    class=""
+                    src="portfolio-assets/vex/programming-at-field.webp"
+                    alt="Benjamin programming on a laptop beside the VEX game field"
+                    loading="lazy"
+                  />
+                  <figcaption>Programming beside the field</figcaption>
+                </figure>
+              </div>
+            </article>
+          </div>
+          <footer class="story-controls">
+            <nav class="scene-steps" aria-label="VEX Robotics stages">
+              <a
+                href="#vex-team"
+                aria-label="VEX Robotics: Reaper 23083Z / Team engineering"
+                aria-current="step"
+                ><span>01</span><span class="step-label">Discover</span></a
+              ><a
+                href="#vex-iterate"
+                aria-label="VEX Robotics: Build → Test → Repeat"
+                ><span>02</span><span class="step-label">Explore</span></a
+              ><a href="#vex-role" aria-label="VEX Robotics: My contribution"
+                ><span>03</span><span class="step-label">Reflect</span></a
+              >
+            </nav>
+            <a class="story-cta" href="robotics.html"
+              >Meet the team-built robots <span>↗</span></a
+            >
+          </footer>
+          <div class="story-progress" aria-hidden="true"></div>
+        </div>
+      </section>
+      <section
+        class="project-story story-sunset"
+        id="project-sdg"
+        data-chapter="05"
+        aria-labelledby="project-sdg-title"
+      >
+        <span class="legacy-anchor" id="sdg-home"></span>
+        <div class="story-shell">
+          <header class="story-heading">
+            <p class="story-number">05<span> / 05</span></p>
+            <h2 id="project-sdg-title">SDG Engineering</h2>
+            <span class="story-kind">Scroll to unfold ↓</span>
+          </header>
+          <div class="story-scenes">
+            <article
+              class="story-scene"
+              id="sdg-team"
+              aria-labelledby="sdg-team-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Team leadership / Practical questions</p>
+                <h3 id="sdg-team-title">
+                  A question.<br />
+                  A team. A prototype.
+                </h3>
+                <p class="scene-description">
+                  From demonstrating fluid pressure to exploring microplastic
+                  separation and computer vision.
+                </p>
+              </div>
+              <div class="scene-media team-scene">
+                <figure class="" data-asset-key="sdg-team-teacher">
+                  <img
+                    class=""
+                    src="portfolio-assets/sdg/team-teacher.webp"
+                    alt="Benjamin with his SDG teammates and teacher"
+                    loading="lazy"
+                  />
+                  <figcaption>With my teammates and our teacher</figcaption>
+                </figure>
+              </div>
+            </article>
+            <article
+              class="story-scene"
+              id="sdg-prototypes"
+              aria-labelledby="sdg-prototypes-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">Two ideas / Learning by building</p>
+                <h3 id="sdg-prototypes-title">
+                  Make the<br />
+                  principle visible.
+                </h3>
+                <p class="scene-description">
+                  Heron’s Fountain explores fluid pressure; the centrifugal
+                  concept explores separation. These are student prototypes and
+                  early design proposals.
+                </p>
+                <p class="scene-note">
+                  The early fountain poster’s “perpetual machine /
+                  hydroelectricity” wording is not a validated result. The
+                  demonstration is pressure-driven.
+                </p>
+              </div>
+              <div class="scene-media media-pair poster-pair">
+                <figure class="" data-asset-key="sdg-heron">
+                  <img
+                    class=""
+                    src="portfolio-assets/sdg/herons-fountain.webp"
+                    alt="Original Heron’s Fountain concept poster; historical claims corrected in adjacent caption"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Heron’s Fountain / Original early poster
+                  </figcaption>
+                </figure>
+                <figure class="" data-asset-key="sdg-centrifuge">
+                  <img
+                    class=""
+                    src="portfolio-assets/sdg/centrifuge-concept.webp"
+                    alt="Original student poster outlining a preliminary centrifugal separation concept"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Centrifugal separation / Original concept poster
+                  </figcaption>
+                </figure>
+              </div>
+            </article>
+            <article
+              class="story-scene"
+              id="sdg-champion"
+              aria-labelledby="sdg-champion-title"
+            >
+              <div class="scene-copy">
+                <p class="eyebrow">3-Minute Science / Team achievement</p>
+                <h3 id="sdg-champion-title">
+                  Explain it.<br />
+                  Make it matter.
+                </h3>
+                <p class="scene-description">
+                  Our team became national champions, receiving the Gold Award
+                  in the 3-Minute Science Competition.
+                </p>
+                <div class="scene-tags">
+                  <span>National champions</span><span>Team recognition</span>
+                </div>
+              </div>
+              <div class="scene-media media-pair">
+                <figure class="" data-asset-key="sdg-on-stage">
+                  <img
+                    class=""
+                    src="portfolio-assets/sdg/on-stage.webp"
+                    alt="Benjamin presenting on stage at the 3-Minute Science Competition"
+                    loading="lazy"
+                  />
+                  <figcaption>Explaining the project</figcaption>
+                </figure>
+                <figure class="" data-asset-key="sdg-championship">
+                  <img
+                    class=""
+                    src="portfolio-assets/sdg/championship.webp"
+                    alt="SDG team receiving their science competition award"
+                    loading="lazy"
+                  />
+                  <figcaption>National champions / Gold Award</figcaption>
+                </figure>
+              </div>
+            </article>
+          </div>
+          <footer class="story-controls">
+            <nav class="scene-steps" aria-label="SDG Engineering stages">
+              <a
+                href="#sdg-team"
+                aria-label="SDG Engineering: Team leadership / Practical questions"
+                aria-current="step"
+                ><span>01</span><span class="step-label">Discover</span></a
+              ><a
+                href="#sdg-prototypes"
+                aria-label="SDG Engineering: Two ideas / Learning by building"
+                ><span>02</span><span class="step-label">Explore</span></a
+              ><a
+                href="#sdg-champion"
+                aria-label="SDG Engineering: 3-Minute Science / Team achievement"
+                ><span>03</span><span class="step-label">Reflect</span></a
+              >
+            </nav>
+            <a class="story-cta" href="activities.html#sdg"
+              >Explore the SDG projects <span>↗</span></a
+            >
+          </footer>
+          <div class="story-progress" aria-hidden="true"></div>
+        </div>
+      </section>
+      <section class="beyond-cinema" id="beyond" data-chapter="06">
+        <figure data-asset-key="badminton-court">
+          <img
+            src="portfolio-assets/badminton/competition.webp"
+            alt="Benjamin competing on a badminton court"
+            loading="lazy"
+            width="870"
+            height="936"
+          />
+        </figure>
+        <div>
+          <p class="eyebrow">06 / Beyond the workbench</p>
+          <h2>Same curiosity.<br />Different court.</h2>
+          <p>
+            Badminton captain. SDG team leader.<br />Still learning how to make
+            a team better.
+          </p>
+          <div class="beyond-links">
+            <a class="pill-link" href="activities.html"
+              >Outside engineering ↗</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="cinema-closing wrap" id="explore">
+        <p class="eyebrow">07 / Keep the conversation going</p>
+        <a class="closing-title" href="contact.html"
+          >Let’s build<br /><span>what’s next.</span
+          ><i aria-hidden="true">↗</i></a
+        >
+        <div class="closing-links">
+          <a href="honors.html">Honors ↗</a
+          ><a href="mailto:benjisung@gmail.com">benjisung@gmail.com ↗</a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <div>
+        <a class="footer-name" href="index.html"
+          >Benjamin Sung<span class="accent">.</span></a
+        >
+        <p>
+          Chi-Hsuan Sung · 宋其軒<br />Wego High School International Program ·
+          Taiwan
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a
+        ><a href="mailto:benjisung@gmail.com">benjisung@gmail.com ↗</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Benjamin Sung</span
+        ><span>Still learning. Still building.</span
+        ><button
+          type="button"
+          class="motion-toggle"
+          aria-pressed="false"
+          hidden
+        >
+          Reduce motion</button
+        ><button type="button" class="replay-intro" hidden>
+          Replay intro ↗</button
+        ><a href="#main">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
 </html>

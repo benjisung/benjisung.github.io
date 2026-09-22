@@ -1,86 +1,322 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Benjamin Sung, a Grade 12 student interested in environmental and mechanical engineering, robotics, and computer vision.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Benjamin Sung, legal name Chi-Hsuan Sung (宋其軒), Grade 12 at Wego High School International Program. Computation, physical systems, and environmental interests."
+    />
+    <meta name="theme-color" content="#25272c" />
     <title>About | Benjamin Sung</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-<div id="cursor-dot"></div>
-<div id="cursor-outline"></div>
-<div class="rgb-mesh"></div>
-
-<nav>
-    <div class="nav-brand"><img src="images/benjaminlogo.png" alt="Benjamin Sung logo" class="nav-logo"><h1>BENJAMIN_SUNG &gt;_</h1></div>
-    <ul>
-        <li><a href="index.html">HOME</a></li><li><a href="about.html" class="active">ABOUT</a></li><li><a href="activities.html">ACTIVITIES</a></li><li><a href="honors.html">HONORS</a></li><li><a href="robotics.html">ROBOTICS</a></li><li><a href="funfacts.html">FUN FACTS</a></li><li><a href="contact.html">CONTACT</a></li>
-    </ul>
-    <div class="nav-time mono" id="clock">00:00:00</div>
-</nav>
-
-<main>
-<section>
-    <h2 class="section-title mono">01_BIOGRAPHY</h2>
-    <div class="about-container">
-        <div>
-            <div class="profile-img-wrap"><img src="images/profile.jpg" alt="Portrait of Benjamin Sung" class="profile-img-portrait"></div>
-            <p class="mono silver image-caption">// BENJAMIN_SUNG</p>
-            <div class="school-block">
-                <p class="mono silver section-label">// SCHOOL</p>
-                <img src="images/wego.png" alt="Wego School logo">
-                <p class="mono accent">Wego High School IEP · Grade 12</p>
-            </div>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cinematic.css" />
+    <link rel="stylesheet" href="chapters.css" />
+    <script src="site.js" defer></script>
+    <script src="chapters.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Benjamin Sung, home"
+        >BS<span class="brand-dot">.</span
+        ><span class="brand-name">Benjamin Sung</span></a
+      ><button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        hidden
+      >
+        Menu <span aria-hidden="true">+</span>
+      </button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a
+        ><a href="about.html" aria-current="page">About</a
+        ><a href="environment.html">Environment</a
+        ><a href="research.html">AI / Research</a
+        ><a href="robotics.html">Robotics</a
+        ><a href="activities.html">Activities</a><a href="honors.html">Honors</a
+        ><a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="detail-hero wrap photo-heading heading-about">
+        <div class="heading-photograph" data-asset-key="about-portrait">
+          <img
+            class=""
+            src="portfolio-assets/portrait/hero-portrait.webp"
+            alt="Benjamin standing outdoors beside the water at HIMB"
+            fetchpriority="high"
+            width="1350"
+            height="1800"
+          />
         </div>
-
-        <article class="card biography-card">
-            <div class="identity-heading"><img src="images/benjaminlogo.png" alt="" aria-hidden="true"><h3>Benjamin Sung <span class="accent">(宋其軒)</span></h3></div>
-            <p class="mono accent" style="margin-bottom: 20px;">// ENVIRONMENTAL + MECHANICAL ENGINEERING</p>
-            <p>I am a Grade 12 student who likes understanding how physical systems work and then building, testing, and improving them. Programming first taught me to break complex problems into smaller parts; robotics showed me that code also has to work with motors, mechanisms, sensors, power, and real-world uncertainty.</p>
-            <p>That interest expanded through SDG engineering projects and marine-conservation experiences. At NMMBA and HIMB, I saw how environmental science can connect with sensing, mapping, AI, and engineering. I now apply those ideas in an independent fish-detection system and an autonomous mobile robot development platform.</p>
-            <p>I am especially interested in environmental and mechanical engineering, with robotics and computer vision as tools for measuring and interacting with the physical world.</p>
-            <div class="tag-container">
-                <span class="tag">Environmental Engineering</span><span class="tag">Mechanical Engineering</span><span class="tag">Robotics</span><span class="tag">Computer Vision</span>
+        <p class="eyebrow">
+          About / Wego High School International Program · Grade 12
+        </p>
+        <h1>Benjamin Sung<span class="accent">.</span></h1>
+        <div class="context-badges">
+          <span class="context-badge" data-asset-key="logo-wego"
+            ><img
+              class=""
+              src="portfolio-assets/logos/wego.webp"
+              alt="Wego High School logo"
+              loading="lazy"
+              width="480"
+              height="448"
+            /><span>Wego / International Program</span></span
+          >
+        </div>
+        <p class="identity-other">Chi-Hsuan Sung · 宋其軒</p>
+        <p class="large-copy">
+          I like using computation and engineering to understand and interact
+          with physical, environmental, and biological systems.
+        </p>
+      </section>
+      <section class="detail-section wrap editorial-split">
+        <!-- MEDIA SLOT: about-portrait. Real user-supplied media; subject-aware portrait crop. Provenance: MEDIA_PLAN.md. -->
+        <figure
+          class="project-media media-slot media-slot--portrait"
+          data-asset-key="about-portrait"
+          data-media-state="current"
+        >
+          <img
+            src="portfolio-assets/portrait/hero-portrait.webp"
+            alt="Benjamin standing outdoors beside the water at HIMB"
+            width="1350"
+            height="1800"
+            loading="lazy"
+          />
+          <figcaption>
+            Benjamin Sung · Learning outside the classroom
+          </figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">What connects the work</p>
+          <h2>Build. Test.<br />Understand.</h2>
+          <p>
+            Programming first taught me to break complex problems into smaller
+            parts. Robotics showed me that code also has to work with motors,
+            mechanisms, sensors, power, and real-world uncertainty.
+          </p>
+          <p>
+            That interest expanded through SDG engineering projects and
+            marine-conservation experiences. At NMMBA and HIMB, I saw how
+            environmental science connects with sensing, mapping, AI, and
+            engineering.
+          </p>
+          <p>
+            I now carry those questions into an independent aquarium
+            fish-detection system and an autonomous mobile robot development
+            platform. Robotics and computer vision are tools that connect my
+            interests—not substitutes for the physical and environmental
+            problems themselves.
+          </p>
+        </div>
+      </section>
+      <section class="detail-section tinted atmospheric about-atmosphere">
+        <div class="wrap">
+          <p class="eyebrow section-label">
+            <span>01</span> Threads of development
+          </p>
+          <h2>From problem solving<br />to systems thinking.</h2>
+          <div class="evidence-rows">
+            <div class="evidence-row">
+              <div>
+                <span class="micro">FOUNDATIONS</span>
+                <h3>Programming</h3>
+              </div>
+              <p>
+                C++ and algorithms through competitive programming and the
+                SPROUT program; advancement to USACO Gold.
+              </p>
             </div>
-        </article>
-    </div>
-
-    <h2 class="section-title mono spaced-title">02_DEVELOPMENT_TIMELINE</h2>
-    <div class="timeline">
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">Grade 12 · Current</div><h4 class="mono accent">Independent engineering systems</h4><p>Developing a reusable 24V AMR platform with STM32, Jetson, and ROS 2, while continuing live testing of an aquarium fish-detection and tracking system.</p></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">Summer 2026</div><h4 class="mono accent">Marine AI and field context</h4><p>Learned YOLO training workflows at NYCU's Adaptive Photonics Laboratory under day-to-day guidance from a senior lab member, then completed the Taiwan Global Pathfinders experience at NMMBA and HIMB.</p></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">VEX Robotics</div><h4 class="mono accent">From code to mechanisms</h4><p>Worked as a programmer and builder using C++, PROS, PID, odometry, mechanism assembly, and repeated testing and tuning.</p></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">SDG Engineering Projects</div><h4 class="mono accent">Prototypes, failures, and redesign</h4><p>Led projects involving Heron's Fountain, microplastic separation, the Ocean Challenge, and an AI Fridge—moving from science demonstrations toward engineering applications.</p></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">Programming Foundations</div><h4 class="mono accent">Algorithms and problem solving</h4><p>Built a foundation in C++ and algorithms through competitive programming and the SPROUT program, advancing to USACO Gold.</p></div></div>
-    </div>
-
-    <h2 class="section-title mono spaced-title">03_TOOLS_&amp;_AREAS_OF_EXPERIENCE</h2>
-    <div class="experience-grid">
-        <article class="experience-card"><span class="mono experience-index">01</span><h3>C++ / Python</h3><p>Robot programming, algorithms, computer-vision workflows, and technical experimentation.</p></article>
-        <article class="experience-card"><span class="mono experience-index">02</span><h3>ROS 2</h3><p>ROS 2 Humble, joystick control, topic-based integration, and an autonomous navigation stack in development.</p></article>
-        <article class="experience-card"><span class="mono experience-index">03</span><h3>Computer Vision / YOLO</h3><p>Annotation, class mapping, train-validation workflows, hard-negative mining, evaluation, deployment, and ByteTrack.</p></article>
-        <article class="experience-card"><span class="mono experience-index">04</span><h3>Mechanical Prototyping</h3><p>Mechanism assembly, modification, motors, encoders, power integration, and iterative physical testing.</p></article>
-        <article class="experience-card"><span class="mono experience-index">05</span><h3>Algorithms</h3><p>Data structures and computational problem solving through USACO Gold and the SPROUT program.</p></article>
-        <article class="experience-card"><span class="mono experience-index">06</span><h3>Environmental Monitoring</h3><p>Exposure to water-quality monitoring, CoralWatch, GIS, Structure-from-Motion, ReefCloud, and aerial monitoring concepts.</p></article>
-    </div>
-</section>
-</main>
-
-<footer class="site-footer mono">&copy; 2026 BENJAMIN SUNG | PERSONAL ENGINEERING PORTFOLIO</footer>
-
-<script>
-    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('visible'); }), { threshold: 0.15 });
-    document.querySelectorAll('.timeline-item').forEach((item) => observer.observe(item));
-    const dot = document.getElementById('cursor-dot');
-    const outline = document.getElementById('cursor-outline');
-    window.addEventListener('mousemove', (event) => {
-        dot.style.left = `${event.clientX}px`; dot.style.top = `${event.clientY}px`;
-        outline.animate({ left: `${event.clientX}px`, top: `${event.clientY}px` }, { duration: 500, fill: 'forwards' });
-    });
-    function updateClock() { const clock = document.getElementById('clock'); if (clock) clock.innerText = new Date().toLocaleTimeString('en-GB', { hour12: false }); }
-    setInterval(updateClock, 1000); updateClock();
-</script>
-</body>
+            <div class="evidence-row">
+              <div>
+                <span class="micro">PHYSICAL CONSTRAINTS</span>
+                <h3>VEX &amp; SDG projects</h3>
+              </div>
+              <p>
+                Competition robots, Heron’s Fountain, microplastic separation,
+                the Ocean Challenge, and an AI Fridge. Testing and rebuilding
+                made iteration central to the work.
+              </p>
+            </div>
+            <div class="evidence-row">
+              <div>
+                <span class="micro">FIELD LEARNING</span>
+                <h3>NMMBA &amp; HIMB</h3>
+              </div>
+              <p>
+                Completed the Taiwan Global Pathfinders program, connecting
+                coral conservation with measurement and engineering.
+              </p>
+            </div>
+            <div class="evidence-row">
+              <div>
+                <span class="micro">SUMMER 2026</span>
+                <h3>NYCU lab learning</h3>
+              </div>
+              <p>
+                YOLO workflows at the Adaptive Photonics Laboratory, Tainan,
+                with day-to-day guidance mainly from a senior lab member.
+              </p>
+            </div>
+            <div class="evidence-row">
+              <div>
+                <span class="micro">CURRENT / GRADE 12</span>
+                <h3>Independent systems</h3>
+              </div>
+              <p>
+                Ongoing aquarium detection and tracking tests, alongside a
+                reusable 24V AMR platform with advanced autonomy still under
+                development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="detail-section wrap">
+        <p class="eyebrow section-label">
+          <span>02</span> Tools &amp; areas of experience
+        </p>
+        <h2>A practical toolkit.</h2>
+        <dl class="spec-list">
+          <div>
+            <dt>Programming</dt>
+            <dd>C++ / Python · data structures · algorithms</dd>
+          </div>
+          <div>
+            <dt>Robotics</dt>
+            <dd>PROS · PID · odometry · STM32 · Jetson · ROS 2 Humble</dd>
+          </div>
+          <div>
+            <dt>Vision</dt>
+            <dd>
+              YOLO · annotation · class mapping · data cleaning · hard-negative
+              refinement · independent evaluation · ByteTrack
+            </dd>
+          </div>
+          <div>
+            <dt>Mechanical</dt>
+            <dd>
+              Mechanism assembly and modification · motors · encoders · power
+              integration · iterative testing
+            </dd>
+          </div>
+          <div>
+            <dt>Environment</dt>
+            <dd>
+              Learning exposure to water-quality monitoring, CoralWatch, GIS /
+              R, SfM, ReefCloud, and aerial monitoring concepts
+            </dd>
+          </div>
+        </dl>
+      </section>
+      <section class="detail-section wrap">
+        <p class="eyebrow section-label">
+          <span>03</span> Connecting my interests
+        </p>
+        <div class="editorial-split">
+          <h2>Different disciplines.<br />A shared question.</h2>
+          <div>
+            <p>
+              Environmental Engineering and Mechanical Engineering are my
+              central academic interests. Computer Science, Robotics, Computer
+              Vision, Bioengineering, and Environmental Science offer additional
+              ways to understand systems that compute, move, and live.
+            </p>
+            <p>
+              What connects them for me is the relationship between a model and
+              the world it is meant to describe—or act on.
+            </p>
+            <p class="small">
+              Preferred name: Benjamin Sung<br />Legal name: Chi-Hsuan Sung ·
+              宋其軒
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="detail-section wrap">
+        <p class="eyebrow">A few frames from my life</p>
+        <h2>Learning happens<br />with other people.</h2>
+        <div class="story-photo-grid">
+          <figure class="photo-story" data-asset-key="sdg-team-teacher">
+            <img
+              class=""
+              src="portfolio-assets/sdg/team-teacher.webp"
+              alt="Benjamin with his SDG teammates and teacher"
+              loading="lazy"
+              width="2000"
+              height="1425"
+            />
+            <figcaption>My SDG teammates and our teacher</figcaption>
+          </figure>
+          <figure class="photo-story" data-asset-key="vex-repair">
+            <img
+              class=""
+              src="portfolio-assets/vex/team-repair.webp"
+              alt="Benjamin and teammates working together on a robot mechanism"
+              loading="lazy"
+              width="1477"
+              height="1108"
+            />
+            <figcaption>Solving problems with the robotics team</figcaption>
+          </figure>
+          <figure class="photo-story" data-asset-key="field-algae">
+            <img
+              class=""
+              src="portfolio-assets/pathfinders/algae-fieldwork.webp"
+              alt="Benjamin holding collected algae while standing in shallow coastal water"
+              loading="lazy"
+              width="1350"
+              height="1800"
+            />
+            <figcaption>
+              Outside the workshop / Environmental learning
+            </figcaption>
+          </figure>
+          <figure class="photo-story" data-asset-key="sdg-award-speech">
+            <img
+              class=""
+              src="portfolio-assets/sdg/award-speech.webp"
+              alt="Benjamin speaking with his teammates after their science competition award"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <figcaption>Learning to explain the work</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <div>
+        <a class="footer-name" href="index.html"
+          >Benjamin Sung<span class="accent">.</span></a
+        >
+        <p>
+          Chi-Hsuan Sung · 宋其軒<br />Wego High School International Program ·
+          Taiwan
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a
+        ><a href="mailto:benjisung@gmail.com">benjisung@gmail.com ↗</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Benjamin Sung</span
+        ><span>Still learning. Still building.</span
+        ><button
+          type="button"
+          class="motion-toggle"
+          aria-pressed="false"
+          hidden
+        >
+          Reduce motion</button
+        ><a href="#main">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
 </html>

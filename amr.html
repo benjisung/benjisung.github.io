@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Benjamin Sung's independent AMR development platform: assembled hardware, joystick control, STM32, Jetson, ROS 2, and ongoing autonomy integration."
+    />
+    <meta name="theme-color" content="#25272c" />
+    <title>AMR | Benjamin Sung</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cinematic.css" />
+    <link rel="stylesheet" href="chapters.css" />
+    <script src="site.js" defer></script>
+    <script src="chapters.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Benjamin Sung, home"
+        >BS<span class="brand-dot">.</span
+        ><span class="brand-name">Benjamin Sung</span></a
+      ><button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        hidden
+      >
+        Menu <span aria-hidden="true">+</span>
+      </button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="about.html">About</a
+        ><a href="environment.html">Environment</a
+        ><a href="research.html">AI / Research</a
+        ><a href="robotics.html" aria-current="page">Robotics</a
+        ><a href="activities.html">Activities</a><a href="honors.html">Honors</a
+        ><a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="detail-hero wrap photo-heading heading-amr">
+        <div class="heading-photograph" data-asset-key="amr-hero">
+          <img src="portfolio-assets/amr/assembled-platform.webp" alt="Benjamin’s assembled independent AMR platform" width="1600" height="1200" fetchpriority="high" />
+        </div>
+        <p class="eyebrow">Robotics / Independent development</p>
+        <h1>From a chassis<br />to a system.</h1>
+        <p class="large-copy">
+          My autonomous mobile robot development platform.<br />Assembled and
+          joystick-controlled. Advanced autonomy in progress.
+        </p>
+        <a class="pill-link" href="#amr">Explore the platform ↗</a>
+      </section>
+      <nav class="robotics-tabs" aria-label="Robotics projects">
+        <a href="robotics.html">01 / VEX <span>Team engineering</span></a
+        ><a href="amr.html" aria-current="page"
+          >02 / AMR <span>Independent platform</span></a
+        >
+      </nav>
+      <nav class="wrap page-jump" aria-label="AMR sections">
+        <a href="#amr">The platform</a
+        ><a href="#architecture">Architecture &amp; hardware</a
+        ><a href="robotics.html">VEX team project ↗</a>
+      </nav>
+      <section class="detail-section wrap" id="amr">
+        <p class="eyebrow section-label">
+          <span>01</span> Independent development platform
+        </p>
+        <div class="editorial-split">
+          <div>
+            <h2>Autonomous Mobile Robot<br />Development Platform.</h2>
+            <p>
+              I assembled a 24V two-wheel differential-drive robot as a reusable
+              base for development. An early application idea evolved into a
+              platform for different sensors, perception models, and mechanisms.
+            </p>
+            <p>
+              The physical robot exists and can be driven. Current work connects
+              power, geared motors, encoders, embedded control, Jetson compute,
+              and ROS 2 communication.
+            </p>
+            <span class="status">Assembled · joystick control</span>
+          </div>
+          <!-- MEDIA SLOT: amr-hero. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--hardware"
+            data-asset-key="amr-hero"
+            data-media-state="current"
+          >
+            <img
+              src="portfolio-assets/amr/assembled-platform.webp"
+              alt="Front three-quarter view of Benjamin’s assembled robot, showing wheels, electronics and base"
+              width="1600"
+              height="1200"
+              loading="lazy"
+            />
+            <figcaption>
+              The assembled platform · Original workshop setting
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="detail-section tinted" id="architecture">
+        <div class="wrap">
+          <p class="eyebrow section-label">
+            <span>02</span> AMR system architecture
+          </p>
+          <div class="editorial-split">
+            <div class="detail-architecture">
+              <div class="architecture" data-phase="0">
+                <div class="diagram-top">
+                  <span class="eyebrow">AMR / Conceptual architecture</span
+                  ><span class="diagram-mark">24V</span>
+                </div>
+                <svg
+                  class="amr-svg"
+                  viewBox="0 0 640 560"
+                  role="img"
+                  aria-labelledby="amr-title amr-desc"
+                >
+                  <title id="amr-title">AMR logical system architecture</title>
+                  <desc id="amr-desc">
+                    Two-wheel differential drive with motor encoders, STM32
+                    control, Jetson compute and ROS 2. Dashed LiDAR, camera and
+                    navigation components remain in development. This is a
+                    functional schematic, not a CAD drawing.
+                  </desc>
+                  <g class="architecture-grid" aria-hidden="true">
+                    <path
+                      d="M40 100H600M40 180H600M40 260H600M40 340H600M40 420H600M40 500H600M80 70V530M160 70V530M240 70V530M320 70V530M400 70V530M480 70V530M560 70V530"
+                    />
+                  </g>
+                  <g class="amr-layer layer-base">
+                    <path
+                      class="base-outline"
+                      d="M150 415L320 360L490 415V457L320 515L150 457Z"
+                    />
+                    <path d="M150 415L320 473L490 415M320 473V515" />
+                    <rect x="120" y="415" width="38" height="65" rx="9" />
+                    <rect x="482" y="415" width="38" height="65" rx="9" />
+                    <text x="320" y="447" text-anchor="middle">
+                      DIFFERENTIAL DRIVE
+                    </text>
+                  </g>
+                  <g class="amr-layer layer-motor">
+                    <path d="M215 379V404M425 379V404" />
+                    <rect x="100" y="328" width="188" height="53" rx="3" />
+                    <rect x="352" y="328" width="188" height="53" rx="3" />
+                    <text x="194" y="351" text-anchor="middle">
+                      24V / 60W MOTOR
+                    </text>
+                    <text
+                      class="svg-small"
+                      x="194"
+                      y="369"
+                      text-anchor="middle"
+                    >
+                      AB encoder · left
+                    </text>
+                    <text x="446" y="351" text-anchor="middle">
+                      24V / 60W MOTOR
+                    </text>
+                    <text
+                      class="svg-small"
+                      x="446"
+                      y="369"
+                      text-anchor="middle"
+                    >
+                      AB encoder · right
+                    </text>
+                  </g>
+                  <g class="amr-layer layer-control">
+                    <path d="M194 328V303H446V328M320 284V303" />
+                    <rect x="200" y="230" width="240" height="54" rx="3" />
+                    <text x="320" y="253" text-anchor="middle">STM32</text>
+                    <text
+                      class="svg-small"
+                      x="320"
+                      y="272"
+                      text-anchor="middle"
+                    >
+                      Low-level motor control
+                    </text>
+                  </g>
+                  <g class="amr-layer layer-compute">
+                    <path d="M320 208V230" />
+                    <rect x="160" y="142" width="320" height="66" rx="3" />
+                    <text x="320" y="168" text-anchor="middle">
+                      JETSON ORIN NANO SUPER
+                    </text>
+                    <text
+                      class="svg-small"
+                      x="320"
+                      y="190"
+                      text-anchor="middle"
+                    >
+                      8GB · Ubuntu · ROS 2 Humble
+                    </text>
+                  </g>
+                  <g class="amr-layer layer-sensors planned">
+                    <path d="M220 112V128H420V112M320 128V142" />
+                    <rect x="145" y="62" width="150" height="50" rx="3" />
+                    <rect x="345" y="62" width="150" height="50" rx="3" />
+                    <text x="220" y="92" text-anchor="middle">LiDAR</text>
+                    <text x="420" y="92" text-anchor="middle">
+                      CAMERA / YOLO
+                    </text>
+                  </g>
+                  <g class="amr-layer layer-software planned">
+                    <path d="M480 175H556V284" />
+                    <text
+                      class="svg-small"
+                      x="566"
+                      y="229"
+                      transform="rotate(90 566 229)"
+                    >
+                      SLAM → LOCALIZATION → NAV2
+                    </text>
+                  </g>
+                </svg>
+                <div class="diagram-legend">
+                  <span><i></i>Assembled / current stack</span
+                  ><span><i class="dashed"></i>Under development</span>
+                </div>
+                <p class="diagram-caption">
+                  System architecture — conceptual. Not derived from CAD.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h2>Hardware.<br />Software.<br />One platform.</h2>
+              <dl class="spec-list">
+                <div>
+                  <dt>Drivetrain</dt>
+                  <dd>
+                    Two-wheel differential drive · 24V / 60W geared motors · AB
+                    encoders
+                  </dd>
+                </div>
+                <div>
+                  <dt>Control</dt>
+                  <dd>
+                    STM32 · motor and encoder integration · proportional speed
+                    control · joystick / joy commands
+                  </dd>
+                </div>
+                <div>
+                  <dt>Compute</dt>
+                  <dd>Jetson Orin Nano Super 8GB · Ubuntu · ROS 2 Humble</dd>
+                </div>
+                <div>
+                  <dt>In progress</dt>
+                  <dd>
+                    LiDAR · camera / YOLO · SLAM · localization · Nav2 ·
+                    obstacle avoidance · autonomous navigation
+                  </dd>
+                </div>
+              </dl>
+              <div class="note">
+                <span class="eyebrow">Current boundary</span>The assembled base
+                can be driven. Advanced perception and autonomy are still being
+                integrated and tested.
+              </div>
+            </div>
+          </div>
+          <div class="media-library">
+            <!-- MEDIA SLOT: amr-chassis. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+            <figure
+              class="project-media media-slot media-slot--hardware"
+              data-asset-key="amr-chassis"
+              data-media-state="current"
+            >
+              <img
+                src="portfolio-assets/amr/chassis-underneath.webp"
+                alt="Low-angle view of the robot chassis, front caster and lower electronics"
+                width="1600"
+                height="1200"
+                loading="lazy"
+              />
+              <figcaption>Under the base · Chassis and lower layer</figcaption>
+            </figure>
+            <!-- MEDIA SLOT: amr-electronics. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+            <figure
+              class="project-media media-slot media-slot--technical"
+              data-asset-key="amr-electronics"
+              data-media-state="current"
+            >
+              <a
+                class="media-full-link"
+                href="portfolio-assets/amr/powered-top-view.webp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open full image: Top view of the powered robot with controller wiring, compute board and display"
+                ><img
+                  src="portfolio-assets/amr/powered-top-view.webp"
+                  alt="Top view of the powered robot with controller wiring, compute board and display"
+                  width="1350"
+                  height="1800"
+                  loading="lazy"
+              /></a>
+              <figcaption>Power and wiring · Top view</figcaption>
+            </figure>
+            <!-- MEDIA SLOT: amr-jetson-stm32. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+            <figure
+              class="project-media media-slot media-slot--technical"
+              data-asset-key="amr-jetson-stm32"
+              data-media-state="current"
+            >
+              <a
+                class="media-full-link"
+                href="portfolio-assets/amr/jetson-detail.webp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open full image: Close view of the mounted Jetson board, fan and connectors"
+                ><img
+                  src="portfolio-assets/amr/jetson-detail.webp"
+                  alt="Close view of the mounted Jetson board, fan and connectors"
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+              /></a>
+              <figcaption>
+                Compute detail · Jetson shown; STM32 detail still needed
+              </figcaption>
+            </figure>
+            <!-- MEDIA SLOT: amr-lidar. Real sensor mounting or integration test; do not imply completed navigation. See MEDIA_PLAN.md before replacing. -->
+            <figure
+              class="project-media media-slot media-slot--technical"
+              data-asset-key="amr-lidar"
+              data-media-state="pending"
+            >
+              <div class="media-placeholder">
+                <span class="media-kind">Evidence / pending</span
+                ><span class="media-title">LiDAR integration</span
+                ><span class="media-pending">Full frame · no crop</span>
+              </div>
+              <figcaption>
+                LiDAR integration<span>Image to be added</span>
+              </figcaption>
+            </figure>
+            <!-- MEDIA SLOT: amr-ros. Actual ROS 2 or RViz screenshot. Full readable view; redact sensitive paths if necessary. See MEDIA_PLAN.md before replacing. -->
+            <figure
+              class="project-media media-slot media-slot--technical"
+              data-asset-key="amr-ros"
+              data-media-state="pending"
+            >
+              <div class="media-placeholder">
+                <span class="media-kind">Evidence / pending</span
+                ><span class="media-title">ROS / RViz</span
+                ><span class="media-pending">Full frame · no crop</span>
+              </div>
+              <figcaption>ROS / RViz<span>Image to be added</span></figcaption>
+            </figure>
+            <!-- MEDIA SLOT: amr-demo-video. Physical robot moving under the documented control mode. Native controls; no autoplay. See MEDIA_PLAN.md before replacing. -->
+            <figure
+              class="project-media media-slot media-slot--video"
+              data-asset-key="amr-demo-video"
+              data-media-state="pending"
+            >
+              <div class="media-placeholder">
+                <span class="media-kind">Video / pending</span
+                ><span class="media-title">Movement test</span
+                ><span class="media-pending"
+                  >Short demo · controls enabled</span
+                >
+              </div>
+              <figcaption>
+                Movement test<span>Video to be added</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <div>
+        <a class="footer-name" href="index.html"
+          >Benjamin Sung<span class="accent">.</span></a
+        >
+        <p>
+          Chi-Hsuan Sung · 宋其軒<br />Wego High School International Program ·
+          Taiwan
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a
+        ><a href="mailto:benjisung@gmail.com">benjisung@gmail.com ↗</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Benjamin Sung</span
+        ><span>Still learning. Still building.</span
+        ><button
+          type="button"
+          class="motion-toggle"
+          aria-pressed="false"
+          hidden
+        >
+          Reduce motion</button
+        ><a href="#main">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

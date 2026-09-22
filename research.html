@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Benjamin Sung's fish-detection deployment project: NYCU learning, independent aquarium data, hard negatives, frozen evaluation, and live tracking."
+    />
+    <meta name="theme-color" content="#25272c" />
+    <title>AI / Research | Benjamin Sung</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cinematic.css" />
+    <link rel="stylesheet" href="chapters.css" />
+    <script src="site.js" defer></script>
+    <script src="chapters.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Benjamin Sung, home"
+        >BS<span class="brand-dot">.</span
+        ><span class="brand-name">Benjamin Sung</span></a
+      ><button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        hidden
+      >
+        Menu <span aria-hidden="true">+</span>
+      </button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="about.html">About</a
+        ><a href="environment.html">Environment</a
+        ><a href="research.html" aria-current="page">AI / Research</a
+        ><a href="robotics.html">Robotics</a
+        ><a href="activities.html">Activities</a><a href="honors.html">Honors</a
+        ><a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="detail-hero wrap photo-heading heading-research">
+        <div class="heading-photograph" data-asset-key="fish-raw">
+          <img
+            class=""
+            src="portfolio-assets/fish-ai/raw-0010.webp"
+            alt="Full aquarium frame at the same source timestamp used in the v1 and v2 examples"
+            fetchpriority="high"
+            width="1920"
+            height="1080"
+          />
+        </div>
+        <p class="eyebrow">AI / Research · Engineering case study</p>
+        <h1>The real test<br />was deployment.</h1>
+        <p class="large-copy">
+          An underwater fish-detection project that grew from learning YOLO
+          workflows into an independent aquarium monitoring system.
+        </p>
+        <div class="detail-meta">
+          <span>Summer 2026 → independent extension</span
+          ><span>YOLO · ByteTrack</span>
+        </div>
+      </section>
+      <nav class="wrap page-jump" aria-label="Research sections">
+        <a href="#workflow">Lab workflow</a
+        ><a href="#dataset">Independent dataset</a
+        ><a href="#failure">Failure analysis</a
+        ><a href="#evaluation">Evaluation</a
+        ><a href="#deployment">Ongoing deployment</a>
+      </nav>
+      <section class="detail-section wrap editorial-split" id="workflow">
+        <div>
+          <p class="eyebrow section-label">
+            <span>01</span> Learning the workflow
+          </p>
+          <h2>Annotation<br />before automation.</h2>
+          <p>
+            During summer 2026, I worked and learned at National Yang Ming Chiao
+            Tung University’s Adaptive Photonics Laboratory in Tainan.
+            Day-to-day technical guidance came mainly from a senior lab member.
+          </p>
+          <p>
+            I practiced bounding-box annotation, class mapping, train-validation
+            preparation, and YOLO model training with underwater and field fish
+            imagery associated with marine research and NMMBA-related data.
+          </p>
+          <dl class="spec-list">
+            <div>
+              <dt>Classes</dt>
+              <dd>10 fish classes</dd>
+            </div>
+            <div>
+              <dt>Original</dt>
+              <dd>1,292 annotated images</dd>
+            </div>
+            <div>
+              <dt>Cleaned</dt>
+              <dd>1,104 valid images</dd>
+            </div>
+            <div>
+              <dt>Split</dt>
+              <dd>80% training / 20% validation</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="research-diagram">
+          <div class="vision-visual" data-phase="0">
+            <div class="diagram-top">
+              <span class="eyebrow">Fish detection / Iteration</span
+              ><span class="phase-number">01 / 06</span>
+            </div>
+            <div
+              class="pipeline-map"
+              role="group"
+              aria-label="Conceptual fish detection workflow, not model output"
+            >
+              <div class="pipeline-node node-input">
+                <span class="micro">01 · INPUT</span
+                ><strong>Marine imagery</strong
+                ><small>Annotate → clean → train</small>
+              </div>
+              <div class="pipeline-connector" aria-hidden="true"></div>
+              <div class="pipeline-node node-deploy">
+                <span class="micro">02 · DEPLOY</span
+                ><strong>School coral tank</strong
+                ><small>Controlled data → full-tank video</small>
+              </div>
+              <div class="error-branch">
+                <span class="micro">DOMAIN SHIFT</span>
+                <p>Pipes · reflections<br />equipment · structure</p>
+                <span class="error-label">False positives</span>
+              </div>
+              <div class="pipeline-connector" aria-hidden="true"></div>
+              <div class="pipeline-node node-refine">
+                <span class="micro">03 · REFINE</span
+                ><strong>60 adaptation images</strong
+                ><small>Labeled fish + background context → v2</small>
+              </div>
+              <div class="pipeline-connector" aria-hidden="true"></div>
+              <div class="pipeline-node node-evaluate">
+                <span class="micro">04 · EVALUATE</span
+                ><strong>60 frozen frames</strong
+                ><small>428 ground-truth boxes</small>
+              </div>
+              <div class="tracking-note">
+                <span class="micro">NEXT</span> ByteTrack + live testing ↗
+              </div>
+            </div>
+            <p class="diagram-caption">
+              Pipeline schematic · not a model output
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="detail-section tinted" id="dataset">
+        <div class="wrap">
+          <p class="eyebrow section-label">
+            <span>02</span> Independent school-tank project
+          </p>
+          <div class="editorial-split">
+            <h2>New scene.<br />New dataset.</h2>
+            <div>
+              <p>
+                I built an independent dataset for the school coral tank, with 8
+                classes, 419 images, and approximately 5,100 bounding boxes.
+                This was separate from the 10-class lab workflow.
+              </p>
+              <p>
+                The first model worked relatively well with controlled images.
+                Testing full-tank footage and live camera feeds exposed a much
+                harder deployment environment.
+              </p>
+            </div>
+          </div>
+          <dl class="metrics dataset-metrics">
+            <div>
+              <dt>Fish classes</dt>
+              <dd>8</dd>
+            </div>
+            <div>
+              <dt>Images</dt>
+              <dd>419</dd>
+            </div>
+            <div>
+              <dt>Bounding boxes</dt>
+              <dd>~5,100</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <section class="detail-section wrap" id="failure">
+        <p class="eyebrow section-label">
+          <span>03</span> Failure → refinement
+        </p>
+        <h2>Backgrounds became<br />false positives.</h2>
+        <div class="editorial-split">
+          <div>
+            <p>
+              Pipes, equipment, reflections, and background structures were
+              repeatedly mistaken for fish. The issue was a domain shift between
+              the controlled data and the full-tank scene.
+            </p>
+            <p>
+              I added 60 manually labeled full-tank images: 48 for adaptation
+              training and 12 for validation. Fish were labeled; pipes,
+              equipment, and other background remained unlabeled as
+              hard-negative context. These were not empty, fish-free images.
+            </p>
+          </div>
+          <div class="note">
+            <span class="eyebrow">Engineering lesson</span>A model is only one
+            part of the system. The data must reflect the environment where the
+            system will actually run.
+          </div>
+        </div>
+      </section>
+      <section class="detail-section warm-tint" id="evaluation">
+        <div class="wrap">
+          <p class="eyebrow section-label">
+            <span>04</span> Final frozen validation / v2
+          </p>
+          <h2>Separate training<br />from the test.</h2>
+          <p>
+            I manually annotated and audited 60 frames from the final full-tank
+            recording, then froze all 428 ground-truth boxes before evaluating
+            either model. These final v2 results replace the earlier 30-frame
+            evaluation as the current headline metrics. The demo footage below
+            is retained as an archive, not the final test.
+          </p>
+          <dl class="metrics evaluation-metrics">
+            <div>
+              <dt>Precision</dt>
+              <dd>74.10<span>%</span></dd>
+            </div>
+            <div>
+              <dt>Recall</dt>
+              <dd>52.80<span>%</span></dd>
+            </div>
+            <div>
+              <dt>mAP@50</dt>
+              <dd>58.20<span>%</span></dd>
+            </div>
+          </dl>
+          <p class="small">
+            F1: 61.66% · mAP@50:95: 30.34% · TP 226 / FP 79 / FN 202
+          </p>
+          <details class="video-description">
+            <summary>Evaluation protocol and scope</summary>
+            <p>
+              Both models used the same frozen images and labels, image size
+              960, confidence 0.35, and class-aware one-to-one matching at IoU
+              0.50. The separate AP calculation used a confidence floor of 0.001
+              and the project's verified 101-point evaluator. mAP averages cover
+              the six classes with positive ground truth; the two absent classes
+              have no estimated AP, but their detections still count as false
+              positives. These 60 validation frames are separate from the 60
+              adaptation images used in training and validation.
+            </p>
+            <p>
+              On this same final test, v1 precision was 9.39%, recall 6.78%, and
+              mAP@50 7.33%. False positives fell from 280 to 79 with v2, a
+              71.79% reduction. This is a within-test comparison, not a
+              comparison against the older 30-frame results.
+            </p>
+          </details>
+          <div class="note">
+            <span class="eyebrow">Reading the results</span>Precision and recall
+            describe different failure modes. The measured recall means missed
+            detections remain an improvement area. This small, scene-specific
+            test uses frames from one recording, which may be correlated; it
+            does not establish performance on open reefs or every aquarium.
+          </div>
+        </div>
+      </section>
+      <section class="detail-section wrap" id="deployment">
+        <p class="eyebrow section-label">
+          <span>05</span> Tracking &amp; live testing
+        </p>
+        <div class="editorial-split">
+          <h2>Detection is<br />not the endpoint.</h2>
+          <div>
+            <p>
+              I added ByteTrack and continue long-duration, live, and livestream
+              processing tests. The intended direction is real-time fish
+              identification and an interactive educational display, with
+              possible future reef and environmental-monitoring applications.
+            </p>
+            <p>
+              This remains an engineering and deployment project in development,
+              not a publication or a validated reef-monitoring product.
+            </p>
+            <span class="status pending">Live deployment testing ongoing</span>
+          </div>
+        </div>
+      </section>
+      <section class="detail-section wrap">
+        <p class="eyebrow section-label">
+          <span>06</span> Connecting perception to action
+        </p>
+        <div class="editorial-split">
+          <h2>Seeing is one part.<br />Acting is another.</h2>
+          <div>
+            <p>
+              At NYCU, I also saw a pineapple-harvesting robotic arm. It made
+              the connection between computer vision and mechanical action more
+              tangible: identifying an object is different from reliably
+              interacting with it.
+            </p>
+            <a class="text-link" href="amr.html#amr"
+              >Explore the mobile robot platform <span>↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="detail-section wrap" id="project-media">
+        <p class="eyebrow section-label">
+          <span>07</span> Project media / Real evidence
+        </p>
+        <h2>Inside the tank.</h2>
+        <p class="small">
+          The raw, v1, and v2 images share source timestamp 00:10. They
+          illustrate deployment behavior, not the independent evaluation.
+          Technical images open at full size.
+        </p>
+        <div class="note">
+          <span class="eyebrow">Reading the archive</span>Some original figures
+          and the silent video retain historical labels. “AP50” refers to the
+          class-averaged mAP@50 metric, but its archived numerical value belongs
+          to the earlier 30-frame evaluation—not the final validation above.
+          “Batfish” / “Platax_sp” is the historical model label for the fish
+          subsequently identified as silver moony (<i>Monodactylus argenteus</i
+          >). Tracking lines and IDs are exploratory tracklets, not counts of
+          unique fish. The live-display screenshot documents an early
+          input/enhancement test, not completed live detection.
+        </div>
+        <div class="media-library">
+          <!-- MEDIA SLOT: fish-raw. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--technical"
+            data-asset-key="fish-raw"
+            data-media-state="current"
+          >
+            <a
+              class="media-full-link"
+              href="portfolio-assets/fish-ai/raw-0010.webp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open full image: Full aquarium frame at the same source timestamp used in the v1 and v2 examples"
+              ><img
+                src="portfolio-assets/fish-ai/raw-0010.webp"
+                alt="Full aquarium frame at the same source timestamp used in the v1 and v2 examples"
+                width="1920"
+                height="1080"
+                loading="lazy"
+            /></a>
+            <figcaption>
+              Raw full-tank frame · Source timestamp 00:10
+            </figcaption>
+          </figure>
+          <!-- MEDIA SLOT: fish-v1-failure. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--technical"
+            data-asset-key="fish-v1-failure"
+            data-media-state="current"
+          >
+            <a
+              class="media-full-link"
+              href="portfolio-assets/fish-ai/v1-0010.webp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open full image: Actual v1 detector output with false-positive labels on aquarium equipment"
+              ><img
+                src="portfolio-assets/fish-ai/v1-0010.webp"
+                alt="Actual v1 detector output with false-positive labels on aquarium equipment"
+                width="1920"
+                height="1080"
+                loading="lazy"
+            /></a>
+            <figcaption>
+              v1 · Same scene at 00:10 · Qualitative output
+            </figcaption>
+          </figure>
+          <!-- MEDIA SLOT: fish-hard-negative. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--technical"
+            data-asset-key="fish-hard-negative"
+            data-media-state="current"
+          >
+            <a
+              class="media-full-link"
+              href="portfolio-assets/fish-ai/adaptation-training-frame.webp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open full image: Real adaptation training frame with fish and background aquarium equipment"
+              ><img
+                src="portfolio-assets/fish-ai/adaptation-training-frame.webp"
+                alt="Real adaptation training frame with fish and background aquarium equipment"
+                width="1920"
+                height="1080"
+                loading="lazy"
+            /></a>
+            <figcaption>
+              Training example · Labeled fish; equipment left unlabeled
+            </figcaption>
+          </figure>
+          <!-- MEDIA SLOT: fish-v2. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--technical"
+            data-asset-key="fish-v2"
+            data-media-state="current"
+          >
+            <a
+              class="media-full-link"
+              href="portfolio-assets/fish-ai/v2-0010.webp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open full image: Actual v2 detector output for the matched aquarium scene"
+              ><img
+                src="portfolio-assets/fish-ai/v2-0010.webp"
+                alt="Actual v2 detector output for the matched aquarium scene"
+                width="1920"
+                height="1080"
+                loading="lazy"
+            /></a>
+            <figcaption>
+              v2 · Same scene at 00:10 · Not the frozen test
+            </figcaption>
+          </figure>
+          <!-- MEDIA SLOT: fish-bytetrack. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--technical"
+            data-asset-key="fish-bytetrack"
+            data-media-state="current"
+          >
+            <a
+              class="media-full-link"
+              href="portfolio-assets/fish-ai/tracking-trajectories.webp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open full image: Exploratory fish tracking trajectories over a recorded aquarium frame"
+              ><img
+                src="portfolio-assets/fish-ai/tracking-trajectories.webp"
+                alt="Exploratory fish tracking trajectories over a recorded aquarium frame"
+                width="2137"
+                height="1255"
+                loading="lazy"
+            /></a>
+            <figcaption>
+              ByteTrack exploration · Tracklets are not unique fish counts
+            </figcaption>
+          </figure>
+          <!-- MEDIA SLOT: fish-live. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--technical"
+            data-asset-key="fish-live"
+            data-media-state="current"
+          >
+            <a
+              class="media-full-link"
+              href="portfolio-assets/fish-ai/live-display-test.webp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open full image: Archived live-input enhancement display with playback timing diagnostics"
+              ><img
+                src="portfolio-assets/fish-ai/live-display-test.webp"
+                alt="Archived live-input enhancement display with playback timing diagnostics"
+                width="960"
+                height="540"
+                loading="lazy"
+            /></a>
+            <figcaption>
+              Early live-input display test · Not a detection-speed benchmark
+            </figcaption>
+          </figure>
+          <!-- MEDIA SLOT: fish-metrics. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--technical"
+            data-asset-key="fish-metrics"
+            data-media-state="current"
+          >
+            <a
+              class="media-full-link"
+              href="portfolio-assets/fish-ai/v2-confusion-matrix.webp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open full image: Archived v2 confusion matrix from the earlier 30-frame evaluation"
+              ><img
+                src="portfolio-assets/fish-ai/v2-confusion-matrix.webp"
+                alt="Archived v2 confusion matrix from the earlier 30-frame evaluation"
+                width="1800"
+                height="1620"
+                loading="lazy"
+            /></a>
+            <figcaption>
+              Earlier 30-frame evaluation (superseded) · Not the final 60-frame
+              results
+            </figcaption>
+          </figure>
+          <!-- MEDIA SLOT: fish-demo-video. A short real detection / tracking demo. Native controls, no autoplay audio; contain. See MEDIA_PLAN.md before replacing. -->
+          <figure
+            class="project-media media-slot media-slot--video"
+            data-asset-key="fish-demo-video"
+            data-media-state="current"
+          >
+            <video
+              controls
+              preload="none"
+              playsinline
+              width="1920"
+              height="1080"
+              poster="portfolio-assets/fish-ai/demo-poster.webp"
+              aria-label="Silent archived v1 versus v2 aquarium detection demo"
+            >
+              <source
+                src="portfolio-assets/fish-ai/detection-demo.mp4"
+                type="video/mp4"
+              />
+              <p>
+                <a href="portfolio-assets/fish-ai/detection-demo.mp4"
+                  >Download the silent demo video</a
+                >.
+              </p>
+            </video>
+            <figcaption>
+              Archived v1/v2 demo · 71 seconds · Silent. Evaluation updated: the
+              video retains the earlier 30-frame results. Final 60-frame
+              validation (428 ground-truth boxes): v2 precision 74.10%, recall
+              52.80%, and mAP@50 58.20%.
+              <a class="text-link" href="#evaluation">View current results ↗</a>
+            </figcaption>
+            <details class="video-description">
+              <summary>Video description and historical labels</summary>
+              <p>
+                0:00–0:15: raw aquarium scene. 0:15–0:30: v1 detections.
+                0:30–0:51: matched v1/v2 split-screen. 0:51–1:03: the separate
+                frozen 30-frame test results. 1:03–1:11: next steps. There is no
+                audio. These earlier test figures have been superseded by the
+                final 60-frame validation above; the original video is
+                unchanged. The historical “AP50” label refers to mAP@50, and
+                historical Batfish labels remain in the footage. This archived
+                demonstration is not the final evaluation or a live service.
+              </p>
+            </details>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <div>
+        <a class="footer-name" href="index.html"
+          >Benjamin Sung<span class="accent">.</span></a
+        >
+        <p>
+          Chi-Hsuan Sung · 宋其軒<br />Wego High School International Program ·
+          Taiwan
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a
+        ><a href="mailto:benjisung@gmail.com">benjisung@gmail.com ↗</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Benjamin Sung</span
+        ><span>Still learning. Still building.</span
+        ><button
+          type="button"
+          class="motion-toggle"
+          aria-pressed="false"
+          hidden
+        >
+          Reduce motion</button
+        ><a href="#main">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

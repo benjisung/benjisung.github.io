@@ -1,96 +1,411 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Benjamin Sung's autonomous mobile robot development platform and VEX robotics work.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Benjamin Sung's assembled AMR platform, ongoing autonomy integration, and personal VEX contributions alongside clearly attributed team work."
+    />
+    <meta name="theme-color" content="#25272c" />
     <title>Robotics | Benjamin Sung</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-<div id="cursor-dot"></div><div id="cursor-outline"></div><div class="rgb-mesh"></div>
-
-<nav>
-    <div class="nav-brand"><img src="images/benjaminlogo.png" alt="Benjamin Sung logo" class="nav-logo"><h1>BENJAMIN_SUNG &gt;_</h1></div>
-    <ul>
-        <li><a href="index.html">HOME</a></li><li><a href="about.html">ABOUT</a></li><li><a href="activities.html">ACTIVITIES</a></li><li><a href="honors.html">HONORS</a></li><li><a href="robotics.html" class="active">ROBOTICS</a></li><li><a href="funfacts.html">FUN FACTS</a></li><li><a href="contact.html">CONTACT</a></li>
-    </ul>
-    <div class="nav-time mono" id="clock">00:00:00</div>
-</nav>
-
-<main>
-<section style="max-width: 1200px;">
-    <div class="page-intro">
-        <p class="mono accent">// ROBOTICS DEVELOPMENT LOG</p>
-        <h2>From competition robots to a <span class="accent">reusable AMR platform</span></h2>
-        <p>My robotics work combines mechanical assembly, embedded control, computing, sensing, and repeated testing. The goal is to make software and hardware behave as one system.</p>
-    </div>
-
-    <article class="card amr-hero" id="amr">
-        <div>
-            <div class="project-meta mono"><span>INDEPENDENT PROJECT</span><span class="status-in-progress">IN DEVELOPMENT</span></div>
-            <h2>Autonomous Mobile Robot Development Platform</h2>
-            <p class="project-subtitle">24V differential drive · STM32 low-level control · Jetson Orin Nano · ROS 2 Humble</p>
-            <p>I assembled this two-wheel differential-drive platform as a reusable base for robotics development. It began from one application idea, but the project has evolved into a general platform that can accept different sensors, perception models, and mechanisms.</p>
-            <p>The current work centers on hardware-software integration: power, geared motors, encoder feedback, embedded control, high-level Jetson compute, and ROS 2 communication. The robot exists and can be driven; the advanced navigation and perception stack is still being integrated and tested.</p>
-            <div class="tag-container"><span class="tag">Mechatronics</span><span class="tag">Embedded Control</span><span class="tag">Jetson Deployment</span><span class="tag">ROS 2</span><span class="tag">System Debugging</span></div>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cinematic.css" />
+    <link rel="stylesheet" href="chapters.css" />
+    <script src="site.js" defer></script>
+    <script src="chapters.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Benjamin Sung, home"
+        >BS<span class="brand-dot">.</span
+        ><span class="brand-name">Benjamin Sung</span></a
+      ><button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        hidden
+      >
+        Menu <span aria-hidden="true">+</span>
+      </button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="about.html">About</a
+        ><a href="environment.html">Environment</a
+        ><a href="research.html">AI / Research</a
+        ><a href="robotics.html" aria-current="page">Robotics</a
+        ><a href="activities.html">Activities</a><a href="honors.html">Honors</a
+        ><a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="detail-hero wrap photo-heading heading-team">
+        <div class="heading-photograph" data-asset-key="vex-all-team">
+          <img
+            class=""
+            src="portfolio-assets/vex/all-team.webp"
+            alt="The full Reaper 23083Z team with its competition robot"
+            fetchpriority="high"
+            width="1477"
+            height="1108"
+          />
         </div>
-        <div class="system-diagram" aria-label="Robot system architecture">
-            <div class="diagram-node"><span>HIGH-LEVEL COMPUTE</span><strong>Jetson Orin Nano Super 8GB</strong><small>Ubuntu · ROS 2 Humble</small></div>
-            <div class="diagram-arrow">↕</div>
-            <div class="diagram-node"><span>LOW-LEVEL CONTROL</span><strong>STM32</strong><small>Motor commands · encoder feedback</small></div>
-            <div class="diagram-arrow">↕</div>
-            <div class="diagram-node"><span>MOBILE BASE</span><strong>24V Differential Drive</strong><small>Two 24V / 60W geared motors · AB encoders</small></div>
+        <p class="eyebrow">Robotics / Reaper 23083Z</p>
+        <h1>One team.<br />Every moving part.</h1>
+        <p class="large-copy">
+          We build, program, break, repair, and try again.
+        </p>
+        <a class="pill-link" href="#vex">Meet the work behind the team ↗</a>
+        <div class="hero-context">
+          <span class="context-badge" data-asset-key="logo-reaper"
+            ><img
+              class=""
+              src="portfolio-assets/logos/reaper.webp"
+              alt="Reaper 23083Z team logo"
+              loading="lazy"
+              width="480"
+              height="219"
+            /><span>Reaper 23083Z / VEX Robotics</span></span
+          >
         </div>
-    </article>
-
-    <h2 class="section-title mono spaced-title">01_PLATFORM_ARCHITECTURE</h2>
-    <div class="spec-card-grid">
-        <article class="spec-card"><span class="mono">DRIVE</span><h3>Mechanical &amp; Power</h3><ul class="clean-list"><li>Two-wheel differential-drive base</li><li>24V / 60W geared motors</li><li>AB encoder feedback</li><li>Assembled physical platform</li></ul></article>
-        <article class="spec-card"><span class="mono">CONTROL</span><h3>Embedded Layer</h3><ul class="clean-list"><li>STM32 low-level controller</li><li>Motor and encoder integration</li><li>Proportional speed control</li><li>Joystick / joy-topic commands</li></ul></article>
-        <article class="spec-card"><span class="mono">COMPUTE</span><h3>High-Level Layer</h3><ul class="clean-list"><li>Jetson Orin Nano Super 8GB</li><li>Ubuntu / Jetson environment</li><li>ROS 2 Humble</li><li>Camera / YOLO integration in progress</li></ul></article>
-        <article class="spec-card"><span class="mono">AUTONOMY</span><h3>Integration Roadmap</h3><ul class="clean-list"><li>LiDAR integration in progress</li><li>SLAM and localization in progress</li><li>Nav2 and obstacle avoidance in progress</li><li>Autonomous navigation not yet complete</li></ul></article>
-    </div>
-
-    <div class="engineering-note">
-        <span class="mono">WHY_THIS_PROJECT_MATTERS</span>
-        <p>The platform gives me one system on which to learn mechanical design, power and motor integration, encoder feedback, embedded programming, Linux deployment, ROS 2, perception, and autonomy. It is intentionally not tied to a single end use.</p>
-    </div>
-
-    <h2 class="section-title mono spaced-title" id="vex">02_VEX_ROBOTICS</h2>
-    <article class="card vex-overview">
-        <div>
-            <div class="project-meta mono"><span>PROGRAMMER / BUILDER</span><span>WEGO ROBOTICS</span></div>
-            <h3>Competition robotics under real constraints</h3>
-            <p>In VEX Robotics, I worked across programming and building. I used C++ and PROS for robot programming and contributed to mechanism assembly and modification. My technical experience includes PID, odometry, repeated testing, tuning, and engineering design iteration.</p>
-            <p>Competition work taught me that an idea is only useful when the mechanism, code, timing, and driver needs all work together reliably.</p>
-            <p><strong>Team recognition:</strong> VEX Create Award and VEX Sportsmanship Award.</p>
-            <a href="https://23083z.com/#home" target="_blank" rel="noopener" class="btn">OPEN TEAM WEBSITE</a>
+      </section>
+      <nav class="robotics-tabs" aria-label="Robotics projects">
+        <a href="robotics.html" aria-current="page"
+          >01 / VEX <span>Team engineering</span></a
+        ><a href="amr.html">02 / AMR <span>Independent platform</span></a>
+      </nav>
+      <nav class="wrap page-jump" aria-label="VEX sections">
+        <a href="#vex">Our work</a><a href="#iterations">The robots</a
+        ><a href="#contributions">My contributions</a
+        ><a href="#team">Team photographs</a>
+      </nav>
+      <section class="detail-section wrap" id="vex">
+        <p class="eyebrow section-label"><span>01</span> VEX Robotics</p>
+        <div class="editorial-split">
+          <div>
+            <h2>Competition robots.<br />Real constraints.</h2>
+            <p>
+              These robots were built by our team. My contributions included C++
+              / PROS programming, debugging and fixing robot functions, and
+              mechanism ideation. My experience includes PID, odometry, repeated
+              testing, tuning, and the team’s mechanism assembly and
+              modification process.
+            </p>
+            <p>
+              VEX taught me to consider the mechanism, code, timing, and driver
+              needs together.
+            </p>
+            <p class="small">
+              Team recognition: VEX Create Award · VEX Sportsmanship Award
+            </p>
+          </div>
+          <!-- MEDIA SLOT: vex-robot-01. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--hardware"
+            data-asset-key="vex-robot-01"
+            data-media-state="current"
+          >
+            <img
+              src="portfolio-assets/vex/team-robot-side.webp"
+              alt="Full side view of the team-built Reaper 23083Z robot against a white background"
+              width="1600"
+              height="1132"
+              loading="lazy"
+            />
+            <figcaption>Reaper 23083Z · Team-built robot</figcaption>
+          </figure>
         </div>
-        <img src="images/teammember.png" alt="Wego Robotics team members">
-    </article>
+      </section>
+      <section class="detail-section wrap" id="iterations">
+        <p class="eyebrow section-label">
+          <span>02</span> Robot iterations / Build views
+        </p>
+        <h2>From the build archive.</h2>
+        <p>
+          These photographs document our team’s hardware. They are build views
+          rather than a dated version history; I’ll add specific iteration notes
+          when the sequence is confirmed.
+        </p>
+        <div class="media-library">
+          <!-- MEDIA SLOT: vex-mechanism. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--hardware"
+            data-asset-key="vex-mechanism"
+            data-media-state="current"
+          >
+            <img
+              src="portfolio-assets/vex/mechanism-detail.webp"
+              alt="Close view of the VEX team robot’s mechanism and structural assembly"
+              width="1045"
+              height="1567"
+              loading="lazy"
+            />
+            <figcaption>Mechanism detail · Team hardware</figcaption>
+          </figure>
+          <!-- MEDIA SLOT: vex-robot-02. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--hardware"
+            data-asset-key="vex-robot-02"
+            data-media-state="current"
+          >
+            <img
+              src="portfolio-assets/vex/team-robot-front.webp"
+              alt="Front three-quarter view of a team-built VEX robot and its mechanisms"
+              width="1600"
+              height="1172"
+              loading="lazy"
+            />
+            <figcaption>Team build · Another hardware view</figcaption>
+          </figure>
+          <!-- MEDIA SLOT: vex-competition. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--hardware"
+            data-asset-key="vex-competition"
+            data-media-state="current"
+          >
+            <img
+              src="portfolio-assets/vex/robot-at-field.webp"
+              alt="The Reaper team robot beside the competition field"
+              width="1477"
+              height="1108"
+              loading="lazy"
+            />
+            <figcaption>
+              Team robot at the field · Event date unconfirmed
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="detail-section wrap" id="process">
+        <p class="eyebrow section-label"><span>03</span> Engineering process</p>
+        <div class="editorial-split">
+          <div>
+            <h2>Test the robot.<br />Not just the idea.</h2>
+            <!-- MEDIA SLOT: vex-testing. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+            <figure
+              class="project-media media-slot media-slot--hardware"
+              data-asset-key="vex-testing"
+              data-media-state="current"
+            >
+              <img
+                src="portfolio-assets/vex/programming-at-field.webp"
+                alt="Benjamin programming on a laptop beside the VEX game field"
+                width="1567"
+                height="1045"
+                loading="lazy"
+              />
+              <figcaption>
+                My contribution · Programming at the field
+              </figcaption>
+            </figure>
+          </div>
+          <ol class="process-list">
+            <li>
+              <div>
+                <h3>Program</h3>
+                <p>
+                  Translate match objectives into driver-control and autonomous
+                  routines using C++ and PROS.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Diagnose &amp; improve</h3>
+                <p>
+                  Troubleshoot robot functions with teammates and suggest
+                  mechanism changes as design and strategy evolve.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Observe</h3>
+                <p>
+                  Test movement and mechanism behavior together, using feedback
+                  and position estimates.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Tune &amp; repeat</h3>
+                <p>
+                  Refine PID, odometry, and the physical system through repeated
+                  tests.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="detail-section warm-tint" id="contributions">
+        <div class="wrap">
+          <p class="eyebrow section-label"><span>04</span> My contributions</p>
+          <h2>Where I contributed.</h2>
+          <!-- MEDIA SLOT: vex-repair. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--hardware"
+            data-asset-key="vex-repair"
+            data-media-state="current"
+          >
+            <img
+              src="portfolio-assets/vex/team-repair.webp"
+              alt="Benjamin and teammates working together on a robot mechanism"
+              width="1477"
+              height="1108"
+              loading="lazy"
+            />
+            <figcaption>
+              Functional troubleshooting · Working with teammates
+            </figcaption>
+          </figure>
+          <div class="evidence-rows">
+            <div class="evidence-row">
+              <h3>Programming &amp; control</h3>
+              <p>C++ / PROS programming, PID, odometry, and repeated tuning.</p>
+            </div>
+            <div class="evidence-row">
+              <h3>Functional troubleshooting</h3>
+              <p>
+                Debugging and fixing robot functions, contributing mechanism
+                ideas, and testing changes with teammates.
+              </p>
+            </div>
+            <div class="evidence-row">
+              <h3>Planning with the team</h3>
+              <p>
+                Suggesting mechanism approaches and helping improve robot
+                functionality. Design, assembly, programming, and competition
+                preparation were collaborative team efforts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="detail-section wrap" id="team">
+        <p class="eyebrow section-label">
+          <span>05</span> Team context / Shared work
+        </p>
+        <div class="editorial-split">
+          <div>
+            <h2>A team robot.<br />A shared process.</h2>
+            <p>
+              Reaper 23083Z represents Wego High School in Taipei. Founded in
+              2023, the team describes experience in Over Under and High Stakes,
+              followed by a 2025–26 Push Back season plan.
+            </p>
+            <p>
+              My work focused on programming, functional troubleshooting, and
+              mechanism ideation. The robot designs, builds, and team results
+              reflect shared work—not individual ownership of every part.
+            </p>
+            <p class="small">
+              Team context adapted from
+              <a
+                class="inline-link"
+                href="https://23083z.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >23083z.com ↗</a
+              >. A season plan is not evidence of completed events or results.
+            </p>
+          </div>
+          <!-- MEDIA SLOT: vex-team. Real user-supplied media; preserve meaningful context; contain technical evidence. Provenance: MEDIA_PLAN.md. -->
+          <figure
+            class="project-media media-slot media-slot--hardware"
+            data-asset-key="vex-team"
+            data-media-state="current"
+          >
+            <img
+              src="portfolio-assets/vex/team-photo.webp"
+              alt="Wego Robotics teammates standing with their team-built robot"
+              width="1477"
+              height="1108"
+              loading="lazy"
+            />
+            <figcaption>Reaper 23083Z · Shared work</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="detail-section wrap" id="team-site">
+        <p class="eyebrow section-label"><span>06</span> External team site</p>
+        <h2>More from the team.</h2>
+        <p>
+          Explore broader team updates and activities on the original Wego
+          Robotics site.
+        </p>
+        <a
+          class="text-link"
+          href="https://23083z.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Visit Reaper 23083Z <span>↗</span></a
+        ><br /><a
+          class="text-link"
+          href="https://www.instagram.com/23083_wego_robotics/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Team Instagram <span>↗</span></a
+        >
+      </section>
 
-    <h2 class="section-title mono spaced-title">03_BUILD_&amp;_TEST_PROCESS</h2>
-    <div class="spec-card-grid">
-        <article class="spec-card"><span class="mono">PROGRAM</span><h3>C++ / PROS</h3><p>Translate match objectives into driver-control and autonomous routines.</p></article>
-        <article class="spec-card"><span class="mono">CONTROL</span><h3>PID / Odometry</h3><p>Develop and tune movement behavior using feedback and position estimates.</p></article>
-        <article class="spec-card"><span class="mono">BUILD</span><h3>Mechanism Iteration</h3><p>Assemble and modify mechanisms as the design and strategy change.</p></article>
-        <article class="spec-card"><span class="mono">VERIFY</span><h3>Repeated Testing</h3><p>Test the complete robot, identify unreliable behavior, and refine the system.</p></article>
-    </div>
-    <div class="social-row">
-        <p>More team updates and build logs are available from Wego Robotics.</p>
-        <a href="https://www.instagram.com/23083_wego_robotics/" target="_blank" rel="noopener" class="text-link mono">VISIT @23083_WEGO_ROBOTICS →</a>
-    </div>
-</section>
-</main>
-
-<footer class="site-footer mono">&copy; 2026 BENJAMIN SUNG | PERSONAL ENGINEERING PORTFOLIO</footer>
-<script>
-    const dot = document.getElementById('cursor-dot'); const outline = document.getElementById('cursor-outline');
-    window.addEventListener('mousemove', (event) => { dot.style.left = `${event.clientX}px`; dot.style.top = `${event.clientY}px`; outline.animate({ left: `${event.clientX}px`, top: `${event.clientY}px` }, { duration: 500, fill: 'forwards' }); });
-    function updateClock() { const clock = document.getElementById('clock'); if (clock) clock.innerText = new Date().toLocaleTimeString('en-GB', { hour12: false }); }
-    setInterval(updateClock, 1000); updateClock();
-</script>
-</body>
+      <section class="detail-section wrap">
+        <p class="eyebrow">Between the matches</p>
+        <h2>More than the robot.</h2>
+        <div class="story-photo-grid">
+          <figure class="photo-story" data-asset-key="vex-travel-team">
+            <img
+              class=""
+              src="portfolio-assets/vex/team-hero.webp"
+              alt="Reaper teammates with their robot at a competition"
+              loading="lazy"
+              width="870"
+              height="936"
+            />
+            <figcaption>Reaper / With the team</figcaption>
+          </figure>
+          <figure class="photo-story" data-asset-key="vex-arrival">
+            <img
+              class=""
+              src="portfolio-assets/vex/competition-arrival.webp"
+              alt="Reaper team transporting its equipment to a competition"
+              loading="lazy"
+              width="1477"
+              height="1108"
+            />
+            <figcaption>From the workshop to the competition</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <div>
+        <a class="footer-name" href="index.html"
+          >Benjamin Sung<span class="accent">.</span></a
+        >
+        <p>
+          Chi-Hsuan Sung · 宋其軒<br />Wego High School International Program ·
+          Taiwan
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a
+        ><a href="mailto:benjisung@gmail.com">benjisung@gmail.com ↗</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Benjamin Sung</span
+        ><span>Still learning. Still building.</span
+        ><button
+          type="button"
+          class="motion-toggle"
+          aria-pressed="false"
+          hidden
+        >
+          Reduce motion</button
+        ><a href="#main">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
 </html>
