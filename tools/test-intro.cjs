@@ -4,6 +4,12 @@ const vm = require("node:vm");
 const assert = require("node:assert/strict");
 const path = require("node:path");
 const code = fs.readFileSync(path.join(__dirname, "..", "intro.js"), "utf8");
+// Guard the page integration too: the animation must remain mounted after redesigns.
+const home = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
+assert.match(home, /<script\b[^>]*src="intro\.js"/);
+assert.match(home, /<link\b[^>]*href="intro\.css"/);
+assert.match(home, /class="intro-overlay"/);
+assert.match(home, /class="replay-intro"/);
 function scenario(options = {}) {
   let time = 0,
     nextId = 0;
@@ -92,6 +98,8 @@ assert.equal(first.overlay.hidden, false);
 assert.equal(first.storage.size, 0);
 first.advance(190);
 assert.equal(first.greeting.textContent, "你好");
+first.advance(570);
+assert.equal(first.greeting.textContent, "Bonjour");
 first.advance(950);
 assert.equal(first.greeting.textContent, "Aloha");
 first.advance(1140);

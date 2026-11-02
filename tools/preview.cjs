@@ -13,6 +13,7 @@ const types = {
   ".jpeg": "image/jpeg",
   ".webp": "image/webp",
   ".mp4": "video/mp4",
+  ".pdf": "application/pdf",
   ".svg": "image/svg+xml",
   ".ico": "image/x-icon",
   ".ttf": "font/ttf",

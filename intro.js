@@ -30,7 +30,7 @@
     document.removeEventListener("pointerdown", finish, true);
     document.removeEventListener("keydown", finish, true);
     if (hadFocus)
-      document.querySelector("#hero-title")?.focus({ preventScroll: true });
+      (document.querySelector("#hello-title") || document.querySelector("#hero-title"))?.focus({ preventScroll: true });
   }
   function play() {
     if (reduced()) return;

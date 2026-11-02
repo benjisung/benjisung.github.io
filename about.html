@@ -2,323 +2,76 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Benjamin Sung, legal name Chi-Hsuan Sung (宋其軒), Grade 12 at Wego High School International Program. Computation, physical systems, and environmental interests."
-    />
-    <meta name="theme-color" content="#25272c" />
+    <meta name="description" content="The threads connecting Benjamin Sung’s engineering projects, computer vision, marine field learning, and team leadership." />
+    <meta name="theme-color" content="#141615" />
     <title>About | Benjamin Sung</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="cinematic.css" />
-    <link rel="stylesheet" href="chapters.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="visual-refresh.css" />
+    <link rel="stylesheet" href="detail-refresh.css" />
+    <link rel="stylesheet" href="creative.css" />
+    <link rel="stylesheet" href="navigation.css" />
     <script src="site.js" defer></script>
-    <script src="chapters.js" defer></script>
+    <script src="navigation.js" defer></script>
+    <script src="creative.js" defer></script>
+    <script src="profile-board.js" defer></script>
   </head>
-  <body>
+  <body class="fresh-detail theme-connections">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Benjamin Sung, home"
-        >BS<span class="brand-dot">.</span
-        ><span class="brand-name">Benjamin Sung</span></a
-      ><button
-        type="button"
-        class="menu-toggle"
-        aria-expanded="false"
-        aria-controls="site-nav"
-        hidden
-      >
-        Menu <span aria-hidden="true">+</span>
-      </button>
+    <header class="site-header fresh-header">
+      <a class="brand" href="index.html" aria-label="Benjamin Sung, home">BS<span aria-hidden="true">✳</span></a>
+      <span class="header-note">A little code. A lot of curiosity.</span>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu <span aria-hidden="true">+</span></button>
       <nav id="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a
-        ><a href="about.html" aria-current="page">About</a
-        ><a href="environment.html">Environment</a
-        ><a href="research.html">AI / Research</a
-        ><a href="robotics.html">Robotics</a
-        ><a href="activities.html">Activities</a><a href="honors.html">Honors</a
-        ><a href="contact.html">Contact</a>
+        <a href="index.html#work">Work</a><a href="about.html" aria-current="page">About</a>
+        <details class="nav-explore"><summary>Explore <span aria-hidden="true">+</span></summary>
+          <div class="explore-panel">
+            <div class="explore-group"><p>Build &amp; experiment</p>
+              <a href="robotics.html">VEX Robotics <small>Reaper 23083Z / Team engineering</small></a>
+              <a class="nav-sub" href="robotics.html#robot-explorer">Robot explorer ↗</a>
+              <a class="nav-sub" href="robotics.html#notebook">Engineering notebook ↗</a>
+              <a class="nav-sub" href="robotics.html#autonomous">My autonomous programs ↗</a>
+              <a class="nav-sub" href="robotics.html#contributions">My role &amp; programming ↗</a>
+              <a class="nav-sub" href="robotics.html#iterations">Robot gallery ↗</a>
+              <a href="amr.html">AMR <small>Independent robot platform</small></a>
+              <a href="sdg.html">SDG Engineering <small>Student projects / Team science</small></a>
+              <a class="nav-sub" href="sdg.html#projects">Explore the projects ↗</a>
+            </div>
+            <div class="explore-group"><p>Observe &amp; understand</p>
+              <a href="environment.html">Pathfinders <small>Taiwan → Hawaiʻi / Field learning</small></a>
+              <a href="research.html">Fish AI <small>Computer vision / Data &amp; evaluation</small></a>
+              <a href="about.html#connections">The connection board <small>Follow the threads between my interests</small></a>
+            </div>
+            <div class="explore-group"><p>Beyond the projects</p>
+              <a href="activities.html">Activities <small>Algorithms, sport &amp; leadership</small></a>
+              <a class="nav-sub" href="activities.html#sprout">SPROUT / Programming ↗</a>
+              <a class="nav-sub" href="activities.html#badminton">Badminton ↗</a>
+              <a href="honors.html">Honors <small>Academic &amp; team recognition</small></a>
+              <a href="contact.html">Contact <small>Let’s keep the conversation going</small></a>
+            </div>
+          </div>
+        </details>
+        <a href="contact.html">Say hello ↗</a>
       </nav>
     </header>
     <main id="main">
-      <section class="detail-hero wrap photo-heading heading-about">
-        <div class="heading-photograph" data-asset-key="about-portrait">
-          <img
-            class=""
-            src="portfolio-assets/portrait/hero-portrait.webp"
-            alt="Benjamin standing outdoors beside the water at HIMB"
-            fetchpriority="high"
-            width="1350"
-            height="1800"
-          />
-        </div>
-        <p class="eyebrow">
-          About / Wego High School International Program · Grade 12
-        </p>
-        <h1>Benjamin Sung<span class="accent">.</span></h1>
-        <div class="context-badges">
-          <span class="context-badge" data-asset-key="logo-wego"
-            ><img
-              class=""
-              src="portfolio-assets/logos/wego.webp"
-              alt="Wego High School logo"
-              loading="lazy"
-              width="480"
-              height="448"
-            /><span>Wego / International Program</span></span
-          >
-        </div>
-        <p class="identity-other">Chi-Hsuan Sung · 宋其軒</p>
-        <p class="large-copy">
-          I like using computation and engineering to understand and interact
-          with physical, environmental, and biological systems.
-        </p>
+      <section class="page-intro about-intro page-wrap">
+        <p class="micro mint">About / Benjamin Sung · 宋其軒</p>
+        <div class="intro-columns"><h1>Follow<br /> <span class="serif-word">the threads.</span></h1><p>Code, robots, coral, and a badminton racket.<br /> Here’s how they connect.</p></div>
       </section>
-      <section class="detail-section wrap editorial-split">
-        <!-- MEDIA SLOT: about-portrait. Real user-supplied media; subject-aware portrait crop. Provenance: MEDIA_PLAN.md. -->
-        <figure
-          class="project-media media-slot media-slot--portrait"
-          data-asset-key="about-portrait"
-          data-media-state="current"
-        >
-          <img
-            src="portfolio-assets/portrait/hero-portrait.webp"
-            alt="Benjamin standing outdoors beside the water at HIMB"
-            width="1350"
-            height="1800"
-            loading="lazy"
-          />
-          <figcaption>
-            Benjamin Sung · Learning outside the classroom
-          </figcaption>
-        </figure>
-        <div>
-          <p class="eyebrow">What connects the work</p>
-          <h2>Build. Test.<br />Understand.</h2>
-          <p>
-            Programming first taught me to break complex problems into smaller
-            parts. Robotics showed me that code also has to work with motors,
-            mechanisms, sensors, power, and real-world uncertainty.
-          </p>
-          <p>
-            That interest expanded through SDG engineering projects and
-            marine-conservation experiences. At NMMBA and HIMB, I saw how
-            environmental science connects with sensing, mapping, AI, and
-            engineering.
-          </p>
-          <p>
-            I now carry those questions into an independent aquarium
-            fish-detection system and an autonomous mobile robot development
-            platform. Robotics and computer vision are tools that connect my
-            interests—not substitutes for the physical and environmental
-            problems themselves.
-          </p>
+      <section class="connections-section page-wrap" id="connections" aria-labelledby="connections-title">
+        <div class="board-topline"><h2 id="connections-title" class="micro">A map of my curiosity</h2><span class="micro">Every photo opens a story ↗</span></div>
+        <div class="connection-board">
+          <svg class="board-strings" aria-hidden="true" focusable="false"></svg>
+          <div class="board-profile" data-node="me"><span class="board-pin" aria-hidden="true"></span><p class="micro">The common thread</p><div class="board-face"><img src="portfolio-assets/portrait/benjamin-cutout.webp" alt="Benjamin Sung" width="1060" height="1484" /></div><h3>Always<br /> connecting dots.</h3><p>Student. Builder.<br /> Still figuring things out.</p></div>
+<a class="board-card card-vex" href="robotics.html" data-node="vex"><span class="board-pin" aria-hidden="true"></span><figure class="" data-asset-key="vex-repair"><img src="portfolio-assets/vex/team-repair.webp" alt="Benjamin and teammates working together on a robot mechanism" loading="lazy" /></figure><span class="card-copy"><span class="micro">01 / Team engineering</span><strong>VEX Robotics <span aria-hidden="true">↗</span></strong><span>Code. Test. Repeat.</span></span></a><a class="board-card card-amr" href="amr.html" data-node="amr"><span class="board-pin" aria-hidden="true"></span><figure class="" data-asset-key="amr-hero"><img src="portfolio-assets/amr/assembled-platform.webp" alt="Front three-quarter view of Benjamin’s assembled robot, showing wheels, electronics and base" loading="lazy" /></figure><span class="card-copy"><span class="micro">02 / Independent build</span><strong>AMR <span aria-hidden="true">↗</span></strong><span>From bits to movement.</span></span></a><a class="board-card card-field" href="environment.html" data-node="field"><span class="board-pin" aria-hidden="true"></span><figure class="" data-asset-key="field-algae"><img src="portfolio-assets/pathfinders/algae-fieldwork.webp" alt="Benjamin holding collected algae while standing in shallow coastal water" loading="lazy" /></figure><span class="card-copy"><span class="micro">03 / Field learning</span><strong>Outside the lab <span aria-hidden="true">↗</span></strong><span>NMMBA → HIMB</span></span></a><a class="board-card card-fish" href="research.html" data-node="fish"><span class="board-pin" aria-hidden="true"></span><figure class="" data-asset-key="fish-v2"><img src="portfolio-assets/fish-ai/v2-0010.webp" alt="Actual v2 detector output for the matched aquarium scene" loading="lazy" /></figure><span class="card-copy"><span class="micro">04 / Computer vision</span><strong>Fish AI <span aria-hidden="true">↗</span></strong><span>Learning to look closer.</span></span></a><a class="board-card card-sdg" href="sdg.html" data-node="sdg"><span class="board-pin" aria-hidden="true"></span><figure class="" data-asset-key="sdg-team-teacher"><img src="portfolio-assets/sdg/team-teacher.webp" alt="Benjamin with his SDG teammates and teacher" loading="lazy" /></figure><span class="card-copy"><span class="micro">05 / Shared questions</span><strong>SDG Engineering <span aria-hidden="true">↗</span></strong><span>An idea becomes a prototype.</span></span></a><a class="board-card card-court" href="activities.html#badminton" data-node="court"><span class="board-pin" aria-hidden="true"></span><figure class="" data-asset-key="badminton-court"><img src="portfolio-assets/badminton/competition.webp" alt="Badminton racket and Benjamin’s competition certificate" loading="lazy" /></figure><span class="card-copy"><span class="micro">06 / Another kind of team</span><strong>Badminton <span aria-hidden="true">↗</span></strong><span>Practice. Lead. Play.</span></span></a><a class="board-card card-code" href="activities.html#sprout" data-node="code"><span class="board-pin" aria-hidden="true"></span><figure class="" data-asset-key="logo-sprout"><img src="portfolio-assets/logos/sprout.webp" alt="SPROUT program logo" loading="lazy" /></figure><span class="card-copy"><span class="micro">07 / The foundations</span><strong>Programming <span aria-hidden="true">↗</span></strong><span>C++ · SPROUT · USACO Gold</span></span></a>
         </div>
+        <div class="board-bottomline"><p class="thread-note" aria-live="polite">Different interests. A shared curiosity about how things work.</p><span class="micro">Hover or focus to follow a thread</span></div>
       </section>
-      <section class="detail-section tinted atmospheric about-atmosphere">
-        <div class="wrap">
-          <p class="eyebrow section-label">
-            <span>01</span> Threads of development
-          </p>
-          <h2>From problem solving<br />to systems thinking.</h2>
-          <div class="evidence-rows">
-            <div class="evidence-row">
-              <div>
-                <span class="micro">FOUNDATIONS</span>
-                <h3>Programming</h3>
-              </div>
-              <p>
-                C++ and algorithms through competitive programming and the
-                SPROUT program; advancement to USACO Gold.
-              </p>
-            </div>
-            <div class="evidence-row">
-              <div>
-                <span class="micro">PHYSICAL CONSTRAINTS</span>
-                <h3>VEX &amp; SDG projects</h3>
-              </div>
-              <p>
-                Competition robots, Heron’s Fountain, microplastic separation,
-                the Ocean Challenge, and an AI Fridge. Testing and rebuilding
-                made iteration central to the work.
-              </p>
-            </div>
-            <div class="evidence-row">
-              <div>
-                <span class="micro">FIELD LEARNING</span>
-                <h3>NMMBA &amp; HIMB</h3>
-              </div>
-              <p>
-                Completed the Taiwan Global Pathfinders program, connecting
-                coral conservation with measurement and engineering.
-              </p>
-            </div>
-            <div class="evidence-row">
-              <div>
-                <span class="micro">SUMMER 2026</span>
-                <h3>NYCU lab learning</h3>
-              </div>
-              <p>
-                YOLO workflows at the Adaptive Photonics Laboratory, Tainan,
-                with day-to-day guidance mainly from a senior lab member.
-              </p>
-            </div>
-            <div class="evidence-row">
-              <div>
-                <span class="micro">CURRENT / GRADE 12</span>
-                <h3>Independent systems</h3>
-              </div>
-              <p>
-                Ongoing aquarium detection and tracking tests, alongside a
-                reusable 24V AMR platform with advanced autonomy still under
-                development.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="detail-section wrap">
-        <p class="eyebrow section-label">
-          <span>02</span> Tools &amp; areas of experience
-        </p>
-        <h2>A practical toolkit.</h2>
-        <dl class="spec-list">
-          <div>
-            <dt>Programming</dt>
-            <dd>C++ / Python · data structures · algorithms</dd>
-          </div>
-          <div>
-            <dt>Robotics</dt>
-            <dd>PROS · PID · odometry · STM32 · Jetson · ROS 2 Humble</dd>
-          </div>
-          <div>
-            <dt>Vision</dt>
-            <dd>
-              YOLO · annotation · class mapping · data cleaning · hard-negative
-              refinement · independent evaluation · ByteTrack
-            </dd>
-          </div>
-          <div>
-            <dt>Mechanical</dt>
-            <dd>
-              Mechanism assembly and modification · motors · encoders · power
-              integration · iterative testing
-            </dd>
-          </div>
-          <div>
-            <dt>Environment</dt>
-            <dd>
-              Learning exposure to water-quality monitoring, CoralWatch, GIS /
-              R, SfM, ReefCloud, and aerial monitoring concepts
-            </dd>
-          </div>
-        </dl>
-      </section>
-      <section class="detail-section wrap">
-        <p class="eyebrow section-label">
-          <span>03</span> Connecting my interests
-        </p>
-        <div class="editorial-split">
-          <h2>Different disciplines.<br />A shared question.</h2>
-          <div>
-            <p>
-              Environmental Engineering and Mechanical Engineering are my
-              central academic interests. Computer Science, Robotics, Computer
-              Vision, Bioengineering, and Environmental Science offer additional
-              ways to understand systems that compute, move, and live.
-            </p>
-            <p>
-              What connects them for me is the relationship between a model and
-              the world it is meant to describe—or act on.
-            </p>
-            <p class="small">
-              Preferred name: Benjamin Sung<br />Legal name: Chi-Hsuan Sung ·
-              宋其軒
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="detail-section wrap">
-        <p class="eyebrow">A few frames from my life</p>
-        <h2>Learning happens<br />with other people.</h2>
-        <div class="story-photo-grid">
-          <figure class="photo-story" data-asset-key="sdg-team-teacher">
-            <img
-              class=""
-              src="portfolio-assets/sdg/team-teacher.webp"
-              alt="Benjamin with his SDG teammates and teacher"
-              loading="lazy"
-              width="2000"
-              height="1425"
-            />
-            <figcaption>My SDG teammates and our teacher</figcaption>
-          </figure>
-          <figure class="photo-story" data-asset-key="vex-repair">
-            <img
-              class=""
-              src="portfolio-assets/vex/team-repair.webp"
-              alt="Benjamin and teammates working together on a robot mechanism"
-              loading="lazy"
-              width="1477"
-              height="1108"
-            />
-            <figcaption>Solving problems with the robotics team</figcaption>
-          </figure>
-          <figure class="photo-story" data-asset-key="field-algae">
-            <img
-              class=""
-              src="portfolio-assets/pathfinders/algae-fieldwork.webp"
-              alt="Benjamin holding collected algae while standing in shallow coastal water"
-              loading="lazy"
-              width="1350"
-              height="1800"
-            />
-            <figcaption>
-              Outside the workshop / Environmental learning
-            </figcaption>
-          </figure>
-          <figure class="photo-story" data-asset-key="sdg-award-speech">
-            <img
-              class=""
-              src="portfolio-assets/sdg/award-speech.webp"
-              alt="Benjamin speaking with his teammates after their science competition award"
-              loading="lazy"
-              width="1200"
-              height="800"
-            />
-            <figcaption>Learning to explain the work</figcaption>
-          </figure>
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer wrap">
-      <div>
-        <a class="footer-name" href="index.html"
-          >Benjamin Sung<span class="accent">.</span></a
-        >
-        <p>
-          Chi-Hsuan Sung · 宋其軒<br />Wego High School International Program ·
-          Taiwan
-        </p>
-      </div>
-      <div class="footer-links">
-        <a href="about.html">About</a
-        ><a href="mailto:benjisung@gmail.com">benjisung@gmail.com ↗</a>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Benjamin Sung</span
-        ><span>Still learning. Still building.</span
-        ><button
-          type="button"
-          class="motion-toggle"
-          aria-pressed="false"
-          hidden
-        >
-          Reduce motion</button
-        ><a href="#main">Back to top ↑</a>
-      </div>
-    </footer>
+      <section class="profile-summary page-wrap" id="background"><div><p class="micro mint">A little context</p><h2>Build. Test.<br /> Understand.</h2></div><div><p class="profile-lead">I’m a Grade 12 student at Wego High School International Program in Taiwan, drawn to environmental and mechanical engineering.</p><p>Programming gives me tools. Robotics makes me test them. Field learning gives me new questions to ask.</p><div class="identity-strip"><figure class="" data-asset-key="logo-wego"><img src="portfolio-assets/logos/wego.webp" alt="Wego High School logo" loading="lazy" /></figure><span>Benjamin Sung<br /> <small>Chi-Hsuan Sung / 宋其軒</small></span></div></div></section>
+      <section class="page-wrap toolkit-section" id="toolkit"><details class="detail-fold"><summary>Inside my toolkit <span aria-hidden="true">+</span></summary><div class="toolkit-grid"><div><h3>Code</h3><p>C++ · Python · data structures · algorithms</p></div><div><h3>Control</h3><p>PROS · PID · odometry · STM32 · Jetson · ROS 2 Humble</p></div><div><h3>Vision</h3><p>YOLO · annotation · evaluation · exploratory ByteTrack tests</p></div><div><h3>Field learning</h3><p>Coral conservation · environmental observation · exposure to GIS, SfM, and monitoring methods</p></div></div></details></section>
+      <section class="next-page page-wrap"><p class="micro">Keep following the thread</p><a href="robotics.html">Into the workshop <span aria-hidden="true">↗</span></a></section>
+</main>
+    <footer class="site-footer"><span>© 2026 Benjamin Sung</span><span>宋其軒 / Taiwan</span><div><button type="button" class="motion-toggle" aria-pressed="false" hidden>Reduce motion</button><a href="#main">Back to top ↑</a></div></footer>
   </body>
 </html>

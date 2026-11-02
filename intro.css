@@ -1,0 +1,177 @@
+/* Original multilingual greeting and mint aperture, preserved for the refreshed homepage. */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  display: grid;
+  place-items: center;
+  background: var(--warm);
+  animation: intro-failsafe 2.8s step-end both;
+}
+.intro-overlay[hidden] {
+  display: none !important;
+}
+.intro-words {
+  text-align: center;
+  padding: 24px;
+  width: 100%;
+}
+.intro-greeting {
+  font-size: clamp(45px, 8vw, 115px);
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+.intro-identity {
+  display: none;
+}
+.intro-identity p:first-child {
+  font-size: clamp(30px, 5vw, 60px);
+  letter-spacing: 0.01em;
+  margin-bottom: 20px;
+}
+.intro-identity p:nth-child(2) {
+  font-size: clamp(40px, 7vw, 95px);
+  letter-spacing: -0.055em;
+  margin: 0;
+}
+.intro-identity small {
+  display: block;
+  font-size: 18px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+.show-identity .intro-greeting {
+  display: none;
+}
+.show-identity .intro-identity {
+  display: block;
+}
+.intro-skip {
+  position: absolute;
+  bottom: 30px;
+  right: var(--gutter);
+  display: flex;
+  gap: 30px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #a1a7ac;
+  padding: 12px 0;
+  font-size: 0.875rem;
+}
+.intro-leaving .intro-words {
+  opacity: 0;
+  transform: translateY(-14px);
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+.intro-overlay.intro-leaving {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+@keyframes intro-failsafe {
+  0% {
+    visibility: visible;
+    pointer-events: auto;
+  }
+  100% {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+/* A mint aperture opens into the photographic hero; never an asset-loading gate. */
+.intro-overlay {
+  background: #b8f7e4;
+  color: #25272c;
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.9s cubic-bezier(0.76, 0, 0.16, 1);
+}
+.intro-overlay::before {
+  content: "BS / PORTFOLIO 2026";
+  position: absolute;
+  left: var(--gutter);
+  top: 35px;
+  font: 11px var(--mono);
+}
+.intro-overlay::after {
+  content: "";
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 90px;
+  height: 1px;
+  background: #25272c55;
+  transform-origin: left;
+  animation: intro-rule 1.8s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+.intro-identity small {
+  color: #3f5b53;
+  font-family: var(--mono);
+}
+.intro-overlay.intro-leaving {
+  clip-path: inset(0 0 100% 0 round 0 0 40% 0);
+  transition: clip-path 0.9s cubic-bezier(0.76, 0, 0.16, 1);
+}
+.intro-leaving .intro-words {
+  transform: translateY(-65px) scale(0.95);
+  transition:
+    opacity 0.4s,
+    transform 0.8s;
+}
+.intro-identity {
+  animation: identity-focus 0.45s both;
+}
+.intro-skip {
+  border-color: #25272c66;
+}
+.intro-running .identity-stage {
+  animation: hero-subject-in 1.5s 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.intro-running .hello-copy {
+  animation: hero-copy-in 1.3s 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes intro-rule {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes identity-focus {
+  from {
+    opacity: 0;
+    filter: blur(7px);
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+@keyframes hero-subject-in {
+  from {
+    transform: translateY(50px) scale(1.09);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes hero-copy-in {
+  from {
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(25px);
+  }
+  to {
+    clip-path: inset(0);
+    transform: none;
+  }
+}
+
+.replay-intro { background: none; border: 0; padding: 0; font: inherit; color: var(--mint); }
+.replay-intro:disabled { color: var(--muted); cursor: default; }
+@media (max-width: 600px) { .intro-skip { bottom: 24px; }.intro-identity small { font-size: 16px; } }
+@media (prefers-reduced-motion: reduce) { .intro-overlay { display: none !important; } }
+.reduced-motion .intro-overlay { display: none !important; }

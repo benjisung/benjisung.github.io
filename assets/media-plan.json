@@ -1,10 +1,12 @@
 {
   "version": 4,
-  "notes": "Five native-scroll homepage stories with multiple stages, persistent project labels and detail links. Original photos, contextual logos and explicit historical-poster corrections. Official HIMB island image is attributed and not personal photography. No scientific evidence synthesized or changed.",
+  "notes": "Topic-specific creative redesign with original project media, three user-confirmed VEX videos, native controls, and reduced-motion-aware flight and ocean scenes. Source MOV files are unchanged; MP4 copies use the macOS metadata-filtered H.264 export.",
   "assets": [
     {
       "key": "pathfinders-hero",
-      "pages": ["index.html", "environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "section": "02 / Field experience",
       "content": "Benjamin listening beside outdoor coral tanks during a marine learning session",
       "orientation": "Landscape 16:9 or native aspect",
@@ -18,7 +20,9 @@
     },
     {
       "key": "nmmba-training",
-      "pages": ["index.html", "environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "section": "Field notebook / NMMBA preparation",
       "content": "Coral photographed by Benjamin during NMMBA preparatory learning",
       "orientation": "Landscape 16:9 or native aspect",
@@ -32,7 +36,9 @@
     },
     {
       "key": "himb-coral",
-      "pages": ["environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "section": "Field notebook / Coral nursery work",
       "content": "Participants observing coral in a nursery tank",
       "orientation": "Landscape 16:9 or native aspect",
@@ -46,7 +52,7 @@
     },
     {
       "key": "water-quality",
-      "pages": ["environment.html"],
+      "pages": [],
       "section": "Field notebook / Water-quality monitoring",
       "content": "Actual monitoring activity or instruments at HIMB; full apparatus / readout, contain.",
       "orientation": "Landscape 16:9 or native aspect",
@@ -58,7 +64,9 @@
     },
     {
       "key": "diving",
-      "pages": ["environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "section": "Field notebook / Learning below the surface",
       "content": "Benjamin wearing a mask underwater",
       "orientation": "Landscape 16:9 or native aspect",
@@ -72,7 +80,9 @@
     },
     {
       "key": "hcc",
-      "pages": ["index.html", "environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "section": "Field notebook / Hawaii Conservation Conference",
       "content": "A lecture at the Hawaii Conservation Conference",
       "orientation": "Landscape 16:9 or native aspect",
@@ -86,7 +96,9 @@
     },
     {
       "key": "fish-raw",
-      "pages": ["index.html", "research.html"],
+      "pages": [
+        "research.html"
+      ],
       "section": "Fish AI / 01 / Raw aquarium frame",
       "content": "Full aquarium frame at the same source timestamp used in the v1 and v2 examples",
       "orientation": "Landscape 16:9 or native aspect",
@@ -100,7 +112,9 @@
     },
     {
       "key": "fish-v1-failure",
-      "pages": ["index.html", "research.html"],
+      "pages": [
+        "research.html"
+      ],
       "section": "Fish AI / 02 / v1 false positives",
       "content": "Actual v1 detector output with false-positive labels on aquarium equipment",
       "orientation": "Landscape 16:9 or native aspect",
@@ -114,7 +128,9 @@
     },
     {
       "key": "fish-hard-negative",
-      "pages": ["research.html"],
+      "pages": [
+        "research.html"
+      ],
       "section": "Fish AI / 03 / Hard-negative example",
       "content": "Real adaptation training frame with fish and background aquarium equipment",
       "orientation": "Landscape 16:9 or native aspect",
@@ -128,7 +144,10 @@
     },
     {
       "key": "fish-v2",
-      "pages": ["index.html", "research.html"],
+      "pages": [
+        "about.html",
+        "research.html"
+      ],
       "section": "Fish AI / 04 / v2 detection",
       "content": "Actual v2 detector output for the matched aquarium scene",
       "orientation": "Landscape 16:9 or native aspect",
@@ -142,7 +161,9 @@
     },
     {
       "key": "fish-bytetrack",
-      "pages": ["research.html"],
+      "pages": [
+        "research.html"
+      ],
       "section": "Fish AI / 05 / ByteTrack",
       "content": "Exploratory fish tracking trajectories over a recorded aquarium frame",
       "orientation": "Landscape 16:9 or native aspect",
@@ -156,7 +177,9 @@
     },
     {
       "key": "fish-live",
-      "pages": ["research.html"],
+      "pages": [
+        "research.html"
+      ],
       "section": "Fish AI / 06 / Live system",
       "content": "Archived live-input enhancement display with playback timing diagnostics",
       "orientation": "Landscape 16:9 or native aspect",
@@ -170,7 +193,9 @@
     },
     {
       "key": "fish-metrics",
-      "pages": ["research.html"],
+      "pages": [
+        "research.html"
+      ],
       "section": "Fish AI / 07 / Evaluation visual",
       "content": "Archived v2 confusion matrix from the superseded 30-frame evaluation",
       "orientation": "Landscape 16:9 or native aspect",
@@ -184,7 +209,9 @@
     },
     {
       "key": "fish-demo-video",
-      "pages": ["research.html"],
+      "pages": [
+        "research.html"
+      ],
       "section": "Fish AI / 08 / Short demo",
       "content": "A short real detection / tracking demo. Native controls, no autoplay audio; contain.",
       "orientation": "Landscape 16:9 or native aspect",
@@ -200,7 +227,10 @@
     },
     {
       "key": "amr-hero",
-      "pages": ["index.html", "amr.html"],
+      "pages": [
+        "about.html",
+        "amr.html"
+      ],
       "section": "AMR / The assembled platform",
       "content": "Front three-quarter view of Benjamin’s assembled robot, showing wheels, electronics and base",
       "orientation": "Landscape 4:3",
@@ -214,7 +244,9 @@
     },
     {
       "key": "amr-chassis",
-      "pages": ["index.html", "amr.html"],
+      "pages": [
+        "amr.html"
+      ],
       "section": "AMR / Chassis & drivetrain",
       "content": "Low-angle view of the robot chassis, front caster and lower electronics",
       "orientation": "Landscape 4:3",
@@ -228,7 +260,9 @@
     },
     {
       "key": "amr-electronics",
-      "pages": ["index.html", "amr.html"],
+      "pages": [
+        "amr.html"
+      ],
       "section": "AMR / Power & wiring",
       "content": "Top view of the powered robot with controller wiring, compute board and display",
       "orientation": "Landscape 16:9 or native aspect",
@@ -242,7 +276,9 @@
     },
     {
       "key": "amr-jetson-stm32",
-      "pages": ["index.html", "amr.html"],
+      "pages": [
+        "amr.html"
+      ],
       "section": "AMR / Compute & control",
       "content": "Close view of the mounted Jetson board, fan and connectors",
       "orientation": "Landscape 16:9 or native aspect",
@@ -256,7 +292,7 @@
     },
     {
       "key": "amr-lidar",
-      "pages": ["amr.html"],
+      "pages": [],
       "section": "AMR / LiDAR integration",
       "content": "Real sensor mounting or integration test; do not imply completed navigation.",
       "orientation": "Landscape 16:9 or native aspect",
@@ -268,7 +304,7 @@
     },
     {
       "key": "amr-ros",
-      "pages": ["amr.html"],
+      "pages": [],
       "section": "AMR / ROS / RViz",
       "content": "Actual ROS 2 or RViz screenshot. Full readable view; redact sensitive paths if necessary.",
       "orientation": "Landscape 16:9 or native aspect",
@@ -280,7 +316,7 @@
     },
     {
       "key": "amr-demo-video",
-      "pages": ["amr.html"],
+      "pages": [],
       "section": "AMR / Movement test",
       "content": "Physical robot moving under the documented control mode. Native controls; no autoplay.",
       "orientation": "Landscape 16:9 or native aspect",
@@ -292,7 +328,9 @@
     },
     {
       "key": "vex-robot-01",
-      "pages": ["robotics.html"],
+      "pages": [
+        "robotics.html"
+      ],
       "section": "Full robot",
       "content": "Full side view of the team-built Reaper 23083Z robot against a white background",
       "orientation": "Landscape 4:3",
@@ -306,9 +344,11 @@
     },
     {
       "key": "vex-robot-02",
-      "pages": ["robotics.html"],
+      "pages": [
+        "robotics.html"
+      ],
       "section": "Build archive",
-      "content": "Front three-quarter view of a team-built VEX robot and its mechanisms",
+      "content": "Separate VEX robot built mainly by Benjamin, distinct from the main team competition robot",
       "orientation": "Landscape 4:3",
       "crop": "contain; show full evidence",
       "type": "hardware",
@@ -316,13 +356,16 @@
       "current": "portfolio-assets/vex/team-robot-front.webp",
       "plannedPath": "portfolio-assets/vex/vex-robot-02.jpg",
       "source": "images/vex/white background robot_3.jpg",
-      "caption": "Team build · Another hardware view"
+      "caption": "Separate VEX build / Built mainly by me",
+      "ownership": "Built mainly by Benjamin; user-confirmed November 2, 2026."
     },
     {
       "key": "vex-mechanism",
-      "pages": ["robotics.html"],
+      "pages": [
+        "robotics.html"
+      ],
       "section": "Build archive",
-      "content": "Close view of the VEX team robot’s mechanism and structural assembly",
+      "content": "The team’s X-drive skills-challenge robot; control programming remained unfinished",
       "orientation": "Landscape 4:3",
       "crop": "contain; show full evidence",
       "type": "hardware",
@@ -330,11 +373,14 @@
       "current": "portfolio-assets/vex/mechanism-detail.webp",
       "plannedPath": "portfolio-assets/vex/vex-mechanism.jpg",
       "source": "images/vex/bot_1.jpg",
-      "caption": "Mechanism detail · Team hardware"
+      "caption": "Skills-challenge robot / X-drive prototype. The control programming was not completed, so the attempt did not succeed.",
+      "ownership": "Team skills-challenge prototype; outcome and control-software limitation confirmed by user November 2, 2026."
     },
     {
       "key": "vex-testing",
-      "pages": ["index.html", "robotics.html"],
+      "pages": [
+        "robotics.html"
+      ],
       "section": "Engineering process",
       "content": "Benjamin programming on a laptop beside the VEX game field",
       "orientation": "Landscape 4:3",
@@ -348,7 +394,9 @@
     },
     {
       "key": "vex-competition",
-      "pages": ["index.html", "robotics.html"],
+      "pages": [
+        "robotics.html"
+      ],
       "section": "Build archive",
       "content": "The Reaper team robot beside the competition field",
       "orientation": "Landscape 16:9 or native aspect",
@@ -362,7 +410,9 @@
     },
     {
       "key": "vex-team",
-      "pages": ["robotics.html"],
+      "pages": [
+        "robotics.html"
+      ],
       "section": "Team context",
       "content": "Wego Robotics teammates standing with their team-built robot",
       "orientation": "Landscape 4:3",
@@ -376,9 +426,12 @@
     },
     {
       "key": "badminton-court",
-      "pages": ["index.html", "activities.html"],
+      "pages": [
+        "about.html",
+        "activities.html"
+      ],
       "section": "06 / Beyond engineering",
-      "content": "Benjamin competing on a badminton court",
+      "content": "Badminton racket and Benjamin’s competition certificate",
       "orientation": "Landscape 4:3",
       "crop": "contain; show full evidence",
       "type": "hardware",
@@ -386,11 +439,11 @@
       "current": "portfolio-assets/badminton/competition.webp",
       "plannedPath": "portfolio-assets/badminton/badminton-court.jpg",
       "source": "images/badminton/badminton.png",
-      "caption": "Badminton · Practice, competition, and team leadership"
+      "caption": "Badminton / Competition certificate"
     },
     {
       "key": "about-portrait",
-      "pages": ["about.html"],
+      "pages": [],
       "section": "Biography",
       "content": "Benjamin standing outdoors beside the water at HIMB",
       "orientation": "Portrait 4:5",
@@ -404,7 +457,9 @@
     },
     {
       "key": "field-mapping",
-      "pages": ["environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "section": "Field notebook / 3D methods",
       "content": "Benjamin and other participants learning from a three-dimensional model on a laptop",
       "orientation": "Native aspect",
@@ -418,7 +473,10 @@
     },
     {
       "key": "field-algae",
-      "pages": ["environment.html", "about.html"],
+      "pages": [
+        "about.html",
+        "environment.html"
+      ],
       "section": "Field notebook / Coastal participation",
       "content": "Benjamin holding collected algae while standing in shallow coastal water",
       "orientation": "Portrait",
@@ -432,7 +490,10 @@
     },
     {
       "key": "vex-repair",
-      "pages": ["index.html", "about.html", "robotics.html"],
+      "pages": [
+        "about.html",
+        "robotics.html"
+      ],
       "section": "My contributions / Functional troubleshooting",
       "content": "Benjamin and teammates working together on a robot mechanism",
       "orientation": "Native aspect",
@@ -446,7 +507,9 @@
     },
     {
       "key": "sdg-presentation",
-      "pages": ["activities.html"],
+      "pages": [
+        "sdg.html"
+      ],
       "section": "SDG / Team presentation",
       "content": "Benjamin and teammates answering questions during the science competition",
       "orientation": "Native aspect",
@@ -460,7 +523,9 @@
     },
     {
       "key": "sdg-ocean",
-      "pages": ["activities.html"],
+      "pages": [
+        "sdg.html"
+      ],
       "section": "SDG / Ocean Challenge",
       "content": "Team members presenting at the Ocean Challenge",
       "orientation": "Native aspect",
@@ -474,7 +539,9 @@
     },
     {
       "key": "sdg-centrifuge",
-      "pages": ["index.html", "activities.html"],
+      "pages": [
+        "sdg.html"
+      ],
       "section": "SDG / Preliminary concept",
       "content": "Original student poster outlining a preliminary centrifugal separation concept",
       "orientation": "Native aspect",
@@ -488,7 +555,9 @@
     },
     {
       "key": "hero-conversation",
-      "pages": ["index.html", "contact.html"],
+      "pages": [
+        "contact.html"
+      ],
       "section": "Cinematic photographic pass",
       "content": "Benjamin speaking with a marine expert at HIMB",
       "orientation": "Native aspect",
@@ -500,7 +569,9 @@
     },
     {
       "key": "hero-cutout",
-      "pages": ["index.html"],
+      "pages": [
+        "index.html"
+      ],
       "section": "Cinematic photographic pass",
       "content": "AI-assisted extraction of Benjamin from the HIMB conversation photo",
       "orientation": "Native aspect",
@@ -512,7 +583,9 @@
     },
     {
       "key": "coral-underwater",
-      "pages": ["environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "section": "Cinematic photographic pass",
       "content": "Benjamin’s underwater coral photograph",
       "orientation": "Native aspect",
@@ -524,7 +597,9 @@
     },
     {
       "key": "coral-structures",
-      "pages": ["environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "section": "Cinematic photographic pass",
       "content": "Learning about coral structures",
       "orientation": "Native aspect",
@@ -536,7 +611,9 @@
     },
     {
       "key": "fish-lab-visit",
-      "pages": ["environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "section": "Cinematic photographic pass",
       "content": "Fish laboratory visit",
       "orientation": "Native aspect",
@@ -548,7 +625,9 @@
     },
     {
       "key": "nursery-underwater",
-      "pages": ["environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "section": "Cinematic photographic pass",
       "content": "Underwater coral nursery",
       "orientation": "Native aspect",
@@ -563,7 +642,11 @@
       "current": "portfolio-assets/sdg/team-teacher.webp",
       "source": "images/sdg/our team photo and our teacher.jpg",
       "content": "Benjamin with his SDG teammates and teacher",
-      "pages": ["index.html", "activities.html", "about.html"],
+      "pages": [
+        "about.html",
+        "activities.html",
+        "sdg.html"
+      ],
       "type": "photograph",
       "crop": "Documentary crop; full photograph retained",
       "priority": "Medium"
@@ -573,7 +656,9 @@
       "current": "portfolio-assets/sdg/on-stage.webp",
       "source": "images/sdg/me talking on stage 3min comp.png",
       "content": "Benjamin presenting on stage at the 3-Minute Science Competition",
-      "pages": ["index.html", "activities.html"],
+      "pages": [
+        "sdg.html"
+      ],
       "type": "photograph",
       "crop": "Documentary crop; full photograph retained",
       "priority": "Medium"
@@ -583,7 +668,9 @@
       "current": "portfolio-assets/sdg/award-speech.webp",
       "source": "images/sdg/me talking some words after we won.jpg",
       "content": "Benjamin speaking with his teammates after their science competition award",
-      "pages": ["activities.html", "honors.html", "about.html"],
+      "pages": [
+        "sdg.html"
+      ],
       "type": "photograph",
       "crop": "Documentary crop; full photograph retained",
       "priority": "Medium"
@@ -593,7 +680,10 @@
       "current": "portfolio-assets/sdg/championship.webp",
       "source": "images/sdg/we won national champion at 3min.jpg",
       "content": "SDG team receiving their science competition award",
-      "pages": ["index.html", "honors.html"],
+      "pages": [
+        "honors.html",
+        "sdg.html"
+      ],
       "type": "photograph",
       "crop": "Documentary crop; full photograph retained",
       "priority": "Medium"
@@ -603,7 +693,10 @@
       "current": "portfolio-assets/vex/all-team.webp",
       "source": "images/vex/robotics_allteam.jpg",
       "content": "The full Reaper 23083Z team with its competition robot",
-      "pages": ["index.html", "honors.html", "robotics.html"],
+      "pages": [
+        "honors.html",
+        "robotics.html"
+      ],
       "type": "photograph",
       "crop": "Documentary crop; full photograph retained",
       "priority": "Medium"
@@ -613,7 +706,9 @@
       "current": "portfolio-assets/vex/team-hero.webp",
       "source": "images/vex/teammember second from the left is me.png",
       "content": "Reaper teammates with their robot at a competition",
-      "pages": ["robotics.html"],
+      "pages": [
+        "robotics.html"
+      ],
       "type": "photograph",
       "crop": "Documentary crop; full photograph retained",
       "priority": "Medium"
@@ -623,7 +718,9 @@
       "current": "portfolio-assets/vex/competition-arrival.webp",
       "source": "images/vex/whole team bringing everything to comp.jpg",
       "content": "Reaper team transporting its equipment to a competition",
-      "pages": ["robotics.html"],
+      "pages": [
+        "robotics.html"
+      ],
       "type": "photograph",
       "crop": "Documentary crop; full photograph retained",
       "priority": "Medium"
@@ -633,7 +730,11 @@
       "current": "portfolio-assets/logos/wego.webp",
       "source": "images/wego.png",
       "content": "Wego High School logo",
-      "pages": ["honors.html", "contact.html", "about.html"],
+      "pages": [
+        "about.html",
+        "contact.html",
+        "honors.html"
+      ],
       "type": "logo",
       "crop": "contain; unmodified identity",
       "priority": "Medium"
@@ -643,7 +744,9 @@
       "current": "portfolio-assets/logos/usaco.webp",
       "source": "images/usaco.png",
       "content": "USA Computing Olympiad logo",
-      "pages": ["honors.html"],
+      "pages": [
+        "honors.html"
+      ],
       "type": "logo",
       "crop": "contain; unmodified identity",
       "priority": "Medium"
@@ -653,7 +756,10 @@
       "current": "portfolio-assets/logos/sprout.webp",
       "source": "images/sprout/sprout logo.png",
       "content": "SPROUT program logo",
-      "pages": ["activities.html"],
+      "pages": [
+        "about.html",
+        "activities.html"
+      ],
       "type": "logo",
       "crop": "contain; unmodified identity",
       "priority": "Medium"
@@ -663,14 +769,18 @@
       "current": "portfolio-assets/logos/reaper.webp",
       "source": "images/vex/23083Z Reaper Team logo.png",
       "content": "Reaper 23083Z team logo",
-      "pages": ["honors.html", "robotics.html"],
+      "pages": [
+        "robotics.html"
+      ],
       "type": "logo",
       "crop": "contain; unmodified identity",
       "priority": "Medium"
     },
     {
       "key": "hcc-exhibition",
-      "pages": ["index.html", "environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "type": "landscape",
       "priority": "Medium",
       "current": "portfolio-assets/pathfinders/hcc-exhibition.webp",
@@ -680,7 +790,9 @@
     },
     {
       "key": "diving-18m",
-      "pages": ["index.html", "environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "type": "landscape",
       "priority": "Medium",
       "current": "portfolio-assets/pathfinders/diving-18m.webp",
@@ -690,7 +802,9 @@
     },
     {
       "key": "padi-certification",
-      "pages": ["index.html", "environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "type": "landscape",
       "priority": "Medium",
       "current": "portfolio-assets/pathfinders/padi-certification.webp",
@@ -700,7 +814,9 @@
     },
     {
       "key": "hawaii-sunset",
-      "pages": ["environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "type": "landscape",
       "priority": "Medium",
       "current": "portfolio-assets/pathfinders/hawaii-sunset.webp",
@@ -710,7 +826,9 @@
     },
     {
       "key": "moku-o-loe",
-      "pages": ["index.html", "environment.html"],
+      "pages": [
+        "environment.html"
+      ],
       "type": "landscape",
       "priority": "Medium",
       "current": "portfolio-assets/pathfinders/moku-o-loe.webp",
@@ -720,7 +838,9 @@
     },
     {
       "key": "sdg-heron",
-      "pages": ["index.html", "activities.html"],
+      "pages": [
+        "sdg.html"
+      ],
       "type": "landscape",
       "priority": "Medium",
       "current": "portfolio-assets/sdg/herons-fountain.webp",
@@ -730,7 +850,9 @@
     },
     {
       "key": "logo-amc",
-      "pages": ["honors.html"],
+      "pages": [
+        "honors.html"
+      ],
       "type": "logo",
       "priority": "Medium",
       "current": "portfolio-assets/logos/amc.webp",
@@ -740,7 +862,9 @@
     },
     {
       "key": "logo-usabo",
-      "pages": ["honors.html"],
+      "pages": [
+        "honors.html"
+      ],
       "type": "logo",
       "priority": "Medium",
       "current": "portfolio-assets/logos/usabo.webp",
@@ -750,7 +874,9 @@
     },
     {
       "key": "logo-bbo",
-      "pages": ["honors.html"],
+      "pages": [
+        "honors.html"
+      ],
       "type": "logo",
       "priority": "Medium",
       "current": "portfolio-assets/logos/bbo.webp",
@@ -767,6 +893,57 @@
       "source": "images/padi logo.jpeg",
       "content": "PADI logo",
       "caption": "PADI logo"
+    },
+    {
+      "key": "vex-right-autonomous",
+      "pages": [
+        "robotics.html"
+      ],
+      "current": "portfolio-assets/vex/video/right-autonomous.mp4",
+      "source": "User-supplied IMG_8106.MOV",
+      "content": "Right autonomous / Benjamin Sung’s programming and tuning on a team-built VEX robot",
+      "type": "video",
+      "crop": "contain; preserve full frame and native orientation",
+      "caption": "Programmed by me / Right-side routine",
+      "priority": "High"
+    },
+    {
+      "key": "vex-left-autonomous",
+      "pages": [
+        "robotics.html"
+      ],
+      "current": "portfolio-assets/vex/video/left-autonomous.mp4",
+      "source": "User-supplied IMG_8128.MOV",
+      "content": "Left autonomous / Benjamin Sung’s programming and tuning on a team-built VEX robot",
+      "type": "video",
+      "crop": "contain; preserve full frame and native orientation",
+      "caption": "Programmed by me / Left-side routine",
+      "priority": "High"
+    },
+    {
+      "key": "vex-pid-tuning",
+      "pages": [
+        "robotics.html"
+      ],
+      "current": "portfolio-assets/vex/video/pid-tuning.mp4",
+      "source": "User-supplied IMG_8066.MOV",
+      "content": "PID gain tuning / Benjamin Sung’s programming and tuning on a team-built VEX robot",
+      "type": "video",
+      "crop": "contain; preserve full frame and native orientation",
+      "caption": "My tuning process / Short test recording",
+      "priority": "High"
+    },
+    {
+      "key": "vex-engineering-notebook",
+      "pages": [
+        "robotics.html"
+      ],
+      "type": "document",
+      "priority": "High",
+      "current": "portfolio-assets/vex/notebook/reaper-engineering-notebook.pdf",
+      "source": "User-supplied 23083Z REAPER Engineering Notebook.pdf",
+      "content": "Unchanged 439-page 2025–26 Push Back team notebook, with lazy page images and extracted reading text. Team attribution retained. Benjamin’s aligner and wing records appear on pages 323–342.",
+      "caption": "A shared record by Reaper 23083Z."
     }
   ]
 }

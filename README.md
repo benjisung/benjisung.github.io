@@ -1,111 +1,76 @@
-# Benjamin Sung — Portfolio v4
+# Benjamin Sung — Portfolio
 
-A static, photo-led Graphite / Sky Mint engineering portfolio for Benjamin Sung, a Grade 12 student at Wego High School International Program in Taiwan. Environmental Engineering and Mechanical Engineering remain central interests, connected with Computer Science, Bioengineering, Environmental Science, robotics, and computer vision through physical and living systems. Preferred name: Benjamin Sung; legal name: Chi-Hsuan Sung; Chinese name: 宋其軒. Contact: benjisung@gmail.com.
+A static engineering portfolio hosted on GitHub Pages. Preferred name: Benjamin Sung; legal name: Chi-Hsuan Sung; Chinese name: 宋其軒. Contact: benjisung@gmail.com.
 
-This redesign starts from deployed commit `538c16043a405f4c76522359df38e7e8f23209bc` on the isolated `portfolio-v4-redesign` branch. It is a local review version, not a deployment.
+## Publication status
+
+Benjamin approved publishing the visual redesign on November 2, 2026. The approved source is deployed through the repository’s existing GitHub Pages setup.
+
+The direction combines charcoal and mint, oversized typography, offset photo prints, shorter copy, and real project media. The homepage has an unframed, silhouette-highlighted portrait and aligned project rows. About connects activity photographs with strings. VEX includes Benjamin’s two autonomous routines and PID tuning clip in a keyboard-accessible video selector. SDG has a student notebook treatment. The shared Explore menu exposes every project and key subsection.
 
 ## Preview
-
-With Node.js installed, run:
 
 ```sh
 node tools/preview.cjs 8766
 ```
 
-Open http://127.0.0.1:8766/. The server binds to loopback only and serves public HTML, CSS, JavaScript, image assets, and MP4 video (including byte-range requests); it does not serve Git metadata. No build step, framework, or package installation is needed.
-
-The previously deployed site remains at [benjisung.github.io](https://benjisung.github.io/). Do not commit or push the redesign until visual approval.
+Open http://127.0.0.1:8766/. No package installation or build step is required. The server binds to loopback and supports MP4/PDF byte ranges while refusing Git metadata and non-public file types. `design-preview.html` redirects to the current local homepage.
 
 ## Pages
 
-- `index.html`: personal narrative — identity, five multi-stage projects (Pathfinders, Fish AI, AMR, VEX, SDG), life beyond engineering, and contact.
-- `about.html`: biography, development threads, tools.
-- `environment.html`: completed Taiwan Global Pathfinders program, NMMBA preparation, HIMB learning.
-- `research.html`: NYCU learning and the independent aquarium deployment case study.
-- `robotics.html`: full-team photographic opening, VEX personal contributions, team build archive, and teamwork.
-- `amr.html`: separate independent AMR platform, architecture, and hardware, connected by the Robotics project tabs.
-- `activities.html`: SDG projects, SPROUT, badminton leadership; old project anchors are retained.
-- `honors.html`: academic and team-project recognition.
-- `contact.html`: email and school.
-- `funfacts.html`: retired; a small compatibility redirect leads old bookmarks to About. All Fun Facts links and quiz behavior are removed.
-- `01.html`: preserved early HTML exercise, with basic markup and local-image repairs.
+- `index.html`: image-led project overview, portrait, Fish AI video, and link to the connection board. Earlier public homepage fragments are retained as aliases.
+- `about.html`: interactive activity connection board, brief background, expandable toolkit.
+- `robotics.html`: separate/team robot explorer, 439-page flipping team notebook, autonomous videos, personal contributions, and shared team engineering.
+- `sdg.html`: Heron’s Fountain, microplastic separation concepts, Ocean Challenge, AI Fridge, team science, and recognition.
+- `activities.html`: SPROUT, programming, badminton, and a link to SDG. Existing SDG, Pathfinders, and fish-detection fragments remain available.
+- `environment.html`: ocean atmosphere, replayable Taiwan–Hawaiʻi flight, reef field notebook, and real field photographs.
+- `research.html`: matched-frame image comparison, training context, frozen validation readouts, and the original archived demo.
+- `amr.html`: blueprint grid, switchable real hardware views, and the retained conceptual architecture.
+- `honors.html`: academic milestone collection and clearly attributed shared achievements.
+- `contact.html`: photographic postcard with a direct email link.
+- `funfacts.html`: retired compatibility redirect. `01.html`: preserved early HTML exercise.
 
-## Implementation
+## Source structure
 
-Shared styling is in `style.css`, `cinematic.css`, `chapters.css`, and `stories.css`; progressive enhancement is in `site.js`, `cinematic.js`, `chapters.js`, and `stories.js`; the bounded every-refresh greeting is in `intro.js`.
+All active pages use `visual-refresh.css`, `detail-refresh.css`, and `creative.css`. `creative.js` supplies media tabs, the matched-frame comparison, and visibility-triggered flight/court scenes. Animations respect system and footer reduced-motion preferences. Videos have native controls, no autoplay, and are paused when their panel or browser tab is hidden. All active pages share `navigation.css` and `navigation.js`; navigation markup is present in HTML and works without JavaScript. Native details exposes the Explore panel and expandable background notes. `site.js` supplies the phone menu and reduced-motion preference.
 
-- Native scrolling, IntersectionObserver reveals, requestAnimationFrame-throttled chapter/sequence updates, and CSS sticky layouts.
-- No GSAP, framework, animation CDN, remote fonts, or tracking. The optional intro is not tied to loading or network requests.
-- Home has five persistent project chapters and 16 internal stages: Pathfinders (4), Fish AI (3), AMR (3), VEX (3), SDG (3). No separate title-gate pages. Native scrolling changes the content within a viewport; phase links, a project index, and persistent detail-page links also work with keyboard input. Reduced motion, no JavaScript, and short viewports show a normal reading layout.
-- Inner-page hero photographs, SDG teacher/team galleries, About galleries, and low-opacity documentary backgrounds preserve readable copy. Reduced motion removes sticky project holds and camera transforms. Technical evidence remains available in the detail pages.
-- Cross-document CSS View Transitions connect the shared header, coral image and robot architecture where supported. Other browsers use ordinary links without delay.
-- System reduced-motion preferences and a device-local footer motion control disable animated reveals, long sticky sequences, and transitions. No content depends on animation.
-- Semantic landmarks, skip link, keyboard-accessible menu, Escape-to-close, visible focus, and keyboard-operable project links and image comparison.
+`profile-board.js` positions SVG strings between the actual photo pins using ResizeObserver. Photo cards are ordinary links. Keyboard focus or pointer entry highlights adjacent threads and updates a short description. On phones, the board reflows to a two-column layout; it does not require dragging or horizontal panning.
 
-## Content boundaries
+The former styles and homepage story scripts remain in the repository for history. The original `intro.js` is loaded on Home again, with its styles isolated in `intro.css`: Hello, 你好, こんにちは, Bonjour, 안녕하세요, Aloha, then the original identity and mint aperture. It plays on visits and refreshes, supports skip/replay, respects reduced motion, and preserves direct deep links. `chapters.js` remains on Robotics to preserve older AMR bookmarks. Fonts are self-hosted with their existing licenses. There are no trackers, remote font calls, or new runtime dependencies.
 
-- Pathfinders: independently prepared proposal; approximately NT$280,000 government funding; completed field-learning program, not original conservation findings.
-- NYCU: summer 2026 learning at the Adaptive Photonics Laboratory in Tainan; daily guidance mainly from a senior lab member.
-- Lab dataset: 10 classes; 1,292 original / 1,104 clean images; 80/20 train-validation split.
-- Independent aquarium: 8 classes; 419 images; approximately 5,100 boxes; 60 labeled full-tank adaptation images (48 train / 12 validation), with unlabeled equipment as hard-negative context.
-- Final frozen validation: 60 manually annotated frames / 428 ground-truth boxes; v2 precision 74.10%, recall 52.80%, F1 61.66%, mAP@50 58.20%, mAP@50:95 30.34%. At confidence 0.35 and class-aware matching IoU 0.50: TP 226, FP 79, FN 202. AP uses a 0.001 floor and averages the six positive-GT classes. The older 30-frame metrics are superseded; the unmodified archived video and confusion matrix are explicitly labeled.
-- ByteTrack, long-duration monitoring, and live/livestream tests continue. This is a deployment project, not a publication.
-- AMR: assembled 24V differential-drive platform with STM32, Jetson Orin Nano Super 8GB, ROS 2 Humble, joystick and proportional speed control. Advanced sensing, navigation, and autonomy remain in development.
-- VEX: team-built robots; Benjamin contributed programming, functional troubleshooting, mechanism ideation, testing, and tuning using C++ / PROS, PID, and odometry. Create and Sportsmanship are team awards.
+## Content and media
 
-## Team-site integration and imagery
+Original photographs, technical evidence, and video are untouched. `assets/media-plan.json` tracks actual page slots; `MEDIA_PLAN.md` preserves source and extraction provenance. The existing hero cutout was an earlier AI-assisted background extraction, not a newly generated photograph.
 
-Team context is paraphrased and linked to [Reaper 23083Z](https://23083z.com/). Personal contributions are separate from shared team work. Published season plans are not presented as completed competition results.
+Preserve these distinctions when editing:
 
-The September media pass imports selected real photos from the user-prepared portrait, Pathfinders, AMR, VEX, badminton, and SDG folders, plus archived fish-AI evidence from AquariumFishAI. Originals are untouched. The current palette uses Graphite #25272C and Sky Mint #B8F7E4. Space Grotesk and JetBrains Mono are self-hosted with their SIL Open Font License files in assets/fonts/. Build views have no invented generation numbers or dates. The AMR diagram remains conceptual architecture, not fabricated CAD.
+- Pathfinders was a completed field-learning program, not original conservation research.
+- Fish AI’s archived demonstration is a qualitative example. Final frozen validation uses 60 annotated frames / 428 ground-truth boxes; details remain on Research. Tracking and live deployment remain exploratory.
+- AMR is assembled and joystick-controlled; advanced autonomy remains in development.
+- The main VEX competition robot, repositories, and team awards reflect shared work. The front-view white-background photograph shows a separate robot built mainly by Benjamin. The tall mechanism photograph shows the team’s X-drive skills-challenge prototype, whose control programming was not completed; that attempt did not succeed. Benjamin contributed programming, troubleshooting, mechanism ideas, and testing to the team work.
+- SDG projects are student demonstrations, prototypes, and early concepts. Heron’s Fountain is pressure-driven; the original poster’s power-generation claims were not validated. Competition recognition is attributed to the team.
+- The badminton asset shows a racket and competition certificate, not an action photograph.
 
-Matched raw/v1/v2 frames, an adaptation training example, exploratory tracking, an early live-input test, the independent confusion matrix, and a silent 71-second demo are integrated. Historical species/metric labels are explained without altering archived evidence. The live screenshot is not proof of completed live detection.
-
-## Intro and media
-
-The intro cycles six greetings at 190 ms intervals, shows 宋其軒 / Benjamin Sung / Chi-Hsuan Sung, and opens a mint aperture into the hero. The aperture starts at 1.8 seconds and overlaps the image/text entrance. It ends by 2.75 seconds, with a separate CSS fail-open deadline at 2.8 seconds. Any click or key skips it. Home plays the intro on every normal page load and every refresh; it no longer checks session storage. A footer Replay intro button allows explicit replay. System reduced motion and the footer motion preference bypass it. Direct deep links skip it, but refreshing an anchored Home page still replays it. Storage access is not required. Content never waits for assets.
-
-[MEDIA_PLAN.md](MEDIA_PLAN.md) and `assets/media-plan.json` document 62 media keys: 58 populated and 4 pending. The selected derivatives comprise 58 WebP images and one original MP4. Each entry lists page, section, content, orientation, crop, priority, current file if any, and suggested future path. Used files live under `portfolio-assets/`; paths for the four pending slots are not requested. Highest-value additions are a clean AMR portrait, STM32 detail, ROS/RViz screenshot, movement video, and a current integrated live-detection interface.
-
-All technical screenshots, hardware, charts, diagrams, and video use full-frame `contain` (the AMR home photograph also uses a decorative mint blend). Portraits and documentary photos may use a controlled `cover` crop. Keep the `data-asset-key` when replacing a placeholder. Do not use stock/generated evidence.
+The VEX recordings are user-confirmed: `IMG_8106.MOV` → right autonomous, `IMG_8128.MOV` → left autonomous, `IMG_8066.MOV` → PID gain tuning. They are exported as metadata-filtered MP4 copies in `portfolio-assets/vex/video/`, with real-frame posters. Originals in Downloads are unchanged. Both autonomous programs were written by Benjamin; the robot remains team-built. Add only identified real media, with native video controls and no autoplay. Technical hardware, detection frames, plots, and posters retain full-frame views.
 
 ## Checks
 
 ```sh
 node --check site.js
+node --check navigation.js
+node --check profile-board.js
+node --check creative.js
+node --check robot-notebook.js
 node --check intro.js
-node --check cinematic.js
 node tools/test-intro.cjs
-node --check tools/preview.cjs
 node tools/audit.cjs
 node tools/audit.cjs --http
 ```
 
-The HTTP option expects the preview server on port 8766. An optional one-off semantic HTML check is:
+The HTTP audit expects port 8766. The existing audit reports four pre-existing issues in untouched `01.html` (metadata, h1, description, image alt text). Refreshed pages have no audit errors. Browser review covers desktop and phone layouts, menu discovery, card links, keyboard thread highlighting, reduced motion, and video playback. See `DESIGN_REVIEW.md` for review status and remaining work.
 
-```sh
-npx --yes html-validate --rule doctype-style:off --rule void-style:off "*.html"
-```
+## Robot explorer and notebook
 
-Only the two formatting conventions that differ from Prettier (doctype casing and void-element slashes) are excluded; semantic and accessibility rules remain enabled. This does not add a runtime dependency to the site.
+`robot-notebook.js` adds four selectable mechanisms to each of two clearly attributed builds. The main competition robot is first and selected by default. The separate robot built mainly by Benjamin remains the second option. Team mechanism links open relevant pages of the unchanged 439-page team engineering notebook. `robot-notebook.css` provides the hardware highlights and page-turn effect. `notebook-data.js` holds historical extracted reading text, exempt from current-profile wording checks.
 
-The audit checks local links, fragments, asset filename case, duplicate IDs, required metadata, and outdated wording. Browser QA covers desktop 1440×900, mobile 390×844, tablet, menu, scrolling, motion control, Robotics project tabs, every-refresh intro, and console output.
-
-## Cinematic refinement / September 20
-
-The home page now uses a full-bleed conversation photograph, an AI-assisted photographic cutout of Benjamin, a short journey strip, a native-scroll three-photo HIMB aperture sequence, four field photographs, a keyboard-accessible matched-frame comparison, a mint AMR hardware chapter, a VEX photo mosaic, and a badminton composition. Detailed factual context remains on the linked pages. No scroll hijacking, forced snap, animation dependency, external font requests, or generated research evidence.
-
-The original HIMB portrait remains directly linked. Only the hero cutout uses image generation for background extraction; see [MEDIA_PLAN.md](MEDIA_PLAN.md) for provenance and the exact prompt. Source photographs, original working tree, Git history, and deployment were not modified.
-
-## Final fish-validation metric update
-
-Source: `C:/Users/user/AI/AquariumFishAI/runs/evaluation/cjsj_final_validation_60/aggregate_results.csv`, `comparison_summary.md`, `integrity_report.json`, and `docs/cjsj_final_validation_60_evaluation_protocol.md`. The corrected bootstrap summary confirms the same point estimates. The project, model weights, annotations, images, and original MP4 are read-only sources; no evaluation was rerun. Website values are percentages rounded to two decimals. Homepage, Research, video caption, and archived-figure description consistently distinguish final 60-frame validation from the earlier 30-frame test and the separate 60-image adaptation set.
-
-## Photo-led project chapters / September 21
-
-Every active inner page now has a real photograph behind its main heading. Robotics begins with the full Reaper team photo and separates VEX (`robotics.html`) from AMR (`amr.html`) using link-based tabs, so each works without JavaScript and supports direct links. Existing AMR anchors redirect to the corresponding AMR page when JavaScript is available; site links point directly to the new page. Homepage projects now use multi-stage story viewports with direct phase links and detail-page links, never blocking timed overlays. Contextual Wego, USACO, SPROUT, and Reaper logos come from the supplied files; they are not endorsement claims.
-
-
-## Multi-stage story refinement / September 22
-
-HCC lecture and exhibition photos appear together; NMMBA preparation uses Benjamin’s coral photograph, and diving at 18 m and PADI certification have distinct captions. Warm Pacific-route accents complement Graphite / Sky Mint. Moku o Loʻe naming and the explicitly attributed institutional island image reference the official HIMB site. The original Heron’s Fountain poster is accompanied by a correction of its historical perpetual-motion / hydroelectricity wording. National champion wording is user-confirmed and marked as team recognition. Contact uses a one-shot, reduced-motion-aware email typing reveal without changing its accessible name or mailto target.
+The reader loads only displayed WebP pages (1600px long edge), supports desktop spreads and single phone pages, chapter links, page entry, arrow/Home/End keys, enlargement, and reduced motion. The original PDF remains available separately; no runtime dependency or external viewer is required. The three VEX clips now total about 11 MB, 77% smaller than the earlier web copies, at 30fps with preserved orientation and native controls.

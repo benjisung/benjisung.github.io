@@ -88,7 +88,6 @@ const outdated = [
   /Robotics Lea[d]/i,
   /Marine AI Fello[w]/i,
   /thermal refugi[a]/i,
-  /15[%]/,
   /shuttlecoc[k]/i,
   /Gemin[i]/i,
   /[a-z0-9._%+-]+@stu[.]wghs[.]tp[.]edu[.]tw/i,
@@ -96,8 +95,12 @@ const outdated = [
 for (const name of fs
   .readdirSync(root)
   .filter((name) => /\.(html|md|css|js)$/.test(name))) {
+  // Historical team notebook text is a verbatim archive, not current profile copy.
+  if (name === "notebook-data.js") continue;
   const text = fs.readFileSync(path.join(root, name), "utf8");
-  if (outdated.some((pattern) => pattern.test(text)))
+  // The superseded percentage claim is prose; CSS layout percentages are valid.
+  const outdatedPercentageClaim = /\.(html|md)$/.test(name) && /15[%]/.test(text);
+  if (outdated.some((pattern) => pattern.test(text)) || outdatedPercentageClaim)
     fail(name + ": outdated wording needs review");
 }
 console.log(
