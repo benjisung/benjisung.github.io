@@ -25,6 +25,7 @@
         { name: "Conveyor", x: 51, y: 47, description: "The conveyor moves blocks through the robot toward scoring height. The notebook documents our early intake and scoring-system design choices.", page: 77 },
         { name: "Aligner", x: 30, y: 23, description: "The guide helps position the robot at the long goal. My notebook entries follow the aligner from a trapezoid through notched prototypes to a funnel-like guide.", page: 323 },
         { name: "Drivetrain", x: 57, y: 87, description: "The chassis carries the robot and controls its movement. Our team documented the wheel assembly, gear placement, and chassis CAD before building.", page: 97 },
+        { name: "Wing", x: 45, y: 16, description: "The raised hook/wing is a key Push Back mechanism: it sweeps blocks out of the long goal and moves them toward the control-bonus section. My notebook entries cover its pneumatic actuation, stronger frame, and retraction.", page: 337 },
       ],
     },
   };
@@ -36,7 +37,7 @@
     let build = "team";
     function selectPart(index) {
       const part = builds[build].parts[index];
-      const regions = build === "personal" ? [[27,20],[22,43],[24,24],[49,15]] : [[25,23],[32,32],[21,20],[50,15]];
+      const regions = build === "personal" ? [[27,20],[22,43],[24,24],[49,15]] : [[25,23],[32,32],[21,20],[50,15],[16,32]];
       pins.style.setProperty("--part-x", `${part.x}%`);
       pins.style.setProperty("--part-y", `${part.y}%`);
       pins.style.setProperty("--part-w", `${regions[index][0]}%`);

@@ -15,6 +15,7 @@
 .robot-notes > .micro { color: var(--mint); font-size: 11px; }
 .robot-part-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-block: 25px; }
 .robot-part-list button { padding: 10px; background: transparent; border: 1px solid var(--line); color: var(--muted); font: 11px/1.5 var(--mono); text-align: left; }
+.robot-part-list button:nth-child(5):last-child { grid-column: 1 / -1; }
 .robot-part-list button[aria-pressed="true"] { border-color: var(--mint); color: var(--mint); }
 .part-number { font: 30px/1 var(--mono); color: var(--mint); }
 .robot-part-copy h3 { font-size: clamp(25px, 3vw, 44px); margin-block: 14px; }

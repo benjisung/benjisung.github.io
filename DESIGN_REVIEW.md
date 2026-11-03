@@ -75,3 +75,7 @@ Main robot priority correction: Benjamin confirmed the side-view competition rob
 ## Publication approval / November 2, 2026
 
 Benjamin requested pushing the reviewed redesign to GitHub. Publish the approved portfolio and media through the existing GitHub Pages repository. Preserve the main competition robot as the default explorer, the separate build as the second option, and the original multilingual intro.
+
+## Wing callout / November 3, 2026
+
+Added a fifth main-robot callout on the raised hook/wing. The description explains active descoring and moving blocks toward the control-bonus section, with a direct notebook link to page 337. Pages 340–342 support the pneumatic actuation, frame, and return/retraction details. The fifth selector spans the full row on desktop and phones. The separate build retains its four distinct callouts.
