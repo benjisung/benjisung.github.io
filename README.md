@@ -75,4 +75,4 @@ The HTTP audit expects port 8766. The existing audit reports four pre-existing i
 
 The reader loads only displayed WebP pages (1600px long edge), supports desktop spreads and single phone pages, chapter links, page entry, arrow/Home/End keys, enlargement, and reduced motion. The original PDF remains available separately; no runtime dependency or external viewer is required. The three VEX clips now total about 11 MB, 77% smaller than the earlier web copies, at 30fps with preserved orientation and native controls.
 
-The VEX page ends with a lazy-loaded live view of the official team website at `#team-site`. Its full-page fallback opens in the current tab. The embedded site has its own scroll area; the VEX rail and shared Explore menu link directly to it.
+`team-site.css` supplies the embedded site layout independently of the shared stylesheet cache. The VEX page ends with a lazy-loaded live view of the official team website at `#team-site`. Its full-page fallback opens in the current tab. The embedded site has its own scroll area; the VEX rail and shared Explore menu link directly to it.
