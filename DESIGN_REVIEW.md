@@ -79,3 +79,9 @@ Benjamin requested pushing the reviewed redesign to GitHub. Publish the approved
 ## Wing callout / November 3, 2026
 
 Added a fifth main-robot callout on the raised hook/wing. The description explains active descoring and moving blocks toward the control-bonus section, with a direct notebook link to page 337. Pages 340–342 support the pneumatic actuation, frame, and return/retraction details. The fifth selector spans the full row on desktop and phones. The separate build retains its four distinct callouts.
+
+## Embedded team website / November 3, 2026
+
+Added a live 23083z.com iframe after the code resources and before the next-project link. The old `#team-site` alias now identifies the actual section. Both the VEX rail and all shared Explore menus expose the section. The iframe loads lazily, has a descriptive title, and keeps team-site navigation within the portfolio; the full-page fallback opens in the same tab. Initial headers contained no X-Frame-Options or CSP frame-ancestors restriction. No team-site source is copied into the portfolio.
+
+Verification: the live team site loads inside the local portfolio; selecting About & Team changes the embedded content while the parent URL stays on `robotics.html#team-site`. Both parent and child fit the 390px phone test. Full-page fallback has no new-tab target. The local audit checks 521 references and reports only the four existing `01.html` issues.

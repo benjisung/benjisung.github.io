@@ -20,7 +20,7 @@ Open http://127.0.0.1:8766/. No package installation or build step is required. 
 
 - `index.html`: image-led project overview, portrait, Fish AI video, and link to the connection board. Earlier public homepage fragments are retained as aliases.
 - `about.html`: interactive activity connection board, brief background, expandable toolkit.
-- `robotics.html`: separate/team robot explorer, 439-page flipping team notebook, autonomous videos, personal contributions, and shared team engineering.
+- `robotics.html`: separate/team robot explorer, 439-page flipping team notebook, autonomous videos, personal contributions, shared team engineering, and an embedded live view of 23083z.com.
 - `sdg.html`: Heron’s Fountain, microplastic separation concepts, Ocean Challenge, AI Fridge, team science, and recognition.
 - `activities.html`: SPROUT, programming, badminton, and a link to SDG. Existing SDG, Pathfinders, and fish-detection fragments remain available.
 - `environment.html`: ocean atmosphere, replayable Taiwan–Hawaiʻi flight, reef field notebook, and real field photographs.
@@ -74,3 +74,5 @@ The HTTP audit expects port 8766. The existing audit reports four pre-existing i
 `robot-notebook.js` adds five selectable mechanisms to the main competition robot, including the raised descoring wing, and four to the separate build. The main competition robot is first and selected by default. The separate robot built mainly by Benjamin remains the second option. Team mechanism links open relevant pages of the unchanged 439-page team engineering notebook. `robot-notebook.css` provides the hardware highlights and page-turn effect. `notebook-data.js` holds historical extracted reading text, exempt from current-profile wording checks.
 
 The reader loads only displayed WebP pages (1600px long edge), supports desktop spreads and single phone pages, chapter links, page entry, arrow/Home/End keys, enlargement, and reduced motion. The original PDF remains available separately; no runtime dependency or external viewer is required. The three VEX clips now total about 11 MB, 77% smaller than the earlier web copies, at 30fps with preserved orientation and native controls.
+
+The VEX page ends with a lazy-loaded live view of the official team website at `#team-site`. Its full-page fallback opens in the current tab. The embedded site has its own scroll area; the VEX rail and shared Explore menu link directly to it.
