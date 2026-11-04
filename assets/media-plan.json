@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "notes": "Topic-specific creative redesign with original project media, three user-confirmed VEX videos, native controls, and reduced-motion-aware flight and ocean scenes. Source MOV files are unchanged; MP4 copies use the macOS metadata-filtered H.264 export.",
   "assets": [
     {
@@ -944,6 +944,123 @@
       "source": "User-supplied 23083Z REAPER Engineering Notebook.pdf",
       "content": "Unchanged 439-page 2025–26 Push Back team notebook, with lazy page images and extracted reading text. Team attribution retained. Benjamin’s aligner and wing records appear on pages 323–342.",
       "caption": "A shared record by Reaper 23083Z."
+    },
+    {
+      "key": "fish-final-performance",
+      "pages": [
+        "research.html"
+      ],
+      "section": "Fish AI / Final independent test graphs",
+      "content": "model performance from published aggregate results",
+      "orientation": "Responsive desktop and portrait variants",
+      "crop": "contain; full axes, values and intervals",
+      "type": "technical",
+      "priority": "High",
+      "current": "portfolio-assets/fish-ai/charts/model-performance.svg",
+      "source": "https://github.com/benjisung/AquariumFishAI/tree/61945bce3daf20857ef1b0d926ef3f30a753141b/results",
+      "caption": "Final frozen 60-frame / 428-box test; same aquarium; source CSVs retained in data/fish-ai."
+    },
+    {
+      "key": "fish-final-outcomes",
+      "pages": [
+        "research.html"
+      ],
+      "section": "Fish AI / Final independent test graphs",
+      "content": "detection outcomes from published aggregate results",
+      "orientation": "Responsive desktop and portrait variants",
+      "crop": "contain; full axes, values and intervals",
+      "type": "technical",
+      "priority": "High",
+      "current": "portfolio-assets/fish-ai/charts/detection-outcomes.svg",
+      "source": "https://github.com/benjisung/AquariumFishAI/tree/61945bce3daf20857ef1b0d926ef3f30a753141b/results",
+      "caption": "Final frozen 60-frame / 428-box test; same aquarium; source CSVs retained in data/fish-ai."
+    },
+    {
+      "key": "fish-final-species",
+      "pages": [
+        "research.html"
+      ],
+      "section": "Fish AI / Final independent test graphs",
+      "content": "species ap50 from published aggregate results",
+      "orientation": "Responsive desktop and portrait variants",
+      "crop": "contain; full axes, values and intervals",
+      "type": "technical",
+      "priority": "High",
+      "current": "portfolio-assets/fish-ai/charts/species-ap50.svg",
+      "source": "https://github.com/benjisung/AquariumFishAI/tree/61945bce3daf20857ef1b0d926ef3f30a753141b/results",
+      "caption": "Final frozen 60-frame / 428-box test; same aquarium; source CSVs retained in data/fish-ai."
+    },
+    {
+      "key": "fish-underwater-camera",
+      "pages": [
+        "research.html"
+      ],
+      "section": "Fish AI / NYCU–NMMBA labeling and public camera feed",
+      "content": "On-demand public YouTube seabed camera; four source-channel views; no portfolio AI inference",
+      "orientation": "Native video, no crop",
+      "crop": "contain",
+      "type": "external-video",
+      "priority": "High",
+      "current": null,
+      "source": "https://www.youtube.com/watch?v=oMlSukuxtHw",
+      "channel": "https://www.youtube.com/@%E5%8F%B0%E9%9B%BB-%E5%8D%97%E7%81%A3%E6%B5%B7%E5%9F%9F%E7%8F%8A%E7%91%9A%E8%A7%80/streams",
+      "caption": "Public broadcast credit: 台電-南灣海域珊瑚觀測計畫. Student role: dataset labeling for NYCU–NMMBA project, confirmed by Benjamin. No third-party player loads before a load action."
+    },
+    {
+      "key": "fish-v1-training-curves",
+      "pages": [
+        "research.html"
+      ],
+      "section": "Fish AI / Training diagnostics, development validation only",
+      "content": "Original v1 training and development-validation curves",
+      "orientation": "Landscape 2:1",
+      "crop": "contain; original pixels and axes unchanged",
+      "type": "technical",
+      "priority": "Medium",
+      "current": "portfolio-assets/fish-ai/charts/v1-training-curves.png",
+      "source": "https://github.com/benjisung/AquariumFishAI/blob/61945bce3daf20857ef1b0d926ef3f30a753141b/results/development_validation/v1/results.png",
+      "caption": "Development-validation evidence, separate from the later frozen 60-frame test."
+    },
+    {
+      "key": "fish-v2-training-curves",
+      "pages": [
+        "research.html"
+      ],
+      "section": "Fish AI / Training diagnostics, development validation only",
+      "content": "Original v2 training and development-validation curves",
+      "orientation": "Landscape 2:1",
+      "crop": "contain; original pixels and axes unchanged",
+      "type": "technical",
+      "priority": "Medium",
+      "current": "portfolio-assets/fish-ai/charts/v2-training-curves.png",
+      "source": "https://github.com/benjisung/AquariumFishAI/blob/61945bce3daf20857ef1b0d926ef3f30a753141b/results/development_validation/v2/results.png",
+      "caption": "Development-validation evidence, separate from the later frozen 60-frame test."
+    },
+    {
+      "key": "fish-v1-final-matrix",
+      "pages": [
+        "research.html"
+      ],
+      "section": "Fish AI / Confusion matrix comparison",
+      "content": "User-supplied v1 confusion matrix, unchanged",
+      "type": "technical",
+      "crop": "contain; full axes and color scale",
+      "current": "portfolio-assets/fish-ai/charts/v1-final-confusion-matrix.png",
+      "source": "User attachment, 2026-11-04",
+      "caption": "Original diagnostic figure; original color scale retained; V2 diagonal discrepancy disclosed."
+    },
+    {
+      "key": "fish-v2-final-matrix",
+      "pages": [
+        "research.html"
+      ],
+      "section": "Fish AI / Confusion matrix comparison",
+      "content": "User-supplied v2 confusion matrix, unchanged",
+      "type": "technical",
+      "crop": "contain; full axes and color scale",
+      "current": "portfolio-assets/fish-ai/charts/v2-final-confusion-matrix.png",
+      "source": "User attachment, 2026-11-04",
+      "caption": "Original diagnostic figure; original color scale retained; V2 diagonal discrepancy disclosed."
     }
   ]
 }

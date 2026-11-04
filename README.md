@@ -24,7 +24,7 @@ Open http://127.0.0.1:8766/. No package installation or build step is required. 
 - `sdg.html`: Heron’s Fountain, microplastic separation concepts, Ocean Challenge, AI Fridge, team science, and recognition.
 - `activities.html`: SPROUT, programming, badminton, and a link to SDG. Existing SDG, Pathfinders, and fish-detection fragments remain available.
 - `environment.html`: ocean atmosphere, replayable Taiwan–Hawaiʻi flight, reef field notebook, and real field photographs.
-- `research.html`: matched-frame image comparison, training context, frozen validation readouts, and the original archived demo.
+- `research.html`: matched-frame comparison, reproducible final-test graphs and confidence intervals, NYCU–NMMBA dataset-labeling contribution, four on-demand public seabed camera views, and the original archived demo.
 - `amr.html`: blueprint grid, switchable real hardware views, and the retained conceptual architecture.
 - `honors.html`: academic milestone collection and clearly attributed shared achievements.
 - `contact.html`: photographic postcard with a direct email link.
@@ -82,3 +82,15 @@ The reader loads only displayed WebP pages (1600px long edge), supports desktop 
 `visitor-log.js` sends a page-path report to Benjamin’s separate Cloudflare Worker when one of the ten active pages becomes visible. The edge supplies the network IP and country; timestamps come from the server. No query strings, fragments, referrers, cookies, browser fingerprints, or persistent visitor IDs are sent. Do Not Track and Global Privacy Control skip collection. `privacy.html` is linked from every active page footer.
 
 All dashboard data, assets, APIs, and CSV exports require an eight-hour signed owner session. The generated owner access key, its server-side hash, session secret, backend source, and visitor records stay outside this public repository. The collection endpoint is public for reporting but never returns visitor records. Data older than 30 days is excluded and deleted by a daily job. The backend uses Workers Free and D1 Free; hitting free quotas may interrupt collection, with no automatic upgrade or paid subscription.
+
+## Fish AI graphs and public cameras (local draft)
+
+`fish-research.css` and `fish-research.js` extend Research with three plots generated from the public `AquariumFishAI` aggregate CSVs at revision `61945bce3daf20857ef1b0d926ef3f30a753141b`. Sources and interpretation are in `data/fish-ai/README.md`; `tools/build-fish-charts.py` regenerates the standalone desktop/mobile SVG and PNG figures with Matplotlib. No model inference, new predictions, private frames or labels were used. The final 60-frame test, 60-frame adaptation set, old 30-frame archive and separate 10-class lab workflow retain distinct labels.
+
+The camera section credits Benjamin’s user-confirmed fish-image labeling for an NYCU–NMMBA identification project. The four public source-channel feeds are 頂流區 (`oMlSukuxtHw`), 軸孔樂園 (`2GzIYf-I5kM`), 搖曳大草原 (`2dyGcIYbJa8`), and 雀鯛公寓 (`BggLWTcLixM`). Channel titles and IDs were inspected on 2026-11-04. The broadcast owner is credited as 台電-南灣海域珊瑚觀測計畫. The public ocean footage does not establish model performance, and the portfolio does not run identification on these feeds.
+
+No YouTube iframe, thumbnail, script, or preconnect is present before an explicit Load action. One `youtube-nocookie.com` iframe is created on request, with native controls, autoplay disabled, a referrer policy compatible with YouTube embedding, and no external player API. Changing the camera or selecting Unload removes the previous iframe. The privacy page describes the optional third-party connection. These changes are prepared locally; Benjamin must approve any GitHub push or publication separately.
+
+The expandable training-diagnostics section also retains the repository’s original v1/v2 training-curve PNGs unchanged. Their development-validation scores are explicitly separate from the later final-test graphs.
+
+The two user-supplied final-test confusion matrices are preserved unchanged as `v1-final-confusion-matrix.png` and `v2-final-confusion-matrix.png`, with a V1/V2 selector and full-size links. Their color scales differ. The pinned evaluator uses confidence-ordered overlap matching across classes for matrices, versus class-aware matching for headline metrics; this explains why V2 has 225 diagonal matches versus 226 headline true positives. Background cells alone do not equal the headline FP/FN counts. See `scripts/evaluation/compare_final_test.py` at the source revision above.

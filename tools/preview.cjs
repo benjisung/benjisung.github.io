@@ -15,6 +15,7 @@ const types = {
   ".mp4": "video/mp4",
   ".pdf": "application/pdf",
   ".svg": "image/svg+xml",
+  ".csv": "text/csv; charset=utf-8",
   ".ico": "image/x-icon",
   ".ttf": "font/ttf",
 };

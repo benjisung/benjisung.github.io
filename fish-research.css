@@ -1,0 +1,106 @@
+/* Fish AI: measured model changes, followed by the public underwater observation feeds. */
+.fish-section-links { display: flex; flex-wrap: wrap; gap: 12px 28px; padding-block: 20px; margin-bottom: 35px; border-block: 1px solid var(--line); font: 11px/1.6 var(--mono); }
+.fish-section-links a:hover, .fish-section-links a:focus-visible { color: var(--mint); }
+.fish-section-links span { color: var(--mint); margin-right: 8px; }
+.fish-evidence { margin-top: 85px; padding-block: 65px; background: #142019; }
+.fish-evidence .section-top { align-items: start; }
+.fish-evidence .section-top > p { padding-top: 8px; }
+.evidence-context { display: flex; flex-wrap: wrap; gap: 12px 30px; padding-block: 18px; border-block: 1px solid #c7f3af30; font: 10px/1.7 var(--mono); color: #b8c6b3; }
+.evidence-context strong { color: var(--fg); font-weight: 400; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 10px 28px; font: 10px/1.7 var(--mono); padding-top: 30px; }
+.chart-legend span { display: flex; align-items: center; gap: 9px; }
+.chart-legend i { width: 10px; height: 10px; border-radius: 50%; background: #eab397; display: inline-block; }
+.chart-legend span:last-child i { background: var(--mint); }
+.fish-chart { margin: 20px 0 0; }
+.fish-chart > a { display: block; }
+.fish-chart picture, .fish-chart img { display: block; width: 100%; height: auto; }
+.fish-chart > figcaption { padding-top: 12px; border-top: 1px solid #c7f3af24; max-width: 100%; font-size: 11px; line-height: 1.8; }
+.fish-chart figcaption a, .fish-data-links a { text-decoration: underline; text-underline-offset: 4px; }
+.chart-insight { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 40px; margin-top: 45px; padding-block: 36px; border-block: 1px solid #c7f3af30; }
+.chart-insight p { max-width: 430px; color: #b8c6b3; font-size: 14px; }
+.chart-insight .micro { display: block; color: #b8c6b3; margin-bottom: 12px; font-size: 9px; }
+.chart-insight strong { display: block; color: var(--mint); font-size: clamp(54px, 7vw, 92px); letter-spacing: -.065em; line-height: 1; font-weight: 400; }
+.chart-insight strong small { font-size: .38em; }
+.chart-subsection { padding-top: 44px; }
+.chart-subsection h3 { font-size: clamp(27px, 3vw, 43px); letter-spacing: -.045em; font-weight: 400; line-height: 1.15; }
+.chart-subsection > p { color: #b8c6b3; font-size: 13px; margin-top: 15px; max-width: 650px; }
+.fish-data-links { display: flex; flex-wrap: wrap; gap: 14px 26px; font: 10px/1.7 var(--mono); margin-top: 24px; }
+.fish-data-links a:hover { color: var(--mint); }
+.fish-evidence .detail-fold { border-color: #c7f3af30; }
+.fish-evidence .detail-fold > summary { padding-block: 22px; }
+.fish-values-wrap { width: 100%; overflow-x: auto; padding-block: 5px 20px; }
+.fish-values { width: 100%; border-collapse: collapse; font-size: 14px; }
+.fish-values caption { text-align: left; padding-block: 10px 18px; font: 11px/1.7 var(--mono); color: #b8c6b3; }
+.fish-values th, .fish-values td { text-align: left; vertical-align: top; padding: 14px 18px 14px 0; border-bottom: 1px solid #c7f3af24; }
+.fish-values th { font-weight: 400; color: #d5e6cd; }
+.fish-values td:last-child { color: var(--mint); }
+.fish-values small { display: block; color: #b8c6b3; margin-top: 4px; font: 10px/1.7 var(--mono); }
+.fish-values .metric-label { min-width: 130px; }
+.matrix-section { margin-block: 10px 35px; }
+.matrix-controls { display: flex; flex-wrap: wrap; gap: 10px; margin-block: 25px; }
+.matrix-controls button { font: 11px/1.6 var(--mono); padding: 13px 18px; color: var(--fg); background: transparent; border: 1px solid #c7f3af50; cursor: pointer; }
+.matrix-controls button[aria-pressed="true"] { background: var(--mint); color: #142019; border-color: var(--mint); }
+.matrix-figure { margin-block: 25px; }
+.matrix-figure a, .matrix-figure img { display: block; width: 100%; height: auto; }
+.matrix-figure[hidden] { display: none; }
+.matrix-figure figcaption a { display: inline; text-decoration: underline; text-underline-offset: 4px; }
+.matrix-note { font-size: 11px; line-height: 1.8; color: #b8c6b3; margin-top: 20px; max-width: 850px; }
+.training-curve { margin-block: 28px 35px; }
+.training-curve > a, .training-curve img { display: block; width: 100%; height: auto; }
+.training-curve img { border: 1px solid #c7f3af30; }
+.training-curve figcaption a { text-decoration: underline; text-underline-offset: 4px; }
+.camera-section { padding-top: 100px; }
+.camera-section .section-top > p { max-width: 400px; }
+.camera-role-line { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; padding-block: 22px; margin-top: 30px; border-block: 1px solid var(--line); }
+.camera-role-line .micro { color: var(--mint); font-size: 9px; }
+.camera-role-line p { color: var(--muted); font-size: 13px; margin-top: 9px; }
+.camera-observatory { margin-top: 35px; border: 1px solid #c7f3af3b; background: #0b1717; }
+.camera-heading { display: flex; justify-content: space-between; gap: 24px; padding: 21px 25px; align-items: center; border-bottom: 1px solid #c7f3af30; }
+.camera-heading h3 { font-size: 22px; font-weight: 400; letter-spacing: -.04em; }
+.camera-heading .micro { color: #a5bdb1; font-size: 9px; margin-top: 4px; }
+.camera-heading > span { flex-shrink: 0; color: var(--mint); font: 10px/1.6 var(--mono); }
+.camera-view { position: relative; aspect-ratio: 16 / 9; display: grid; place-items: center; overflow: hidden; isolation: isolate; background: radial-gradient(ellipse at 45% 20%, #1f4948 0, #0e262b 45%, #081317 100%); }
+.camera-view::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(#c7f3af0b 1px, transparent 1px), linear-gradient(90deg, #c7f3af0b 1px, transparent 1px); background-size: 52px 52px; }
+.camera-view::after { content: ''; position: absolute; width: 45%; aspect-ratio: 1; border-radius: 50%; border: 1px solid #b8e4cb29; box-shadow: 0 0 0 55px #b8e4cb06, 0 0 0 110px #b8e4cb04; z-index: -1; }
+.camera-gate { text-align: center; padding: 38px 24px; max-width: 680px; }
+.camera-gate > .micro { color: #afcec0; font-size: 9px; }
+.camera-gate h4 { margin-block: 18px; font-size: clamp(32px, 4.4vw, 66px); line-height: 1.05; letter-spacing: -.05em; font-weight: 400; }
+.camera-gate h4 em { font-family: Georgia, serif; color: var(--mint); font-weight: 400; }
+.camera-load { margin-top: 10px; font: 12px/1.6 var(--mono); background: var(--mint); color: #142019; border: 0; padding: 15px 23px; cursor: pointer; }
+.camera-load:hover { background: #e0ffd0; }
+.camera-load[hidden], .camera-stop[hidden], .camera-gate[hidden] { display: none; }
+.camera-gate .camera-privacy { color: #adc1b7; font-size: 11px; line-height: 1.7; max-width: 470px; margin: 19px auto 0; }
+.camera-privacy a { text-decoration: underline; text-underline-offset: 3px; }
+.camera-view iframe { display: block; width: 100%; height: 100%; position: absolute; inset: 0; border: 0; }
+.camera-view.is-loaded { min-height: 200px; }
+.camera-options { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #c7f3af30; }
+.camera-options[hidden] { display: none; }
+.camera-options button { font: inherit; text-align: left; color: #b8c6c1; border: 0; border-right: 1px solid #c7f3af30; background: transparent; padding: 20px; cursor: pointer; }
+.camera-options button:last-child { border-right: 0; }
+.camera-options button[aria-pressed="true"] { background: #c7f3af12; color: var(--mint); box-shadow: inset 0 3px 0 var(--mint); }
+.camera-options button:hover { background: #c7f3af0b; }
+.camera-options span { display: block; font: 8px/1.7 var(--mono); letter-spacing: .04em; opacity: .8; }
+.camera-options strong { display: block; font-size: 17px; font-weight: 400; margin-block: 8px 4px; }
+.camera-options small { display: block; font-size: 11px; opacity: .85; }
+.camera-bottom { display: flex; flex-wrap: wrap; gap: 12px 25px; padding: 18px 25px; border-top: 1px solid #c7f3af30; font: 10px/1.7 var(--mono); color: #b0c3b9; }
+.camera-bottom > a:hover { color: var(--mint); }
+.camera-stop { border: 0; color: var(--mint); background: transparent; padding: 0; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; margin-left: auto; }
+.camera-credit { color: var(--muted); font-size: 11px; line-height: 1.8; margin-top: 18px; max-width: 900px; }
+.camera-credit a { text-decoration: underline; text-underline-offset: 4px; }
+.camera-note { color: var(--muted); font-size: 12px; line-height: 1.8; margin-top: 15px; }
+.camera-status { min-height: 1.7em; color: var(--mint); font: 10px/1.7 var(--mono); margin-top: 15px; }
+@media (max-width: 900px) { .camera-role-line { gap: 20px; }.camera-options button { padding: 17px 13px; }.camera-heading { align-items: start; } }
+@media (max-width: 650px) {
+  .fish-section-links { gap: 12px 20px; font-size: 9px; margin-bottom: 25px; }
+  .fish-evidence { margin-top: 55px; padding-block: 40px; }.evidence-context { gap: 10px 18px; font-size: 9px; }
+  .chart-legend { font-size: 9px; gap: 10px 20px; padding-top: 24px; }.fish-chart { margin-top: 12px; }
+  .fish-chart > figcaption { font-size: 10px; }.chart-insight { grid-template-columns: 1fr; gap: 23px; margin-top: 30px; padding-block: 27px; }
+  .chart-insight p { font-size: 12px; }.chart-subsection { padding-top: 33px; }.chart-subsection > p { font-size: 12px; }
+  .fish-values { font-size: 12px; min-width: 440px; }.fish-values small { font-size: 9px; }.fish-data-links { font-size: 9px; gap: 13px 22px; }
+  .camera-section { padding-top: 60px; }.camera-role-line { grid-template-columns: 1fr; gap: 20px; padding-block: 24px; }.camera-role-line p { margin-top: 6px; font-size: 12px; }
+  .camera-heading { padding: 18px 16px; gap: 12px; }.camera-heading h3 { font-size: 20px; }.camera-heading .micro { font-size: 7px; }.camera-heading > span { font-size: 8px; }
+  .camera-view { aspect-ratio: 4 / 4.1; }.camera-view.is-loaded { aspect-ratio: 16 / 9; }.camera-gate { padding: 35px 20px; }.camera-gate h4 { font-size: 38px; }
+  .camera-gate .camera-privacy { font-size: 10px; }.camera-load { padding: 13px 16px; font-size: 10px; }
+  .camera-options { grid-template-columns: 1fr 1fr; }.camera-options button { padding: 17px 15px; }.camera-options button:nth-child(2) { border-right: 0; }.camera-options button:nth-child(-n+2) { border-bottom: 1px solid #c7f3af30; }
+  .camera-options strong { font-size: 17px; }.camera-options small { font-size: 10px; }.camera-bottom { padding: 17px 16px; font-size: 9px; }.camera-stop { margin-left: 0; }
+}
