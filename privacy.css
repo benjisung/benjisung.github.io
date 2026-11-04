@@ -1,0 +1,8 @@
+.privacy-page { max-width: 960px; padding-block: 70px 100px; }
+.privacy-page h1 { margin: 28px 0; font-size: clamp(48px, 7vw, 90px); line-height: 1; letter-spacing: -.06em; }
+.privacy-lead { max-width: 44ch; font-size: clamp(20px, 3vw, 28px); line-height: 1.5; color: var(--mint, #b9efb4); }
+.privacy-page section { max-width: 68ch; margin-top: 42px; }
+.privacy-page h2 { margin-bottom: 12px; font-size: 24px; letter-spacing: -.03em; }
+.privacy-page section p { color: #c2c6c0; font-size: 17px; line-height: 1.8; }
+.privacy-page section a { text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+@media (max-width: 600px) { .privacy-page { padding-block: 45px 70px; } }

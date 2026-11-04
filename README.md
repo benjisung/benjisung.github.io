@@ -36,7 +36,7 @@ All active pages use `visual-refresh.css`, `detail-refresh.css`, and `creative.c
 
 `profile-board.js` positions SVG strings between the actual photo pins using ResizeObserver. Photo cards are ordinary links. Keyboard focus or pointer entry highlights adjacent threads and updates a short description. On phones, the board reflows to a two-column layout; it does not require dragging or horizontal panning.
 
-The former styles and homepage story scripts remain in the repository for history. The original `intro.js` is loaded on Home again, with its styles isolated in `intro.css`: Hello, 你好, こんにちは, Bonjour, 안녕하세요, Aloha, then the original identity and mint aperture. It plays on visits and refreshes, supports skip/replay, respects reduced motion, and preserves direct deep links. `chapters.js` remains on Robotics to preserve older AMR bookmarks. Fonts are self-hosted with their existing licenses. There are no trackers, remote font calls, or new runtime dependencies.
+The former styles and homepage story scripts remain in the repository for history. The original `intro.js` is loaded on Home again, with its styles isolated in `intro.css`: Hello, 你好, こんにちは, Bonjour, 안녕하세요, Aloha, then the original identity and mint aperture. It plays on visits and refreshes, supports skip/replay, respects reduced motion, and preserves direct deep links. `chapters.js` remains on Robotics to preserve older AMR bookmarks. Fonts are self-hosted with their existing licenses. Fonts make no remote calls, and no new runtime dependencies are required. A portfolio visitor log records public IPs, server timestamps, portfolio page paths, and country codes in a separate private Cloudflare backend, as described in `privacy.html`.
 
 ## Content and media
 
@@ -76,3 +76,9 @@ The HTTP audit expects port 8766. The existing audit reports four pre-existing i
 The reader loads only displayed WebP pages (1600px long edge), supports desktop spreads and single phone pages, chapter links, page entry, arrow/Home/End keys, enlargement, and reduced motion. The original PDF remains available separately; no runtime dependency or external viewer is required. The three VEX clips now total about 11 MB, 77% smaller than the earlier web copies, at 30fps with preserved orientation and native controls.
 
 `team-site.css` supplies the embedded site layout independently of the shared stylesheet cache. The VEX page ends with a lazy-loaded live view of the official team website at `#team-site`. Its full-page fallback opens in the current tab. The embedded site has its own scroll area; the VEX rail and shared Explore menu link directly to it.
+
+## Private visitor log
+
+`visitor-log.js` sends a page-path report to Benjamin’s separate Cloudflare Worker when one of the ten active pages becomes visible. The edge supplies the network IP and country; timestamps come from the server. No query strings, fragments, referrers, cookies, browser fingerprints, or persistent visitor IDs are sent. Do Not Track and Global Privacy Control skip collection. `privacy.html` is linked from every active page footer.
+
+All dashboard data, assets, APIs, and CSV exports require an eight-hour signed owner session. The generated owner access key, its server-side hash, session secret, backend source, and visitor records stay outside this public repository. The collection endpoint is public for reporting but never returns visitor records. Data older than 30 days is excluded and deleted by a daily job. The backend uses Workers Free and D1 Free; hitting free quotas may interrupt collection, with no automatic upgrade or paid subscription.
