@@ -1,14 +1,6 @@
 /* The camera player connects to YouTube only after an explicit load action. */
 "use strict";
 (() => {
-  const matrixButtons = [...document.querySelectorAll('[data-matrix]')];
-  const matrixPanels = [...document.querySelectorAll('[data-matrix-panel]')];
-  function showMatrix(model) {
-    matrixButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.matrix === model)));
-    matrixPanels.forEach(panel => { panel.hidden = panel.dataset.matrixPanel !== model; });
-  }
-  matrixButtons.forEach(button => button.addEventListener('click', () => showMatrix(button.dataset.matrix)));
-  if (matrixButtons.length) showMatrix('v2');
   const group = document.querySelector('[data-camera-observatory]');
   if (!group) return;
   const choices = [...group.querySelectorAll('[data-camera-id]')];

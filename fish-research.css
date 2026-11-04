@@ -37,13 +37,11 @@
 .fish-values small { display: block; color: #b8c6b3; margin-top: 4px; font: 10px/1.7 var(--mono); }
 .fish-values .metric-label { min-width: 130px; }
 .matrix-section { margin-block: 10px 35px; }
-.matrix-controls { display: flex; flex-wrap: wrap; gap: 10px; margin-block: 25px; }
-.matrix-controls button { font: 11px/1.6 var(--mono); padding: 13px 18px; color: var(--fg); background: transparent; border: 1px solid #c7f3af50; cursor: pointer; }
-.matrix-controls button[aria-pressed="true"] { background: var(--mint); color: #142019; border-color: var(--mint); }
-.matrix-figure { margin-block: 25px; }
-.matrix-figure a, .matrix-figure img { display: block; width: 100%; height: auto; }
-.matrix-figure[hidden] { display: none; }
-.matrix-figure figcaption a { display: inline; text-decoration: underline; text-underline-offset: 4px; }
+.matrix-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(10px, 2vw, 28px); max-width: 1100px; margin-top: 25px; }
+.matrix-figure { min-width: 0; margin: 0; }
+.matrix-figure > a, .matrix-figure img { display: block; width: 100%; height: auto; }
+.matrix-figure figcaption { font: 11px/1.7 var(--mono); margin-top: 12px; }
+.matrix-figure figcaption a { display: block; text-decoration: underline; text-underline-offset: 4px; }
 .matrix-note { font-size: 11px; line-height: 1.8; color: #b8c6b3; margin-top: 20px; max-width: 850px; }
 .training-curve { margin-block: 28px 35px; }
 .training-curve > a, .training-curve img { display: block; width: 100%; height: auto; }
