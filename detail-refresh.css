@@ -259,3 +259,16 @@
 }
 .reduced-motion .board-card, .reduced-motion .board-strings path, .reduced-motion .detail-fold > summary > span { transition: none; }
 @media (prefers-reduced-motion: reduce) { .board-card, .board-strings path, .detail-fold > summary > span { transition: none; } }
+
+.amr-model-frame {
+  display: block;
+  width: 100%;
+  height: clamp(540px, 80svh, 700px);
+  border: 0;
+  border-radius: 16px;
+  background: #edf0ee;
+}
+
+@media (max-width: 720px) {
+  .amr-model-frame { height: 660px; }
+}
